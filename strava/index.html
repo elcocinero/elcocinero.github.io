@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link rel="stylesheet" href="../js/leaflet.css" />
 	<script src="../js/leaflet.js"></script>
+	<script src="https://raw.github.com/calvinmetcalf/leaflet-ajax/master/dist/leaflet.ajax.min.js"></script>
+
 </head>
 <body>
 	
@@ -22,7 +24,8 @@
 		id: 'examples.map-i875mjb7'
 		}).addTo(map);
 
-
+		var geojsonLayer = new L.geoJSON.AJAX("datafiles/20140220-141528-Ride.json");
+		geojsonLayer.addTo(map);
 
 
    	</script>
