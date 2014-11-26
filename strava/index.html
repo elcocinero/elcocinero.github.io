@@ -27,6 +27,45 @@
 		var geojsonLayer = new L.geoJSON.AJAX("datafiles/20140220-141528-Ride.json");
 		geojsonLayer.addTo(map);
 
+		var feat =
+			{
+			  "type": "FeatureCollection",
+			  "features": [
+			    {
+			      "type": "Feature",
+			      "properties": {},
+			      "geometry": {
+			        "type": "LineString",
+			        "coordinates": [
+			          [
+			            -71.06986999511719,
+			            42.36158819524629
+			          ],
+			          [
+			            -71.06334686279297,
+			            42.35067885065581
+			          ],
+			          [
+			            -71.03485107421875,
+			            42.37198836469442
+			          ],
+			          [
+			            -71.06986999511719,
+			            42.371227435069805
+			          ]
+			        ]
+			      }
+			    }
+			  ]
+			}
+		
+		L.geoJson(feat, {
+		    filter: function(feature, layer) {
+		        return feature.properties.show_on_map;
+		    }
+		}).addTo(map);
+
+
 
    	</script>
 
