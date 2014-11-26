@@ -15,6 +15,61 @@
     <script src="../js/leaflet.js"></script>
 
     <script>
+
+var freeBus = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [-105.00341892242432, 39.75383843460583],
+                    [-105.0008225440979, 39.751891803969535]
+                ]
+            },
+            "properties": {
+                "popupContent": "This is free bus that will take you across downtown.",
+                "underConstruction": false
+            },
+            "id": 1
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [-105.0008225440979, 39.751891803969535],
+                    [-104.99820470809937, 39.74979664004068]
+                ]
+            },
+            "properties": {
+                "popupContent": "This is free bus that will take you across downtown.",
+                "underConstruction": true
+            },
+            "id": 2
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [-104.99820470809937, 39.74979664004068],
+                    [-104.98689651489258, 39.741052354709055]
+                ]
+            },
+            "properties": {
+                "popupContent": "This is free bus that will take you across downtown.",
+                "underConstruction": false
+            },
+            "id": 3
+        }
+    ]
+};
+
+
+
+
         var map = L.map('map').setView([39.74739, -105], 13);
 
         L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
@@ -25,43 +80,6 @@
             id: 'examples.map-20v6611k'
         }).addTo(map);
 
-        var baseballIcon = L.icon({
-            iconUrl: 'baseball-marker.png',
-            iconSize: [32, 37],
-            iconAnchor: [16, 37],
-            popupAnchor: [0, -28]
-        });
-
-        function onEachFeature(feature, layer) {
-            var popupContent = "<p>I started out as a GeoJSON " +
-                    feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
-
-            if (feature.properties && feature.properties.popupContent) {
-                popupContent += feature.properties.popupContent;
-            }
-
-            layer.bindPopup(popupContent);
-        }
-
-        L.geoJson([bicycleRental, campus], {
-
-            style: function (feature) {
-                return feature.properties && feature.properties.style;
-            },
-
-            onEachFeature: onEachFeature,
-
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, {
-                    radius: 8,
-                    fillColor: "#ff7800",
-                    color: "#000",
-                    weight: 1,
-                    opacity: 1,
-                    fillOpacity: 0.8
-                });
-            }
-        }).addTo(map);
 
         L.geoJson(freeBus, {
 
@@ -76,14 +94,7 @@
             onEachFeature: onEachFeature
         }).addTo(map);
 
-        var coorsLayer = L.geoJson(coorsField, {
 
-            pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, {icon: baseballIcon});
-            },
-
-            onEachFeature: onEachFeature
-        }).addTo(map);
 
     </script>
 </body>
