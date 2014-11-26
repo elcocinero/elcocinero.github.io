@@ -254,16 +254,7 @@ var campus = {
     }
 };
 
-var coorsField = {
-    "type": "Feature",
-    "properties": {
-        "popupContent": "Coors Field"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-104.99404191970824, 39.756213909328125]
-    }
-};
+
 
 
 
@@ -328,14 +319,7 @@ var coorsField = {
             onEachFeature: onEachFeature
         }).addTo(map);
 
-        var coorsLayer = L.geoJson(coorsField, {
 
-            pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, {icon: baseballIcon});
-            },
-
-            onEachFeature: onEachFeature
-        }).addTo(map);
 
     </script>
 </body>
