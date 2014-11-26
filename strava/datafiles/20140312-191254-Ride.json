@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "name": "03\/12\/2014 Boston, MA", "cmt": null, "desc": null, "src": null, "link1_href": null, "link1_text": null, "link1_type": null, "link2_href": null, "link2_text": null, "link2_type": null, "number": null, "type": null }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -71.041862, 42.349385 ], [ -71.041863, 42.34941 ] ] ] } }
+]
+}
