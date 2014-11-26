@@ -1,0 +1,3268 @@
+
+<html>
+<head>
+	<!-- code from:
+
+	http://wiki.openstreetmap.org/wiki/Openlayers_Track_example -->
+	<!-- Source: http://wiki.openstreetmap.org/wiki/Openlayers_Track_example -->
+	<title>Strava Rides</title>
+	<!-- bring in the OpenLayers javascript library
+		 (here we bring it from the remote site, but you could
+		 easily serve up this javascript yourself) -->
+	<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	<!-- bring in the Google OpenLayers layers -->
+	<script src="http://maps.stamen.com/js/tile.stamen.js?v1.1.2"></script>
+ 
+	<script type="text/javascript">
+		// Start position for the map (hardcoded here for simplicity,
+		// but maybe you want to get this from the URL params)
+		var lat=42.323694
+		var lon=-71.117068
+		var zoom=13
+
+		var map; //complex object of type OpenLayers.Map
+ 
+		function init() {
+			map = new OpenLayers.Map ("map", {
+				maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
+				maxResolution: 156543.0399,
+				numZoomLevels: 19,
+				units: 'm',
+				projection: new OpenLayers.Projection("EPSG:900913"),
+				displayProjection: new OpenLayers.Projection("EPSG:4326")
+			} );
+ 
+			// Define the map layer
+			// Here we use a predefined layer that will be kept up to date with URL changes
+			baselayer = new OpenLayers.Layer.Stamen("terrain");
+			map.addLayer(baselayer);
+	
+
+
+ 			// Define styles
+			var shortStyles = new OpenLayers.StyleMap({
+                "default": new OpenLayers.Style({					
+					strokeColor: "#2C94AD",
+                    strokeWidth: 3, 
+                    strokeOpacity: 0.2
+                }),
+            }); 
+			var longStyles = new OpenLayers.StyleMap({
+                "default": new OpenLayers.Style({					
+					strokeColor: "#FF9D3C",
+                    strokeWidth: 3, 
+                    strokeOpacity: 0.8
+                }),
+            }); 
+
+
+			var gpx1 = new OpenLayers.Layer.Vector("Ride1", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140220-141528-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx1);			
+			var gpx2 = new OpenLayers.Layer.Vector("Ride2", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140220-210904-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx2);			
+			var gpx3 = new OpenLayers.Layer.Vector("Ride3", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140221-004842-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx3);			
+			var gpx4 = new OpenLayers.Layer.Vector("Ride4", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140221-131812-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx4);			
+			var gpx5 = new OpenLayers.Layer.Vector("Ride5", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140221-233400-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx5);			
+			var gpx6 = new OpenLayers.Layer.Vector("Ride6", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140222-130910-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx6);			
+			var gpx7 = new OpenLayers.Layer.Vector("Ride7", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140222-171334-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx7);			
+			var gpx8 = new OpenLayers.Layer.Vector("Ride8", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140222-205944-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx8);			
+			var gpx9 = new OpenLayers.Layer.Vector("Ride9", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140223-130529-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx9);			
+			var gpx10 = new OpenLayers.Layer.Vector("Ride10", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140223-183625-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx10);			
+			var gpx11 = new OpenLayers.Layer.Vector("Ride11", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140223-212634-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx11);			
+			var gpx12 = new OpenLayers.Layer.Vector("Ride12", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140224-132614-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx12);			
+			var gpx13 = new OpenLayers.Layer.Vector("Ride13", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140224-194240-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx13);			
+			var gpx14 = new OpenLayers.Layer.Vector("Ride14", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140224-203554-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx14);			
+			var gpx15 = new OpenLayers.Layer.Vector("Ride15", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140224-234710-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx15);			
+			var gpx16 = new OpenLayers.Layer.Vector("Ride16", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140225-141758-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx16);			
+			var gpx17 = new OpenLayers.Layer.Vector("Ride17", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140226-002934-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx17);			
+			var gpx18 = new OpenLayers.Layer.Vector("Ride18", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140227-141534-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx18);			
+			var gpx19 = new OpenLayers.Layer.Vector("Ride19", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140227-192342-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx19);			
+			var gpx20 = new OpenLayers.Layer.Vector("Ride20", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140228-005028-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx20);			
+			var gpx21 = new OpenLayers.Layer.Vector("Ride21", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140228-155602-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx21);			
+			var gpx22 = new OpenLayers.Layer.Vector("Ride22", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140228-215840-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx22);			
+			var gpx23 = new OpenLayers.Layer.Vector("Ride23", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140307-165922-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx23);			
+			var gpx24 = new OpenLayers.Layer.Vector("Ride24", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140308-000758-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx24);			
+			var gpx25 = new OpenLayers.Layer.Vector("Ride25", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140308-150336-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx25);			
+			var gpx26 = new OpenLayers.Layer.Vector("Ride26", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140308-233456-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx26);			
+			var gpx27 = new OpenLayers.Layer.Vector("Ride27", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140309-040720-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx27);			
+			var gpx28 = new OpenLayers.Layer.Vector("Ride28", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140309-162808-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx28);			
+			var gpx29 = new OpenLayers.Layer.Vector("Ride29", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140309-202928-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx29);			
+			var gpx30 = new OpenLayers.Layer.Vector("Ride30", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140311-122842-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx30);			
+			var gpx31 = new OpenLayers.Layer.Vector("Ride31", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140311-224048-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx31);			
+			var gpx32 = new OpenLayers.Layer.Vector("Ride32", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140312-121058-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx32);			
+			var gpx33 = new OpenLayers.Layer.Vector("Ride33", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140312-191254-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx33);			
+			var gpx34 = new OpenLayers.Layer.Vector("Ride34", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140314-210608-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx34);			
+			var gpx35 = new OpenLayers.Layer.Vector("Ride35", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140315-041912-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx35);			
+			var gpx36 = new OpenLayers.Layer.Vector("Ride36", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140315-171842-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx36);			
+			var gpx37 = new OpenLayers.Layer.Vector("Ride37", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140316-165922-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx37);			
+			var gpx38 = new OpenLayers.Layer.Vector("Ride38", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140316-200058-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx38);			
+			var gpx39 = new OpenLayers.Layer.Vector("Ride39", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140316-203332-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx39);			
+			var gpx40 = new OpenLayers.Layer.Vector("Ride40", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140320-124640-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx40);			
+			var gpx41 = new OpenLayers.Layer.Vector("Ride41", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140320-222034-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx41);			
+			var gpx42 = new OpenLayers.Layer.Vector("Ride42", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140321-001636-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx42);			
+			var gpx43 = new OpenLayers.Layer.Vector("Ride43", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140321-142738-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx43);			
+			var gpx44 = new OpenLayers.Layer.Vector("Ride44", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140322-141102-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx44);			
+			var gpx45 = new OpenLayers.Layer.Vector("Ride45", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140323-221514-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx45);			
+			var gpx46 = new OpenLayers.Layer.Vector("Ride46", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140325-022944-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx46);			
+			var gpx47 = new OpenLayers.Layer.Vector("Ride47", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140326-144720-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx47);			
+			var gpx48 = new OpenLayers.Layer.Vector("Ride48", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140326-174730-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx48);			
+			var gpx49 = new OpenLayers.Layer.Vector("Ride49", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140327-193336-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx49);			
+			var gpx50 = new OpenLayers.Layer.Vector("Ride50", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140327-234054-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx50);			
+			var gpx51 = new OpenLayers.Layer.Vector("Ride51", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140328-140920-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx51);			
+			var gpx52 = new OpenLayers.Layer.Vector("Ride52", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140329-000030-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx52);			
+			var gpx53 = new OpenLayers.Layer.Vector("Ride53", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140329-171249-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx53);			
+			var gpx54 = new OpenLayers.Layer.Vector("Ride54", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140330-223744-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx54);			
+			var gpx55 = new OpenLayers.Layer.Vector("Ride55", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140331-133841-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx55);			
+			var gpx56 = new OpenLayers.Layer.Vector("Ride56", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140331-173012-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx56);			
+			var gpx57 = new OpenLayers.Layer.Vector("Ride57", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140401-130008-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx57);			
+			var gpx58 = new OpenLayers.Layer.Vector("Ride58", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140402-133903-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx58);			
+			var gpx59 = new OpenLayers.Layer.Vector("Ride59", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140402-232056-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx59);			
+			var gpx60 = new OpenLayers.Layer.Vector("Ride60", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140403-200017-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx60);			
+			var gpx61 = new OpenLayers.Layer.Vector("Ride61", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140403-234418-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx61);			
+			var gpx62 = new OpenLayers.Layer.Vector("Ride62", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140404-154319-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx62);			
+			var gpx63 = new OpenLayers.Layer.Vector("Ride63", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140404-182121-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx63);			
+			var gpx64 = new OpenLayers.Layer.Vector("Ride64", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140406-020043-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx64);			
+			var gpx65 = new OpenLayers.Layer.Vector("Ride65", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140406-050658-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx65);			
+			var gpx66 = new OpenLayers.Layer.Vector("Ride66", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140407-183021-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx66);			
+			var gpx67 = new OpenLayers.Layer.Vector("Ride67", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140407-225713-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx67);			
+			var gpx68 = new OpenLayers.Layer.Vector("Ride68", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140408-183224-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx68);			
+			var gpx69 = new OpenLayers.Layer.Vector("Ride69", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140408-215649-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx69);			
+			var gpx70 = new OpenLayers.Layer.Vector("Ride70", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140409-142446-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx70);			
+			var gpx71 = new OpenLayers.Layer.Vector("Ride71", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140409-231236-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx71);			
+			var gpx72 = new OpenLayers.Layer.Vector("Ride72", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140410-121717-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx72);			
+			var gpx73 = new OpenLayers.Layer.Vector("Ride73", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140410-193507-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx73);			
+			var gpx74 = new OpenLayers.Layer.Vector("Ride74", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140410-233938-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx74);			
+			var gpx75 = new OpenLayers.Layer.Vector("Ride75", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140411-145808-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx75);			
+			var gpx76 = new OpenLayers.Layer.Vector("Ride76", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140411-225342-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx76);			
+			var gpx77 = new OpenLayers.Layer.Vector("Ride77", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140412-004344-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx77);			
+			var gpx78 = new OpenLayers.Layer.Vector("Ride78", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140417-131030-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx78);			
+			var gpx79 = new OpenLayers.Layer.Vector("Ride79", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140417-200401-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx79);			
+			var gpx80 = new OpenLayers.Layer.Vector("Ride80", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140418-014428-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx80);			
+			var gpx81 = new OpenLayers.Layer.Vector("Ride81", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140418-124623-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx81);			
+			var gpx82 = new OpenLayers.Layer.Vector("Ride82", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140418-165359-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx82);			
+			var gpx83 = new OpenLayers.Layer.Vector("Ride83", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140418-200519-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx83);			
+			var gpx84 = new OpenLayers.Layer.Vector("Ride84", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140418-211857-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx84);			
+			var gpx85 = new OpenLayers.Layer.Vector("Ride85", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140419-223208-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx85);			
+			var gpx86 = new OpenLayers.Layer.Vector("Ride86", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140420-124558-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx86);			
+			var gpx87 = new OpenLayers.Layer.Vector("Ride87", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140421-161438-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx87);			
+			var gpx88 = new OpenLayers.Layer.Vector("Ride88", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140421-234930-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx88);			
+			var gpx89 = new OpenLayers.Layer.Vector("Ride89", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140422-012755-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx89);			
+			var gpx90 = new OpenLayers.Layer.Vector("Ride90", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140422-133611-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx90);			
+			var gpx91 = new OpenLayers.Layer.Vector("Ride91", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140422-154437-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx91);			
+			var gpx92 = new OpenLayers.Layer.Vector("Ride92", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140422-213841-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx92);			
+			var gpx93 = new OpenLayers.Layer.Vector("Ride93", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140423-122743-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx93);			
+			var gpx94 = new OpenLayers.Layer.Vector("Ride94", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140423-231107-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx94);			
+			var gpx95 = new OpenLayers.Layer.Vector("Ride95", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140424-120957-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx95);			
+			var gpx96 = new OpenLayers.Layer.Vector("Ride96", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140424-192024-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx96);			
+			var gpx97 = new OpenLayers.Layer.Vector("Ride97", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140424-235711-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx97);			
+			var gpx98 = new OpenLayers.Layer.Vector("Ride98", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140425-152135-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx98);			
+			var gpx99 = new OpenLayers.Layer.Vector("Ride99", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140425-222610-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx99);			
+			var gpx100 = new OpenLayers.Layer.Vector("Ride100", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140426-002341-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx100);			
+			var gpx101 = new OpenLayers.Layer.Vector("Ride101", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140426-014656-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx101);			
+			var gpx102 = new OpenLayers.Layer.Vector("Ride102", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140426-142358-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx102);			
+			var gpx103 = new OpenLayers.Layer.Vector("Ride103", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140428-142012-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx103);			
+			var gpx104 = new OpenLayers.Layer.Vector("Ride104", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140428-232142-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx104);			
+			var gpx105 = new OpenLayers.Layer.Vector("Ride105", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140429-011749-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx105);			
+			var gpx106 = new OpenLayers.Layer.Vector("Ride106", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140429-203647-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx106);			
+			var gpx107 = new OpenLayers.Layer.Vector("Ride107", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140429-214704-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx107);			
+			var gpx108 = new OpenLayers.Layer.Vector("Ride108", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140430-001843-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx108);			
+			var gpx109 = new OpenLayers.Layer.Vector("Ride109", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140430-155755-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx109);			
+			var gpx110 = new OpenLayers.Layer.Vector("Ride110", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140501-000013-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx110);			
+			var gpx111 = new OpenLayers.Layer.Vector("Ride111", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140501-123317-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx111);			
+			var gpx112 = new OpenLayers.Layer.Vector("Ride112", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140502-035106-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx112);			
+			var gpx113 = new OpenLayers.Layer.Vector("Ride113", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140502-151602-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx113);			
+			var gpx114 = new OpenLayers.Layer.Vector("Ride114", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140502-224328-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx114);			
+			var gpx115 = new OpenLayers.Layer.Vector("Ride115", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140503-030345-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx115);			
+			var gpx116 = new OpenLayers.Layer.Vector("Ride116", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140503-143347-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx116);			
+			var gpx117 = new OpenLayers.Layer.Vector("Ride117", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140503-231301-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx117);			
+			var gpx118 = new OpenLayers.Layer.Vector("Ride118", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140504-132507-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx118);			
+			var gpx119 = new OpenLayers.Layer.Vector("Ride119", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140504-202323-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx119);			
+			var gpx120 = new OpenLayers.Layer.Vector("Ride120", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140504-205202-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx120);			
+			var gpx121 = new OpenLayers.Layer.Vector("Ride121", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140505-132116-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx121);			
+			var gpx122 = new OpenLayers.Layer.Vector("Ride122", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140506-001452-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx122);			
+			var gpx123 = new OpenLayers.Layer.Vector("Ride123", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140507-023400-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx123);			
+			var gpx124 = new OpenLayers.Layer.Vector("Ride124", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140507-130316-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx124);			
+			var gpx125 = new OpenLayers.Layer.Vector("Ride125", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140507-212349-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx125);			
+			var gpx126 = new OpenLayers.Layer.Vector("Ride126", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140507-215224-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx126);			
+			var gpx127 = new OpenLayers.Layer.Vector("Ride127", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140507-234410-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx127);			
+			var gpx128 = new OpenLayers.Layer.Vector("Ride128", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140508-122517-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx128);			
+			var gpx129 = new OpenLayers.Layer.Vector("Ride129", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140508-220544-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx129);			
+			var gpx130 = new OpenLayers.Layer.Vector("Ride130", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140509-025949-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx130);			
+			var gpx131 = new OpenLayers.Layer.Vector("Ride131", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140509-043139-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx131);			
+			var gpx132 = new OpenLayers.Layer.Vector("Ride132", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140509-150836-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx132);			
+			var gpx133 = new OpenLayers.Layer.Vector("Ride133", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140509-220439-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx133);			
+			var gpx134 = new OpenLayers.Layer.Vector("Ride134", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140509-234121-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx134);			
+			var gpx135 = new OpenLayers.Layer.Vector("Ride135", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140510-023904-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx135);			
+			var gpx136 = new OpenLayers.Layer.Vector("Ride136", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140510-154927-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx136);			
+			var gpx137 = new OpenLayers.Layer.Vector("Ride137", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140510-201401-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx137);			
+			var gpx138 = new OpenLayers.Layer.Vector("Ride138", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140510-225319-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx138);			
+			var gpx139 = new OpenLayers.Layer.Vector("Ride139", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140511-145204-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx139);			
+			var gpx140 = new OpenLayers.Layer.Vector("Ride140", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140512-144858-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx140);			
+			var gpx141 = new OpenLayers.Layer.Vector("Ride141", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140513-000255-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx141);			
+			var gpx142 = new OpenLayers.Layer.Vector("Ride142", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140513-130350-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx142);			
+			var gpx143 = new OpenLayers.Layer.Vector("Ride143", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140513-224728-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx143);			
+			var gpx144 = new OpenLayers.Layer.Vector("Ride144", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140514-124711-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx144);			
+			var gpx145 = new OpenLayers.Layer.Vector("Ride145", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140514-233450-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx145);			
+			var gpx146 = new OpenLayers.Layer.Vector("Ride146", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140515-132337-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx146);			
+			var gpx147 = new OpenLayers.Layer.Vector("Ride147", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140516-165931-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx147);			
+			var gpx148 = new OpenLayers.Layer.Vector("Ride148", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140517-013012-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx148);			
+			var gpx149 = new OpenLayers.Layer.Vector("Ride149", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140517-041702-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx149);			
+			var gpx150 = new OpenLayers.Layer.Vector("Ride150", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140517-151506-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx150);			
+			var gpx151 = new OpenLayers.Layer.Vector("Ride151", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140518-142830-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx151);			
+			var gpx152 = new OpenLayers.Layer.Vector("Ride152", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140519-134916-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx152);			
+			var gpx153 = new OpenLayers.Layer.Vector("Ride153", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140520-043302-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx153);			
+			var gpx154 = new OpenLayers.Layer.Vector("Ride154", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140520-121645-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx154);			
+			var gpx155 = new OpenLayers.Layer.Vector("Ride155", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140520-225814-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx155);			
+			var gpx156 = new OpenLayers.Layer.Vector("Ride156", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140521-140742-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx156);			
+			var gpx157 = new OpenLayers.Layer.Vector("Ride157", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140522-011645-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx157);			
+			var gpx158 = new OpenLayers.Layer.Vector("Ride158", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140522-051201-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx158);			
+			var gpx159 = new OpenLayers.Layer.Vector("Ride159", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140522-135032-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx159);			
+			var gpx160 = new OpenLayers.Layer.Vector("Ride160", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140522-163548-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx160);			
+			var gpx161 = new OpenLayers.Layer.Vector("Ride161", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140523-050845-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx161);			
+			var gpx162 = new OpenLayers.Layer.Vector("Ride162", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140523-194645-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx162);			
+			var gpx163 = new OpenLayers.Layer.Vector("Ride163", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140523-205700-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx163);			
+			var gpx164 = new OpenLayers.Layer.Vector("Ride164", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140524-045350-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx164);			
+			var gpx165 = new OpenLayers.Layer.Vector("Ride165", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140525-154853-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx165);			
+			var gpx166 = new OpenLayers.Layer.Vector("Ride166", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140601-125756-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx166);			
+			var gpx167 = new OpenLayers.Layer.Vector("Ride167", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140601-144747-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx167);			
+			var gpx168 = new OpenLayers.Layer.Vector("Ride168", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140601-180707-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx168);			
+			var gpx169 = new OpenLayers.Layer.Vector("Ride169", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140602-125921-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx169);			
+			var gpx170 = new OpenLayers.Layer.Vector("Ride170", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140602-182724-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx170);			
+			var gpx171 = new OpenLayers.Layer.Vector("Ride171", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140604-170811-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx171);			
+			var gpx172 = new OpenLayers.Layer.Vector("Ride172", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140604-194144-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx172);			
+			var gpx173 = new OpenLayers.Layer.Vector("Ride173", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140604-213118-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx173);			
+			var gpx174 = new OpenLayers.Layer.Vector("Ride174", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140605-154405-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx174);			
+			var gpx175 = new OpenLayers.Layer.Vector("Ride175", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140605-214622-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx175);			
+			var gpx176 = new OpenLayers.Layer.Vector("Ride176", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140606-013626-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx176);			
+			var gpx177 = new OpenLayers.Layer.Vector("Ride177", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140606-112250-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx177);			
+			var gpx178 = new OpenLayers.Layer.Vector("Ride178", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140606-215027-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx178);			
+			var gpx179 = new OpenLayers.Layer.Vector("Ride179", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140607-000353-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx179);			
+			var gpx180 = new OpenLayers.Layer.Vector("Ride180", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140607-021426-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx180);			
+			var gpx181 = new OpenLayers.Layer.Vector("Ride181", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140607-154951-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx181);			
+			var gpx182 = new OpenLayers.Layer.Vector("Ride182", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140607-234143-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx182);			
+			var gpx183 = new OpenLayers.Layer.Vector("Ride183", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140608-155928-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx183);			
+			var gpx184 = new OpenLayers.Layer.Vector("Ride184", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140610-015104-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx184);			
+			var gpx185 = new OpenLayers.Layer.Vector("Ride185", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140612-220023-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx185);			
+			var gpx186 = new OpenLayers.Layer.Vector("Ride186", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140613-011108-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx186);			
+			var gpx187 = new OpenLayers.Layer.Vector("Ride187", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140613-155303-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx187);			
+			var gpx188 = new OpenLayers.Layer.Vector("Ride188", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140613-175852-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx188);			
+			var gpx189 = new OpenLayers.Layer.Vector("Ride189", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140614-212515-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx189);			
+			var gpx190 = new OpenLayers.Layer.Vector("Ride190", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140615-134925-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx190);			
+			var gpx191 = new OpenLayers.Layer.Vector("Ride191", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140618-144510-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx191);			
+			var gpx192 = new OpenLayers.Layer.Vector("Ride192", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140621-020232-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx192);			
+			var gpx193 = new OpenLayers.Layer.Vector("Ride193", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140621-041503-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx193);			
+			var gpx194 = new OpenLayers.Layer.Vector("Ride194", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140621-172205-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx194);			
+			var gpx195 = new OpenLayers.Layer.Vector("Ride195", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140623-151759-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx195);			
+			var gpx196 = new OpenLayers.Layer.Vector("Ride196", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140623-215021-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx196);			
+			var gpx197 = new OpenLayers.Layer.Vector("Ride197", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140623-232118-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx197);			
+			var gpx198 = new OpenLayers.Layer.Vector("Ride198", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140715-192202-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx198);			
+			var gpx199 = new OpenLayers.Layer.Vector("Ride199", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140717-214534-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx199);			
+			var gpx200 = new OpenLayers.Layer.Vector("Ride200", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140718-002924-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx200);			
+			var gpx201 = new OpenLayers.Layer.Vector("Ride201", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140718-140827-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx201);			
+			var gpx202 = new OpenLayers.Layer.Vector("Ride202", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140720-164235-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx202);			
+			var gpx203 = new OpenLayers.Layer.Vector("Ride203", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140720-194831-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx203);			
+			var gpx204 = new OpenLayers.Layer.Vector("Ride204", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140720-213007-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx204);			
+			var gpx205 = new OpenLayers.Layer.Vector("Ride205", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140720-222733-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx205);			
+			var gpx206 = new OpenLayers.Layer.Vector("Ride206", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140721-174519-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx206);			
+			var gpx207 = new OpenLayers.Layer.Vector("Ride207", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140721-214141-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx207);			
+			var gpx208 = new OpenLayers.Layer.Vector("Ride208", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140721-225254-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx208);			
+			var gpx209 = new OpenLayers.Layer.Vector("Ride209", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140723-214737-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx209);			
+			var gpx210 = new OpenLayers.Layer.Vector("Ride210", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140724-214911-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx210);			
+			var gpx211 = new OpenLayers.Layer.Vector("Ride211", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140725-012001-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx211);			
+			var gpx212 = new OpenLayers.Layer.Vector("Ride212", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140726-172959-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx212);			
+			var gpx213 = new OpenLayers.Layer.Vector("Ride213", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140726-190346-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx213);			
+			var gpx214 = new OpenLayers.Layer.Vector("Ride214", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140726-211451-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx214);			
+			var gpx215 = new OpenLayers.Layer.Vector("Ride215", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140726-221227-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx215);			
+			var gpx216 = new OpenLayers.Layer.Vector("Ride216", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140726-225402-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx216);			
+			var gpx217 = new OpenLayers.Layer.Vector("Ride217", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140728-115229-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx217);			
+			var gpx218 = new OpenLayers.Layer.Vector("Ride218", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140728-172552-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx218);			
+			var gpx219 = new OpenLayers.Layer.Vector("Ride219", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140728-220138-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx219);			
+			var gpx220 = new OpenLayers.Layer.Vector("Ride220", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140729-020854-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx220);			
+			var gpx221 = new OpenLayers.Layer.Vector("Ride221", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140810-220040-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx221);			
+			var gpx222 = new OpenLayers.Layer.Vector("Ride222", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140811-004541-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx222);			
+			var gpx223 = new OpenLayers.Layer.Vector("Ride223", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140811-142355-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx223);			
+			var gpx224 = new OpenLayers.Layer.Vector("Ride224", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140812-163238-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx224);			
+			var gpx225 = new OpenLayers.Layer.Vector("Ride225", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140812-203734-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx225);			
+			var gpx226 = new OpenLayers.Layer.Vector("Ride226", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140814-214452-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx226);			
+			var gpx227 = new OpenLayers.Layer.Vector("Ride227", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140814-235652-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: shortStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx227);			
+			var gpx228 = new OpenLayers.Layer.Vector("Ride228", {			
+				strategies: [new OpenLayers.Strategy.Fixed()],		
+				protocol: new OpenLayers.Protocol.HTTP({		
+					url: "datafiles/20140816-131608-Ride.gpx",	
+					format: new OpenLayers.Format.GPX({	
+						extractWaypoints: true, 
+						extractRoutes: true, 
+						extractAttributes: true
+					})	
+				}),		
+				styleMap: longStyles,		
+				projection: new OpenLayers.Projection("EPSG:4326")		
+			});			
+			map.addLayer(gpx228);					
+
+
+
+			var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+			map.setCenter(lonLat, zoom);
+ 
+			var size = new OpenLayers.Size(21, 25);
+			var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+		}
+	</script>
+ 
+</head>
+<!-- body.onload is called once the page is loaded (call the 'init' function) -->
+<body onload="init();">
+	<!-- define a DIV into which the map will appear. Make it take up the whole window -->
+	<div style="width:80%; height:80%" id="map"></div>
+</body>
+</html>
