@@ -77,38 +77,11 @@ var freeBus = {
             id: 'examples.map-20v6611k'
         }).addTo(map);
 
-        var baseballIcon = L.icon({
-            iconUrl: 'baseball-marker.png',
-            iconSize: [32, 37],
-            iconAnchor: [16, 37],
-            popupAnchor: [0, -28]
-        });
 
-        function onEachFeature(feature, layer) {
-            var popupContent = "<p>I started out as a GeoJSON " +
-                    feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
-
-            if (feature.properties && feature.properties.popupContent) {
-                popupContent += feature.properties.popupContent;
-            }
-
-            layer.bindPopup(popupContent);
-        }
 
         
 
-        L.geoJson(freeBus, {
-
-            filter: function (feature, layer) {
-                if (feature.properties) {
-                    // If the property "underConstruction" exists and is true, return false (don't render features under construction)
-                    return feature.properties.underConstruction !== undefined ? !feature.properties.underConstruction : true;
-                }
-                return false;
-            },
-
-            onEachFeature: onEachFeature
-        }).addTo(map);
+        L.geoJson(freeBus,).addTo(map);
 
 
 
