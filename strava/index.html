@@ -58,11 +58,7 @@
 			  ]
 			}
 		
-		L.geoJson(feat, {
-		    filter: function(feature, layer) {
-		        return feature.properties.show_on_map;
-		    }
-		}).addTo(map);
+		L.geoJson(feat).addTo(map);
 
 
 
