@@ -27,7 +27,7 @@
 		// 	maxZoom: 18
 		// });
 
-		$.getJSON("./20140220-141528-Rideas.json", function(data) {
+		$.getJSON("./20140220-141528-Ride.json", function(data) {
 		    var geojson = L.geoJson(data, {
 		     	onEachFeature: function (feature, layer) {
 		       		layer.bindPopup(feature.properties.name);
