@@ -21,6 +21,16 @@
 </head>
 <body>
   <div id="cupcake-map"></div>
-test123
+  <script>
+  var cupcakeTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/lyzidiamond.map-ietb6srb/{z}/{x}/{y}.png', {
+    maxZoom: 18
+  });
+
+
+    var map = L.map('cupcake-map').fitBounds(geojson.getBounds());
+    cupcakeTiles.addTo(map);
+    geojson.addTo(map);
+  });
+  </script>
 </body>
 </html>
