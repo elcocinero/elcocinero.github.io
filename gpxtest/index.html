@@ -35,7 +35,7 @@
       function display_gpx(elt) {
         if (!elt) return;
 
-        var url = elt.getAttribute('data-gpx-source');
+        var url = elt.getAttribute("./gpx/20140220-141528-Ride.gpx");
         var mapid = elt.getAttribute('data-map-target');
         if (!url || !mapid) return;
 
@@ -68,7 +68,6 @@
           _c('distance').textContent = gpx.get_distance_imp().toFixed(2);
           _c('duration').textContent = gpx.get_duration_string(gpx.get_moving_time());
           _c('pace').textContent     = gpx.get_duration_string(gpx.get_moving_pace_imp(), true);
-          _c('avghr').textContent    = gpx.get_average_hr();
           _c('elevation-gain').textContent = gpx.to_ft(gpx.get_elevation_gain()).toFixed(0);
           _c('elevation-loss').textContent = gpx.to_ft(gpx.get_elevation_loss()).toFixed(0);
           _c('elevation-net').textContent  = gpx.to_ft(gpx.get_elevation_gain()
