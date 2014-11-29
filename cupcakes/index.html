@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
@@ -12,6 +13,12 @@
   var cupcakeTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/lyzidiamond.map-ietb6srb/{z}/{x}/{y}.png', {
     maxZoom: 18
   });
+
+
+
+
+
+
 
   $.getJSON("./20140220-141528-Ride.json", function(data) {
     var geojson = L.geoJson(data, {
