@@ -10,6 +10,8 @@
 <body>
 	<div id="map"></div>
    	<script>
+		var map = L.map('map').setView([42.346237, -71.097765], 13);
+
 		tiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -35,6 +37,17 @@
 	 //  		});	
 
 
+
+		 // $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
+		 //    var geojson = L.geoJson(data, {
+		 //     	onEachFeature: function (feature, layer) {
+		 //       		layer.bindPopup(feature.properties.name);
+		 //    	}
+		 //    });
+		 //    geojson.addTo(map);
+  	// 	});	
+
+
 		<!-- old, working stufff-->
 		 // $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
 		 //    var geojson = L.geoJson(data, {
@@ -43,6 +56,7 @@
 		 //    	}
 		 //    });
 		 //    var map = L.map('map').fitBounds(geojson.getBounds());
+		 //    tiles.addTo(map);
 		 //    geojson.addTo(map);
   	// 	});	
 
