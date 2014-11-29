@@ -1,3 +1,41 @@
+<html>
+<head>
+ 	<title>Leaflet KML Example</title>
+	<link rel="stylesheet" href="../js/leaflet.css" />
+   	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
+   	<script src="./js/leaflet.js"></script>
+   	<!-- Bring in the leaflet KML plugin -->
+   	<script src="./js/kml.js"></script>  
+   	<script language="javascript">
+      function init() {
+         var map = new L.Map('map');                       
+      	 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+            maxZoom: 18
+         }).addTo(map);
+         map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
+                                                             
+         var kmlLayer = new L.KML("mapperz-kml-example.kml", {async: true});
+                                                              
+         kmlLayer.on("loaded", function(e) { 
+            map.fitBounds(e.target.getBounds());
+         });
+                                                
+         map.addLayer(kmlLayer);
+         
+      }
+   	</script>
+</head>
+<body onLoad="javascript:init();">
+   	<div id="map" style="height: 200px"></div>
+   
+</body>            
+</html>
+    
+
+
+
+<!-- mine:
 <!doctype html>
 <html>
 <head>
@@ -10,7 +48,6 @@
 <body onLoad="javascript:init();">
 	<div id="map"></div>
    	<script>
-		// might need function init
 		function init() {
 			var map = L.map('map');
 
@@ -32,5 +69,4 @@
    	</script>
 </body>
 </html>
-
-y
+ -->
