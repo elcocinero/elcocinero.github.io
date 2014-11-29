@@ -22,19 +22,19 @@
 
 
 		<!-- this code only shows the first json...-->
-		$.when(
-			$.getJSON("./datafiles/20140721-225254-Ride.json"),
-			$.getJSON("./datafiles/20140810-220040-Ride.json")
-		).done(function(data) {
-			    L.geoJson(data, {
-			     	onEachFeature: function (feature, layer) {
-			       		layer.bindPopup(feature.properties.name);
-			    	}
-			    }).addTo(map);
-	  		});	
+		// $.when(
+		// 	$.getJSON("./datafiles/20140721-225254-Ride.json"),
+		// 	$.getJSON("./datafiles/20140810-220040-Ride.json")
+		// ).done(function(data) {
+		// 	    L.geoJson(data, {
+		// 	     	onEachFeature: function (feature, layer) {
+		// 	       		layer.bindPopup(feature.properties.name);
+		// 	    	}
+		// 	    }).addTo(map);
+	 //  		});	
 
 
-
+		<!-- this code gets both to display, but is looong-->
 		// $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
 		//     var geojson1 = L.geoJson(data, {
 		//      	onEachFeature: function (feature, layer) {
@@ -42,15 +42,24 @@
 		//     	}
 		//     }).addTo(map);
   // 		});	
-
-
-		// $.getJSON("./datafiles/20140721-225254-Ride.json", function(data) {
+		// $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
 		//     var geojson2 = L.geoJson(data, {
 		//      	onEachFeature: function (feature, layer) {
 		//        		layer.bindPopup(feature.properties.name);
 		//     	}
 		//     }).addTo(map);
   // 		});	
+
+
+  		var jsonlist = ["./datafiles/20140810-220040-Ride.json","./datafiles/20140810-220040-Ride.json"];
+
+  		$.each(jsonlist, function (data) {
+	  		 var geojson2 = L.geoJson(data, {
+		     	onEachFeature: function (feature, layer) {
+		       		layer.bindPopup(feature.properties.name);
+		    	}
+		    }).addTo(map);
+		});
 
 
 		<!-- old, working stufff-->
