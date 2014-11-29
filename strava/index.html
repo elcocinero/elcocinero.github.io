@@ -18,32 +18,32 @@
 			id: 'examples.map-i875mjb7'
 			});
 
-		// $.when(
-		// 	$.getJSON("./datafiles/20140811-142355-Ride.json"),
-		// 	$.getJSON("./datafiles/20140810-220040-Ride.json")
-		// ).done(function(data) {
-		// 	    var geojson = L.geoJson(data, {
-		// 	     	onEachFeature: function (feature, layer) {
-		// 	       		layer.bindPopup(feature.properties.name);
-		// 	    	}
-		// 	    });
-		// 	    var map = L.map('map').fitBounds(geojson.getBounds());
-		// 	    tiles.addTo(map);
-		// 	    geojson.addTo(map);
-	 //  		});	
+		$.when(
+			$.getJSON("./datafiles/20140721-225254-Ride.json"),
+			$.getJSON("./datafiles/20140810-220040-Ride.json")
+		).done(function(data) {
+			    var geojson = L.geoJson(data, {
+			     	onEachFeature: function (feature, layer) {
+			       		layer.bindPopup(feature.properties.name);
+			    	}
+			    });
+			    var map = L.map('map').fitBounds(geojson.getBounds());
+			    tiles.addTo(map);
+			    geojson.addTo(map);
+	  		});	
 
 
 		<!-- old, working stufff-->
-		 $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
-		    var geojson = L.geoJson(data, {
-		     	onEachFeature: function (feature, layer) {
-		       		layer.bindPopup(feature.properties.name);
-		    	}
-		    });
-		    var map = L.map('map').fitBounds(geojson.getBounds());
-		    tiles.addTo(map);
-		    geojson.addTo(map);
-  		});	
+		 // $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
+		 //    var geojson = L.geoJson(data, {
+		 //     	onEachFeature: function (feature, layer) {
+		 //       		layer.bindPopup(feature.properties.name);
+		 //    	}
+		 //    });
+		 //    var map = L.map('map').fitBounds(geojson.getBounds());
+		 //    tiles.addTo(map);
+		 //    geojson.addTo(map);
+  	// 	});	
 
    	</script>
 
