@@ -5,7 +5,6 @@
 	<link rel="stylesheet" href="../js/leaflet.css" />
 	<script src="../js/leaflet.js"></script>
   	<script src="../js/kml.js"></script>
-   
    	<script language="javascript">
       function init() {
          var map = new L.Map('map');                       
@@ -15,7 +14,7 @@
          }).addTo(map);
          map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
                                                              
-         var kmlLayer = new L.KML("amtrak.kml", {async: true});
+         var kmlLayer = new L.KML("mapperz-kml-example.kml", {async: true});
                                                               
          kmlLayer.on("loaded", function(e) { 
             map.fitBounds(e.target.getBounds());
@@ -25,12 +24,46 @@
          
       }
    	</script>
-
-
-
 </head>
 <body onLoad="javascript:init();">
 	<div id="map"></div>
 </body>
 </html>
- -->
+    
+
+<!-- 
+
+<!doctype html>
+<html>
+<head>
+    <title>Amtrak Trip</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="../js/leaflet.css" />
+	<script src="../js/leaflet.js"></script>
+  	<script src="../js/kml.js"></script>
+   	<script language="javascript">
+		function init() {
+			var map = new L.map('map');
+
+			L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+				maxZoom: 18,
+				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+					'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+					'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+				id: 'examples.map-i875mjb7'
+				}).addTo(map);
+
+			var kmlLayer = new L.KML("amtrak.kml", {async: true});
+
+			kmlLayer.on("loaded", function(e) {
+				map.fitBounds(e.target.getBounds());
+			});
+			map.addLayer(kmlLayer);
+		}
+   	</script>
+</head>
+<body onLoad="javascript:init();">
+	<div id="map"></div>
+</body>
+</html>
+ --> -->
