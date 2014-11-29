@@ -7,28 +7,30 @@
 	<script src="../js/leaflet.js"></script>
   	<script src="../js/kml.js"></script>
 </head>
-<body>
+<body onLoad="javascript:init();">
 	<div id="map"></div>
    	<script>
 		// might need function init
-		var map = L.map('map');
+		function init() {
+			var map = L.map('map');
 
-		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-			id: 'examples.map-i875mjb7'
-			}).addTo(map);
+			L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+				maxZoom: 18,
+				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+					'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+					'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+				id: 'examples.map-i875mjb7'
+				}).addTo(map);
 
-		var kmlLayer = new L.KML("amtrak.kml", {async: true});
+			var kmlLayer = new L.KML("amtrak.kml", {async: true});
 
-		kmlLayer.on("loaded", function(e) {
-			map.fitBounds(e.target.getBounds());
-		});
-		map.addLayer(kmlLayer);
-
-
+			kmlLayer.on("loaded", function(e) {
+				map.fitBounds(e.target.getBounds());
+			});
+			map.addLayer(kmlLayer);
+		}
    	</script>
 </body>
 </html>
+
+y
