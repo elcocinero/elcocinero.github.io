@@ -51,9 +51,7 @@
           id: 'examples.map-i875mjb7'
         }).addTo(map);
 
-        new L.GPX(url, {
-          async: true,
-        }).on('loaded', function(e) {
+        new L.GPX(url).on('loaded', function(e) {
           var gpx = e.target;
           map.fitBounds(gpx.getBounds());
 
