@@ -10,14 +10,13 @@
 <body>
 	<div id="map"></div>
    	<script>
-		var tiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+		tiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			id: 'examples.map-i875mjb7'
-			});
-		tiles.addTo(map);
+			}).addTo(map);
 
 
 		<!-- this code only shows the first json...-->
@@ -37,16 +36,15 @@
 
 
 		<!-- old, working stufff-->
-		 // $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
-		 //    var geojson = L.geoJson(data, {
-		 //     	onEachFeature: function (feature, layer) {
-		 //       		layer.bindPopup(feature.properties.name);
-		 //    	}
-		 //    });
-		 //    var map = L.map('map').fitBounds(geojson.getBounds());
-		 //    tiles.addTo(map);
-		 //    geojson.addTo(map);
-  	// 	});	
+		 $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
+		    var geojson = L.geoJson(data, {
+		     	onEachFeature: function (feature, layer) {
+		       		layer.bindPopup(feature.properties.name);
+		    	}
+		    });
+		    var map = L.map('map').fitBounds(geojson.getBounds());
+		    geojson.addTo(map);
+  		});	
 
    	</script>
 
