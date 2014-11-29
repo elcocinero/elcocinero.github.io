@@ -36,15 +36,15 @@
 
 
 		<!-- old, working stufff-->
-		 $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
-		    var geojson = L.geoJson(data, {
-		     	onEachFeature: function (feature, layer) {
-		       		layer.bindPopup(feature.properties.name);
-		    	}
-		    });
-		    var map = L.map('map').fitBounds(geojson.getBounds());
-		    geojson.addTo(map);
-  		});	
+		 // $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
+		 //    var geojson = L.geoJson(data, {
+		 //     	onEachFeature: function (feature, layer) {
+		 //       		layer.bindPopup(feature.properties.name);
+		 //    	}
+		 //    });
+		 //    var map = L.map('map').fitBounds(geojson.getBounds());
+		 //    geojson.addTo(map);
+  	// 	});	
 
    	</script>
 
