@@ -35,13 +35,13 @@
 
 
 		<!-- this code gets both to display, but is looong-->
-		// $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
-		//     var geojson1 = L.geoJson(data, {
-		//      	onEachFeature: function (feature, layer) {
-		//        		layer.bindPopup(feature.properties.name);
-		//     	}
-		//     }).addTo(map);
-  // 		});	
+		$.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
+		    var geojson1 = L.geoJson(data, {
+		     	onEachFeature: function (feature, layer) {
+		       		layer.bindPopup(feature.properties.name);
+		    	}
+		    }).addTo(map);
+  		});	
 		// $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
 		//     var geojson2 = L.geoJson(data, {
 		//      	onEachFeature: function (feature, layer) {
@@ -53,14 +53,24 @@
 
   		var jsonlist = ["./datafiles/20140810-220040-Ride.json","./datafiles/20140810-220040-Ride.json"];
 
-  		$.each(jsonlist, function (data) {
-	  		 var geojson2 = L.geoJson(data, {
-		     	onEachFeature: function (feature, layer) {
-		       		layer.bindPopup(feature.properties.name);
-		    	}
-		    }).addTo(map);
-		});
+  		$.each(jsonlist, function (i, jsonid) {
+	  		$.getJSON(jsonid, function(data) {
+			    var geojson1 = L.geoJson(data, {
+			     	onEachFeature: function (feature, layer) {
+			       		layer.bindPopup(feature.properties.name);
+			    	}
+			    }).addTo(map);
+	  		});
+	  	});
 
+
+// $.each(jsonFilesArray, function (i, jsonQuestID) {
+//     var level = jsonQuestID.slice(0, jsonQuestID.indexOf('-'));
+//     var quest = jsonQuestID.slice(jsqonQuestID.indexOf('-') + 1);
+//     $.getJSON("dialog/Level "+ level +"/quest_"+ (level + quest) +".json", function(json) {
+//         //do stuff 
+//     });
+// });
 
 		<!-- old, working stufff-->
 		 // $.getJSON("./datafiles/20140810-220040-Ride.json", function(data) {
