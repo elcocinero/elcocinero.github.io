@@ -9,5 +9,13 @@ Things to add
  ☐ create summary stats by month
 
    trying with gpx
+
    https://github.com/mpetazzoni/leaflet-gpx
 
+leaflet omnivore
+https://www.mapbox.com/mapbox.js/example/v1.0.0/omnivore-gpx/
+
+other things to look at for gpx
+https://github.com/makinacorpus/Leaflet.FileLayer
+https://github.com/shramov/leaflet-plugins/blob/master/examples/gpx.html
+https://github.com/shramov/leaflet-plugins

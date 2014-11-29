@@ -2,21 +2,9 @@
 <html>
   <head>
     <title>leaflet-gpx demo</title>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
-    <style type="text/css">
-      body { width: 800px; margin: 0 auto; }
-      .gpx { border: 5px #aaa solid; border-radius: 5px;
-        box-shadow: 0 0 3px 3px #ccc;
-        width: 800px; margin: 1em auto; }
-      .gpx header { padding: 0.5em; }
-      .gpx h3 { margin: 0; padding: 0; font-weight: bold; }
-      .gpx .start { font-size: smaller; color: #444; }
-      .gpx .map { border: 1px #888 solid; border-left: none; border-right: none;
-        width: 800px; height: 300px; margin: 0; }
-      .gpx footer { background: #f0f0f0; padding: 0.5em; }
-      .gpx ul.info { list-style: none; margin: 0; padding: 0; font-size: smaller; }
-      .gpx ul.info li { color: #666; padding: 2px; display: inline; }
-      .gpx ul.info li span { color: black; }
+    <link rel="stylesheet" href="../js/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
     </style>
   </head>
   <body>
@@ -43,8 +31,8 @@
       </footer>
     </section>
 
-    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
-    <script src="https://rawgithub.com/mpetazzoni/leaflet-gpx/master/gpx.js"></script>
+    <script src="../js/leaflet.js"></script>
+    <script src="../js/gpx.js"></script>
     <script type="application/javascript">
       function display_gpx(elt) {
         if (!elt) return;
