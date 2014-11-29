@@ -41,16 +41,15 @@
 		     	onEachFeature: function (feature, layer) {
 		       		layer.bindPopup(feature.properties.name);
 		    	}
-		    });
-		    geojson1.addTo(map);
+		    }).addTo(map);
   		});	
+
 		$.getJSON("./datafiles/20140721-225254-Ride", function(data) {
 		    var geojson2 = L.geoJson(data, {
 		     	onEachFeature: function (feature, layer) {
 		       		layer.bindPopup(feature.properties.name);
 		    	}
-		    });
-		    geojson2.addTo(map);
+		    }).addTo(map);
   		});	
 
 
