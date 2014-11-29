@@ -14,7 +14,7 @@
          }).addTo(map);
          map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
                                                              
-         var kmlLayer = new L.KML("mapperz-kml-example.kml", {async: true});
+         var kmlLayer = new L.KML("amtrak.kml", {async: true});
                                                               
          kmlLayer.on("loaded", function(e) { 
             map.fitBounds(e.target.getBounds());
