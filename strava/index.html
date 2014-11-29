@@ -19,8 +19,8 @@
 			});
 
 		$.when(
-			$.getJSON("./20140220-141528-Ride.json"),
-			$.getJSON("./20140220-210904-Ride.json")
+			$.getJSON("./datafiles/20140220-141528-Ride.json"),
+			$.getJSON("./datafiles/20140220-210904-Ride.json")
 		).done(function(data) {
 			    var geojson = L.geoJson(data, {
 			     	onEachFeature: function (feature, layer) {
