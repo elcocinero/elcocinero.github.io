@@ -1,50 +1,103 @@
-var freeBus = {
+var bicycleRental = {
     "type": "FeatureCollection",
     "features": [
         {
-            "type": "Feature",
             "geometry": {
-                "type": "LineString",
+                "type": "Point",
                 "coordinates": [
-                    [-105.00341892242432, 39.75383843460583],
-                    [-105.0008225440979, 39.751891803969535]
+                    -104.9998241,
+                    39.7471494
                 ]
             },
+            "type": "Feature",
             "properties": {
-                "popupContent": "This is free bus that will take you across downtown.",
-                "underConstruction": false
+                "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
             },
-            "id": 1
+            "id": 51
         },
         {
-            "type": "Feature",
             "geometry": {
-                "type": "LineString",
+                "type": "Point",
                 "coordinates": [
-                    [-105.0008225440979, 39.751891803969535],
-                    [-104.99820470809937, 39.74979664004068]
+                    -104.9983545,
+                    39.7502833
                 ]
             },
+            "type": "Feature",
             "properties": {
-                "popupContent": "This is free bus that will take you across downtown.",
-                "underConstruction": true
+                "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
             },
-            "id": 2
+            "id": 52
         },
         {
-            "type": "Feature",
             "geometry": {
-                "type": "LineString",
+                "type": "Point",
                 "coordinates": [
-                    [-104.99820470809937, 39.74979664004068],
-                    [-104.98689651489258, 39.741052354709055]
+                    -104.9963919,
+                    39.7444271
                 ]
             },
+            "type": "Feature",
             "properties": {
-                "popupContent": "This is free bus that will take you across downtown.",
-                "underConstruction": false
+                "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
             },
-            "id": 3
+            "id": 54
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.9960754,
+                    39.7498956
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+            },
+            "id": 55
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.9933717,
+                    39.7477264
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+            },
+            "id": 57
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.9913392,
+                    39.7432392
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+            },
+            "id": 58
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.9788452,
+                    39.6933755
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!"
+            },
+            "id": 74
         }
     ]
 };
