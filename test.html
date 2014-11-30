@@ -50,6 +50,14 @@
             onEachFeature: onEachFeature
         }).addTo(map);
 
+        var coorsLayer = L.geoJson(coorsField, {
+
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, {icon: baseballIcon});
+            },
+
+            onEachFeature: onEachFeature
+        }).addTo(map);
 
     </script>
 </body>
