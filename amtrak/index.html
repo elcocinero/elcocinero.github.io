@@ -10,7 +10,7 @@
 <body>
     <div id="map" style="width: 600px; height: 400px"></div>
  <script>
-        var map = L.map('map').setView([39.74739, -105], 13);
+        var map = L.map('map');
 
         L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
             maxZoom: 18,
@@ -52,6 +52,8 @@
                 });
             }
         }).addTo(map);
+
+        map.fitBounds(amtrak.getBounds());
 
     </script>
 </body>
