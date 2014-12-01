@@ -14,6 +14,7 @@
         var map = L.map('map',{
             center: [39.73, -104.99],
             zoom: 10,
+            layers: [boston,chicago,portland]
         });
         L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
