@@ -50,7 +50,6 @@ var freeBus = {
         }
     ]
 };
-};
 
 var amtraklines = {
     "type": "FeatureCollection",
