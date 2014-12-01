@@ -21,8 +21,7 @@
             }).addTo(map);
 
         function onEachFeature(feature, layer) {
-            var popupContent = "Marker ID" + id
-                    feature.id;
+            var popupContent = "Marker ID" + feature.id + "Timestamp" + feature.properties.date;
             layer.bindPopup(popupContent);
         }
 
