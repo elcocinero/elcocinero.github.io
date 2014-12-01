@@ -22,7 +22,7 @@
 
         function onEachFeature(feature, layer) {
             var popupContent = "Marker ID" + id
-                    feature.id + "Timestamp" + feature.properties.date;
+                    feature.id;
             layer.bindPopup(popupContent);
         }
 
