@@ -12,8 +12,6 @@
     <div id="map"></div>
  <script>
         var map = L.map('map');
-
-
         L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -57,8 +55,6 @@
         }).addTo(map);
 
         map.fitBounds(amtrak.getBounds());
-
-
 
     </script>
 </body>
