@@ -11,9 +11,9 @@
 <body>
     <div id="map"></div>
  <script>
-        var boston = map.panTo(new L.LatLng(42.308803, -71.076040)),
-            chicago = map.panTo(new L.LatLng(41.820430, -87.670357)),
-            portland = map.panTo(new L.LatLng(45.551092, -122.589191));
+        var boston = panTo(new L.LatLng(42.308803, -71.076040)),
+            chicago = panTo(new L.LatLng(41.820430, -87.670357)),
+            portland = panTo(new L.LatLng(45.551092, -122.589191));
         var map = L.map('map',{
             center: [39.73, -104.99],
             zoom: 10,
