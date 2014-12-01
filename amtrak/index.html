@@ -41,7 +41,16 @@
 
         map.fitBounds(amtrak.getBounds());
 
-        map.panTo(new L.LatLng(42.308803, -71.076040));
+        var boston = map.panTo(new L.LatLng(42.308803, -71.076040));
+        var chicago = map.panTo(new L.LatLng(41.820430, -87.670357));
+
+        var recenter = {
+            "Boston": boston,
+            "Chicago": chicago
+        };
+
+        L.control.layers(recenter).addTo(map);
+
 
     </script>
 </body>
