@@ -13,7 +13,6 @@
  <script>
         var map = L.map('map');
         L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-            maxZoom: 18,
             center: [39.73, -104.99],
             zoom: 10,
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -43,17 +42,17 @@
 
         // map.fitBounds(amtrak.getBounds());
 
-        var boston = map.panTo(new L.LatLng(42.308803, -71.076040)),
-            chicago = map.panTo(new L.LatLng(41.820430, -87.670357)),
-            portand = map.panTo(new L.LatLng(45.551092, -122.589191));
+        // var boston = map.panTo(new L.LatLng(42.308803, -71.076040)),
+        //     chicago = map.panTo(new L.LatLng(41.820430, -87.670357)),
+        //     portand = map.panTo(new L.LatLng(45.551092, -122.589191));
 
-        var recenter = {
-            "Boston": boston,
-            "Chicago": chicago,
-            "Portland": portland
-        };
+        // var recenter = {
+        //     "Boston": boston,
+        //     "Chicago": chicago,
+        //     "Portland": portland
+        // };
 
-        L.control.layers(recenter).addTo(map);
+        // L.control.layers(recenter).addTo(map);
 
 
     </script>
