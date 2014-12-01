@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="../js/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script src="../js/leaflet.js"></script>
-    <script src="bus.js" type="text/javascript">></script>
+    <script src="amtrak.js" type="text/javascript">></script>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
         // }).addTo(map);
 
         // linestring layer
-        var buslayer = L.geoJson(freeBus, {
+        var amtrak = L.geoJson(amtracklines, {
 
             filter: function (feature, layer) {
                 if (feature.properties) {
@@ -67,7 +67,7 @@
 
 
 
-        map.fitBounds(buslayer.getBounds());
+        map.fitBounds(amtrak.getBounds());
 
     </script>
 </body>
