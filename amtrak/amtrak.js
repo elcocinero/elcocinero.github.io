@@ -51,7 +51,7 @@ var freeBus = {
     ]
 };
 
-var amtraklines = {
+var amtrakLines = {
     "type": "FeatureCollection",
     "features": [
         {

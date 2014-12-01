@@ -51,7 +51,7 @@
         // }).addTo(map);
 
         // linestring layer
-        var amtrak = L.geoJson(freeBus, {
+        var amtrak = L.geoJson(amtrakLines, {
 
             filter: function (feature, layer) {
                 if (feature.properties) {
