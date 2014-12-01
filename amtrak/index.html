@@ -51,7 +51,7 @@
         // }).addTo(map);
 
         // linestring layer
-        L.geoJson(freeBus, {
+        var buslayer = L.geoJson(freeBus, {
 
             filter: function (feature, layer) {
                 if (feature.properties) {
@@ -67,7 +67,7 @@
 
 
 
-        map.fitBounds(amtrak.getBounds());
+        map.fitBounds(buslayer.getBounds());
 
     </script>
 </body>
