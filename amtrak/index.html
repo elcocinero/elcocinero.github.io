@@ -25,26 +25,6 @@
             layer.bindPopup(popupContent);
         }
 
-
-        // points layer
-        // var amtrak = L.geoJson([amtrakpts], {
-        //     style: function (feature) {
-        //         return feature.properties && feature.properties.style;
-        //     },
-        //     onEachFeature: onEachFeature,
-        //     pointToLayer: function (feature, latlng) {
-        //         return L.circleMarker(latlng, {
-        //             radius: 8,
-        //             fillColor: "#ff7800",
-        //             color: "#000",
-        //             weight: 1,
-        //             opacity: 1,
-        //             fillOpacity: 0.8
-        //         });
-        //     }
-        // }).addTo(map);
-
-        // linestring layer
         var amtrak = L.geoJson(amtrakLines, {
 
             filter: function (feature, layer) {
@@ -57,8 +37,6 @@
 
             onEachFeature: onEachFeature
         }).addTo(map);
-
-
 
 
         map.fitBounds(amtrak.getBounds());
