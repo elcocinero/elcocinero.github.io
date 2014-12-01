@@ -54,6 +54,7 @@ var freeBus = {
 var amtrakLines = {
     "type": "FeatureCollection",
     "features": [
+
         {
             "type": "Feature",
             "geometry": {
@@ -64,7 +65,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 11 2014 01:47:05 GMT-0400 (EDT)\""
+                "date": "Fri Jul 11 2014 01:47:05 GMT-0400 (EDT)"
             },
             "id": 1
         },
@@ -78,7 +79,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 11 2014 01:35:08 GMT-0400 (EDT)\""
+                "date": "Fri Jul 11 2014 01:35:08 GMT-0400 (EDT)"
             },
             "id": 2
         },
@@ -92,7 +93,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 11 2014 01:01:58 GMT-0400 (EDT)\""
+                "date": "Fri Jul 11 2014 01:01:58 GMT-0400 (EDT)"
             },
             "id": 3
         },
@@ -106,7 +107,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 11 2014 00:48:49 GMT-0400 (EDT)\""
+                "date": "Fri Jul 11 2014 00:48:49 GMT-0400 (EDT)"
             },
             "id": 4
         },
@@ -120,7 +121,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 11 2014 00:37:38 GMT-0400 (EDT)\""
+                "date": "Fri Jul 11 2014 00:37:38 GMT-0400 (EDT)"
             },
             "id": 5
         },
@@ -134,7 +135,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 11 2014 00:29:26 GMT-0400 (EDT)\""
+                "date": "Fri Jul 11 2014 00:29:26 GMT-0400 (EDT)"
             },
             "id": 6
         },
@@ -148,7 +149,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 11 2014 00:09:58 GMT-0400 (EDT)\""
+                "date": "Fri Jul 11 2014 00:09:58 GMT-0400 (EDT)"
             },
             "id": 7
         },
@@ -162,7 +163,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 23:57:22 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 23:57:22 GMT-0400 (EDT)"
             },
             "id": 8
         },
@@ -176,7 +177,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 23:41:35 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 23:41:35 GMT-0400 (EDT)"
             },
             "id": 9
         },
@@ -190,7 +191,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 21:03:21 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 21:03:21 GMT-0400 (EDT)"
             },
             "id": 10
         },
@@ -204,7 +205,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 20:50:44 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 20:50:44 GMT-0400 (EDT)"
             },
             "id": 11
         },
@@ -218,7 +219,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 20:32:33 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 20:32:33 GMT-0400 (EDT)"
             },
             "id": 12
         },
@@ -232,7 +233,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 20:14:42 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 20:14:42 GMT-0400 (EDT)"
             },
             "id": 13
         },
@@ -246,7 +247,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 20:05:21 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 20:05:21 GMT-0400 (EDT)"
             },
             "id": 14
         },
@@ -260,7 +261,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 19:34:00 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 19:34:00 GMT-0400 (EDT)"
             },
             "id": 15
         },
@@ -274,7 +275,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 19:21:55 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 19:21:55 GMT-0400 (EDT)"
             },
             "id": 16
         },
@@ -288,7 +289,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 18:53:16 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 18:53:16 GMT-0400 (EDT)"
             },
             "id": 17
         },
@@ -302,7 +303,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 18:44:57 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 18:44:57 GMT-0400 (EDT)"
             },
             "id": 18
         },
@@ -316,7 +317,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 18:34:46 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 18:34:46 GMT-0400 (EDT)"
             },
             "id": 19
         },
@@ -330,7 +331,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 18:22:10 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 18:22:10 GMT-0400 (EDT)"
             },
             "id": 20
         },
@@ -344,7 +345,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 18:10:43 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 18:10:43 GMT-0400 (EDT)"
             },
             "id": 21
         },
@@ -358,7 +359,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 17:54:21 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 17:54:21 GMT-0400 (EDT)"
             },
             "id": 22
         },
@@ -372,7 +373,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 17:37:49 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 17:37:49 GMT-0400 (EDT)"
             },
             "id": 23
         },
@@ -386,7 +387,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 17:18:35 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 17:18:35 GMT-0400 (EDT)"
             },
             "id": 24
         },
@@ -400,7 +401,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 17:01:41 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 17:01:41 GMT-0400 (EDT)"
             },
             "id": 25
         },
@@ -414,7 +415,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 16:51:15 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 16:51:15 GMT-0400 (EDT)"
             },
             "id": 26
         },
@@ -428,7 +429,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 16:38:31 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 16:38:31 GMT-0400 (EDT)"
             },
             "id": 27
         },
@@ -442,7 +443,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 16:21:47 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 16:21:47 GMT-0400 (EDT)"
             },
             "id": 28
         },
@@ -456,7 +457,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 16:15:46 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 16:15:46 GMT-0400 (EDT)"
             },
             "id": 29
         },
@@ -470,7 +471,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 15:12:06 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 15:12:06 GMT-0400 (EDT)"
             },
             "id": 30
         },
@@ -484,7 +485,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 14:52:28 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 14:52:28 GMT-0400 (EDT)"
             },
             "id": 31
         },
@@ -498,7 +499,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 14:43:51 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 14:43:51 GMT-0400 (EDT)"
             },
             "id": 32
         },
@@ -512,7 +513,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 14:24:45 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 14:24:45 GMT-0400 (EDT)"
             },
             "id": 33
         },
@@ -526,7 +527,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 14:07:09 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 14:07:09 GMT-0400 (EDT)"
             },
             "id": 34
         },
@@ -540,7 +541,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 13:51:27 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 13:51:27 GMT-0400 (EDT)"
             },
             "id": 35
         },
@@ -554,7 +555,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 13:25:09 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 13:25:09 GMT-0400 (EDT)"
             },
             "id": 36
         },
@@ -568,7 +569,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 13:15:19 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 13:15:19 GMT-0400 (EDT)"
             },
             "id": 37
         },
@@ -582,7 +583,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 13:04:56 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 13:04:56 GMT-0400 (EDT)"
             },
             "id": 38
         },
@@ -596,7 +597,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 12:59:08 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 12:59:08 GMT-0400 (EDT)"
             },
             "id": 39
         },
@@ -610,7 +611,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 12:41:24 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 12:41:24 GMT-0400 (EDT)"
             },
             "id": 40
         },
@@ -624,7 +625,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 12:33:44 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 12:33:44 GMT-0400 (EDT)"
             },
             "id": 41
         },
@@ -638,7 +639,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 01:18:02 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 01:18:02 GMT-0400 (EDT)"
             },
             "id": 42
         },
@@ -652,7 +653,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 01:04:09 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 01:04:09 GMT-0400 (EDT)"
             },
             "id": 43
         },
@@ -666,7 +667,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 00:58:15 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 00:58:15 GMT-0400 (EDT)"
             },
             "id": 44
         },
@@ -680,7 +681,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 10 2014 00:46:23 GMT-0400 (EDT)\""
+                "date": "Thu Jul 10 2014 00:46:23 GMT-0400 (EDT)"
             },
             "id": 45
         },
@@ -694,7 +695,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 13:29:40 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 13:29:40 GMT-0400 (EDT)"
             },
             "id": 46
         },
@@ -708,7 +709,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 13:15:58 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 13:15:58 GMT-0400 (EDT)"
             },
             "id": 47
         },
@@ -722,7 +723,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 12:58:19 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 12:58:19 GMT-0400 (EDT)"
             },
             "id": 48
         },
@@ -736,7 +737,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 12:31:41 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 12:31:41 GMT-0400 (EDT)"
             },
             "id": 49
         },
@@ -750,7 +751,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 12:23:42 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 12:23:42 GMT-0400 (EDT)"
             },
             "id": 50
         },
@@ -764,7 +765,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 11:43:51 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 11:43:51 GMT-0400 (EDT)"
             },
             "id": 51
         },
@@ -778,7 +779,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 11:09:51 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 11:09:51 GMT-0400 (EDT)"
             },
             "id": 52
         },
@@ -792,7 +793,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 09 2014 00:27:29 GMT-0400 (EDT)\""
+                "date": "Wed Jul 09 2014 00:27:29 GMT-0400 (EDT)"
             },
             "id": 53
         },
@@ -806,7 +807,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 21:38:46 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 21:38:46 GMT-0400 (EDT)"
             },
             "id": 54
         },
@@ -820,7 +821,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 21:28:09 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 21:28:09 GMT-0400 (EDT)"
             },
             "id": 55
         },
@@ -834,7 +835,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 21:17:21 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 21:17:21 GMT-0400 (EDT)"
             },
             "id": 56
         },
@@ -848,7 +849,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 21:08:04 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 21:08:04 GMT-0400 (EDT)"
             },
             "id": 57
         },
@@ -862,7 +863,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 20:34:09 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 20:34:09 GMT-0400 (EDT)"
             },
             "id": 58
         },
@@ -876,7 +877,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 20:22:57 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 20:22:57 GMT-0400 (EDT)"
             },
             "id": 59
         },
@@ -890,7 +891,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 20:17:05 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 20:17:05 GMT-0400 (EDT)"
             },
             "id": 60
         },
@@ -904,7 +905,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 19:37:23 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 19:37:23 GMT-0400 (EDT)"
             },
             "id": 61
         },
@@ -918,7 +919,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 19:31:27 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 19:31:27 GMT-0400 (EDT)"
             },
             "id": 62
         },
@@ -932,7 +933,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 18:55:15 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 18:55:15 GMT-0400 (EDT)"
             },
             "id": 63
         },
@@ -946,7 +947,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 18:46:39 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 18:46:39 GMT-0400 (EDT)"
             },
             "id": 64
         },
@@ -960,7 +961,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 18:30:46 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 18:30:46 GMT-0400 (EDT)"
             },
             "id": 65
         },
@@ -974,7 +975,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 18:21:33 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 18:21:33 GMT-0400 (EDT)"
             },
             "id": 66
         },
@@ -988,7 +989,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 17:07:37 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 17:07:37 GMT-0400 (EDT)"
             },
             "id": 67
         },
@@ -1002,7 +1003,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 16:40:58 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 16:40:58 GMT-0400 (EDT)"
             },
             "id": 68
         },
@@ -1016,7 +1017,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 16:26:33 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 16:26:33 GMT-0400 (EDT)"
             },
             "id": 69
         },
@@ -1030,7 +1031,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 16:07:13 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 16:07:13 GMT-0400 (EDT)"
             },
             "id": 70
         },
@@ -1044,7 +1045,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 15:54:57 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 15:54:57 GMT-0400 (EDT)"
             },
             "id": 71
         },
@@ -1058,7 +1059,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 14:59:36 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 14:59:36 GMT-0400 (EDT)"
             },
             "id": 72
         },
@@ -1072,7 +1073,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 14:36:34 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 14:36:34 GMT-0400 (EDT)"
             },
             "id": 73
         },
@@ -1086,7 +1087,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 14:25:20 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 14:25:20 GMT-0400 (EDT)"
             },
             "id": 74
         },
@@ -1100,7 +1101,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 13:54:50 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 13:54:50 GMT-0400 (EDT)"
             },
             "id": 75
         },
@@ -1114,7 +1115,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 13:47:17 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 13:47:17 GMT-0400 (EDT)"
             },
             "id": 76
         },
@@ -1128,7 +1129,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 12:42:32 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 12:42:32 GMT-0400 (EDT)"
             },
             "id": 77
         },
@@ -1142,7 +1143,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 12:25:22 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 12:25:22 GMT-0400 (EDT)"
             },
             "id": 78
         },
@@ -1156,7 +1157,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 12:18:17 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 12:18:17 GMT-0400 (EDT)"
             },
             "id": 79
         },
@@ -1170,7 +1171,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 12:02:19 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 12:02:19 GMT-0400 (EDT)"
             },
             "id": 80
         },
@@ -1184,7 +1185,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 11:46:56 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 11:46:56 GMT-0400 (EDT)"
             },
             "id": 81
         },
@@ -1198,7 +1199,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 11:38:29 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 11:38:29 GMT-0400 (EDT)"
             },
             "id": 82
         },
@@ -1212,7 +1213,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 11:31:44 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 11:31:44 GMT-0400 (EDT)"
             },
             "id": 83
         },
@@ -1226,7 +1227,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 11:22:54 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 11:22:54 GMT-0400 (EDT)"
             },
             "id": 84
         },
@@ -1240,7 +1241,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 11:13:06 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 11:13:06 GMT-0400 (EDT)"
             },
             "id": 85
         },
@@ -1254,7 +1255,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 10:57:29 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 10:57:29 GMT-0400 (EDT)"
             },
             "id": 86
         },
@@ -1268,7 +1269,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 10:35:33 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 10:35:33 GMT-0400 (EDT)"
             },
             "id": 87
         },
@@ -1282,7 +1283,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 10:14:01 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 10:14:01 GMT-0400 (EDT)"
             },
             "id": 88
         },
@@ -1296,7 +1297,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 10:04:03 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 10:04:03 GMT-0400 (EDT)"
             },
             "id": 89
         },
@@ -1310,7 +1311,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 09:55:37 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 09:55:37 GMT-0400 (EDT)"
             },
             "id": 90
         },
@@ -1324,7 +1325,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 09:49:32 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 09:49:32 GMT-0400 (EDT)"
             },
             "id": 91
         },
@@ -1338,7 +1339,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 09:19:57 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 09:19:57 GMT-0400 (EDT)"
             },
             "id": 92
         },
@@ -1352,7 +1353,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 08:47:15 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 08:47:15 GMT-0400 (EDT)"
             },
             "id": 93
         },
@@ -1366,7 +1367,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 08:41:21 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 08:41:21 GMT-0400 (EDT)"
             },
             "id": 94
         },
@@ -1380,7 +1381,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 08:27:39 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 08:27:39 GMT-0400 (EDT)"
             },
             "id": 95
         },
@@ -1394,7 +1395,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 08:10:29 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 08:10:29 GMT-0400 (EDT)"
             },
             "id": 96
         },
@@ -1408,7 +1409,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 07:41:03 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 07:41:03 GMT-0400 (EDT)"
             },
             "id": 97
         },
@@ -1422,7 +1423,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 07:23:36 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 07:23:36 GMT-0400 (EDT)"
             },
             "id": 98
         },
@@ -1436,7 +1437,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 07:14:39 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 07:14:39 GMT-0400 (EDT)"
             },
             "id": 99
         },
@@ -1450,7 +1451,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 07:02:20 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 07:02:20 GMT-0400 (EDT)"
             },
             "id": 100
         },
@@ -1464,7 +1465,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 06:46:33 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 06:46:33 GMT-0400 (EDT)"
             },
             "id": 101
         },
@@ -1478,7 +1479,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 05:55:57 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 05:55:57 GMT-0400 (EDT)"
             },
             "id": 102
         },
@@ -1492,7 +1493,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 05:40:14 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 05:40:14 GMT-0400 (EDT)"
             },
             "id": 103
         },
@@ -1506,7 +1507,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 05:22:30 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 05:22:30 GMT-0400 (EDT)"
             },
             "id": 104
         },
@@ -1520,7 +1521,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 04:30:49 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 04:30:49 GMT-0400 (EDT)"
             },
             "id": 105
         },
@@ -1534,7 +1535,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 04:24:48 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 04:24:48 GMT-0400 (EDT)"
             },
             "id": 106
         },
@@ -1548,7 +1549,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 04:14:32 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 04:14:32 GMT-0400 (EDT)"
             },
             "id": 107
         },
@@ -1562,7 +1563,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 04:06:26 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 04:06:26 GMT-0400 (EDT)"
             },
             "id": 108
         },
@@ -1576,7 +1577,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 03:48:44 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 03:48:44 GMT-0400 (EDT)"
             },
             "id": 109
         },
@@ -1590,7 +1591,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 03:40:55 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 03:40:55 GMT-0400 (EDT)"
             },
             "id": 110
         },
@@ -1604,7 +1605,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 03:35:47 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 03:35:47 GMT-0400 (EDT)"
             },
             "id": 111
         },
@@ -1618,7 +1619,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 03:25:20 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 03:25:20 GMT-0400 (EDT)"
             },
             "id": 112
         },
@@ -1632,7 +1633,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 03:18:28 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 03:18:28 GMT-0400 (EDT)"
             },
             "id": 113
         },
@@ -1646,7 +1647,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 03:01:29 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 03:01:29 GMT-0400 (EDT)"
             },
             "id": 114
         },
@@ -1660,7 +1661,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 02:53:11 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 02:53:11 GMT-0400 (EDT)"
             },
             "id": 115
         },
@@ -1674,7 +1675,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 02:43:15 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 02:43:15 GMT-0400 (EDT)"
             },
             "id": 116
         },
@@ -1688,7 +1689,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 02:35:44 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 02:35:44 GMT-0400 (EDT)"
             },
             "id": 117
         },
@@ -1702,7 +1703,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 02:26:27 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 02:26:27 GMT-0400 (EDT)"
             },
             "id": 118
         },
@@ -1716,7 +1717,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 02:06:21 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 02:06:21 GMT-0400 (EDT)"
             },
             "id": 119
         },
@@ -1730,7 +1731,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 02:01:00 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 02:01:00 GMT-0400 (EDT)"
             },
             "id": 120
         },
@@ -1744,7 +1745,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 01:18:15 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 01:18:15 GMT-0400 (EDT)"
             },
             "id": 121
         },
@@ -1758,7 +1759,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 01:07:26 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 01:07:26 GMT-0400 (EDT)"
             },
             "id": 122
         },
@@ -1772,7 +1773,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 00:54:09 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 00:54:09 GMT-0400 (EDT)"
             },
             "id": 123
         },
@@ -1786,7 +1787,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 08 2014 00:42:26 GMT-0400 (EDT)\""
+                "date": "Tue Jul 08 2014 00:42:26 GMT-0400 (EDT)"
             },
             "id": 124
         },
@@ -1800,7 +1801,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 23:09:16 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 23:09:16 GMT-0400 (EDT)"
             },
             "id": 125
         },
@@ -1814,7 +1815,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 22:55:14 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 22:55:14 GMT-0400 (EDT)"
             },
             "id": 126
         },
@@ -1828,7 +1829,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 22:46:17 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 22:46:17 GMT-0400 (EDT)"
             },
             "id": 127
         },
@@ -1842,7 +1843,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 22:33:04 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 22:33:04 GMT-0400 (EDT)"
             },
             "id": 128
         },
@@ -1856,7 +1857,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 22:15:01 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 22:15:01 GMT-0400 (EDT)"
             },
             "id": 129
         },
@@ -1870,7 +1871,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 22:09:10 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 22:09:10 GMT-0400 (EDT)"
             },
             "id": 130
         },
@@ -1884,7 +1885,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 22:00:48 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 22:00:48 GMT-0400 (EDT)"
             },
             "id": 131
         },
@@ -1898,7 +1899,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 21:39:47 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 21:39:47 GMT-0400 (EDT)"
             },
             "id": 132
         },
@@ -1912,7 +1913,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 21:31:23 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 21:31:23 GMT-0400 (EDT)"
             },
             "id": 133
         },
@@ -1926,7 +1927,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 21:15:56 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 21:15:56 GMT-0400 (EDT)"
             },
             "id": 134
         },
@@ -1940,7 +1941,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 21:09:50 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 21:09:50 GMT-0400 (EDT)"
             },
             "id": 135
         },
@@ -1954,7 +1955,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 21:03:47 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 21:03:47 GMT-0400 (EDT)"
             },
             "id": 136
         },
@@ -1968,7 +1969,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 20:55:49 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 20:55:49 GMT-0400 (EDT)"
             },
             "id": 137
         },
@@ -1982,7 +1983,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 20:45:10 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 20:45:10 GMT-0400 (EDT)"
             },
             "id": 138
         },
@@ -1996,7 +1997,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 20:21:56 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 20:21:56 GMT-0400 (EDT)"
             },
             "id": 139
         },
@@ -2010,7 +2011,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 20:11:19 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 20:11:19 GMT-0400 (EDT)"
             },
             "id": 140
         },
@@ -2024,7 +2025,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 20:01:30 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 20:01:30 GMT-0400 (EDT)"
             },
             "id": 141
         },
@@ -2038,7 +2039,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 19:32:48 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 19:32:48 GMT-0400 (EDT)"
             },
             "id": 142
         },
@@ -2052,7 +2053,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 19:13:53 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 19:13:53 GMT-0400 (EDT)"
             },
             "id": 143
         },
@@ -2066,7 +2067,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 19:01:09 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 19:01:09 GMT-0400 (EDT)"
             },
             "id": 144
         },
@@ -2080,7 +2081,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 18:26:29 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 18:26:29 GMT-0400 (EDT)"
             },
             "id": 145
         },
@@ -2094,7 +2095,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 18:14:34 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 18:14:34 GMT-0400 (EDT)"
             },
             "id": 146
         },
@@ -2108,7 +2109,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 17:47:22 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 17:47:22 GMT-0400 (EDT)"
             },
             "id": 147
         },
@@ -2122,7 +2123,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 17:38:53 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 17:38:53 GMT-0400 (EDT)"
             },
             "id": 148
         },
@@ -2136,7 +2137,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 17:17:22 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 17:17:22 GMT-0400 (EDT)"
             },
             "id": 149
         },
@@ -2150,7 +2151,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 16:47:22 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 16:47:22 GMT-0400 (EDT)"
             },
             "id": 150
         },
@@ -2164,7 +2165,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 16:09:41 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 16:09:41 GMT-0400 (EDT)"
             },
             "id": 151
         },
@@ -2178,7 +2179,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 15:55:49 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 15:55:49 GMT-0400 (EDT)"
             },
             "id": 152
         },
@@ -2192,7 +2193,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 15:45:00 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 15:45:00 GMT-0400 (EDT)"
             },
             "id": 153
         },
@@ -2206,7 +2207,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 15:35:48 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 15:35:48 GMT-0400 (EDT)"
             },
             "id": 154
         },
@@ -2220,7 +2221,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 15:14:21 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 15:14:21 GMT-0400 (EDT)"
             },
             "id": 155
         },
@@ -2234,7 +2235,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 15:03:39 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 15:03:39 GMT-0400 (EDT)"
             },
             "id": 156
         },
@@ -2248,7 +2249,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 14:49:38 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 14:49:38 GMT-0400 (EDT)"
             },
             "id": 157
         },
@@ -2262,7 +2263,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 14:28:17 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 14:28:17 GMT-0400 (EDT)"
             },
             "id": 158
         },
@@ -2276,7 +2277,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 13:37:02 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 13:37:02 GMT-0400 (EDT)"
             },
             "id": 159
         },
@@ -2290,7 +2291,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 13:18:20 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 13:18:20 GMT-0400 (EDT)"
             },
             "id": 160
         },
@@ -2304,7 +2305,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 13:09:14 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 13:09:14 GMT-0400 (EDT)"
             },
             "id": 161
         },
@@ -2318,7 +2319,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jul 07 2014 11:57:46 GMT-0400 (EDT)\""
+                "date": "Mon Jul 07 2014 11:57:46 GMT-0400 (EDT)"
             },
             "id": 162
         },
@@ -2332,7 +2333,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 20:15:57 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 20:15:57 GMT-0400 (EDT)"
             },
             "id": 163
         },
@@ -2346,7 +2347,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 17:55:32 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 17:55:32 GMT-0400 (EDT)"
             },
             "id": 164
         },
@@ -2360,7 +2361,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 17:31:09 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 17:31:09 GMT-0400 (EDT)"
             },
             "id": 165
         },
@@ -2374,7 +2375,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 17:23:10 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 17:23:10 GMT-0400 (EDT)"
             },
             "id": 166
         },
@@ -2388,7 +2389,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 17:16:09 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 17:16:09 GMT-0400 (EDT)"
             },
             "id": 167
         },
@@ -2402,7 +2403,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 17:06:14 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 17:06:14 GMT-0400 (EDT)"
             },
             "id": 168
         },
@@ -2416,7 +2417,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 16:31:03 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 16:31:03 GMT-0400 (EDT)"
             },
             "id": 169
         },
@@ -2430,7 +2431,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 16:25:02 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 16:25:02 GMT-0400 (EDT)"
             },
             "id": 170
         },
@@ -2444,7 +2445,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 16:19:10 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 16:19:10 GMT-0400 (EDT)"
             },
             "id": 171
         },
@@ -2458,7 +2459,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 16:12:01 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 16:12:01 GMT-0400 (EDT)"
             },
             "id": 172
         },
@@ -2472,7 +2473,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 16:01:25 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 16:01:25 GMT-0400 (EDT)"
             },
             "id": 173
         },
@@ -2486,7 +2487,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 15:48:56 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 15:48:56 GMT-0400 (EDT)"
             },
             "id": 174
         },
@@ -2500,7 +2501,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 14:54:09 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 14:54:09 GMT-0400 (EDT)"
             },
             "id": 175
         },
@@ -2514,7 +2515,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 14:41:36 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 14:41:36 GMT-0400 (EDT)"
             },
             "id": 176
         },
@@ -2528,7 +2529,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 14:28:42 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 14:28:42 GMT-0400 (EDT)"
             },
             "id": 177
         },
@@ -2542,7 +2543,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 04:35:29 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 04:35:29 GMT-0400 (EDT)"
             },
             "id": 178
         },
@@ -2556,7 +2557,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 04:02:03 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 04:02:03 GMT-0400 (EDT)"
             },
             "id": 179
         },
@@ -2570,7 +2571,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 03:50:01 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 03:50:01 GMT-0400 (EDT)"
             },
             "id": 180
         },
@@ -2584,7 +2585,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 03:20:33 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 03:20:33 GMT-0400 (EDT)"
             },
             "id": 181
         },
@@ -2598,7 +2599,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 02:45:45 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 02:45:45 GMT-0400 (EDT)"
             },
             "id": 182
         },
@@ -2612,7 +2613,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 02:33:53 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 02:33:53 GMT-0400 (EDT)"
             },
             "id": 183
         },
@@ -2626,7 +2627,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jul 06 2014 01:04:27 GMT-0400 (EDT)\""
+                "date": "Sun Jul 06 2014 01:04:27 GMT-0400 (EDT)"
             },
             "id": 184
         },
@@ -2640,7 +2641,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 23:58:37 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 23:58:37 GMT-0400 (EDT)"
             },
             "id": 185
         },
@@ -2654,7 +2655,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 23:16:32 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 23:16:32 GMT-0400 (EDT)"
             },
             "id": 186
         },
@@ -2668,7 +2669,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 21:49:20 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 21:49:20 GMT-0400 (EDT)"
             },
             "id": 187
         },
@@ -2682,7 +2683,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 19:52:31 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 19:52:31 GMT-0400 (EDT)"
             },
             "id": 188
         },
@@ -2696,7 +2697,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 19:29:25 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 19:29:25 GMT-0400 (EDT)"
             },
             "id": 189
         },
@@ -2710,7 +2711,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 19:04:51 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 19:04:51 GMT-0400 (EDT)"
             },
             "id": 190
         },
@@ -2724,7 +2725,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 15:59:39 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 15:59:39 GMT-0400 (EDT)"
             },
             "id": 191
         },
@@ -2738,7 +2739,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 15:49:45 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 15:49:45 GMT-0400 (EDT)"
             },
             "id": 192
         },
@@ -2752,7 +2753,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 15:38:15 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 15:38:15 GMT-0400 (EDT)"
             },
             "id": 193
         },
@@ -2766,7 +2767,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 15:31:50 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 15:31:50 GMT-0400 (EDT)"
             },
             "id": 194
         },
@@ -2780,7 +2781,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 15:08:48 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 15:08:48 GMT-0400 (EDT)"
             },
             "id": 195
         },
@@ -2794,7 +2795,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 13:54:06 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 13:54:06 GMT-0400 (EDT)"
             },
             "id": 196
         },
@@ -2808,7 +2809,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 13:38:32 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 13:38:32 GMT-0400 (EDT)"
             },
             "id": 197
         },
@@ -2822,7 +2823,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 03:35:02 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 03:35:02 GMT-0400 (EDT)"
             },
             "id": 198
         },
@@ -2836,7 +2837,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 02:58:32 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 02:58:32 GMT-0400 (EDT)"
             },
             "id": 199
         },
@@ -2850,7 +2851,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 02:51:08 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 02:51:08 GMT-0400 (EDT)"
             },
             "id": 200
         },
@@ -2864,7 +2865,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 02:36:28 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 02:36:28 GMT-0400 (EDT)"
             },
             "id": 201
         },
@@ -2878,7 +2879,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jul 05 2014 02:21:51 GMT-0400 (EDT)\""
+                "date": "Sat Jul 05 2014 02:21:51 GMT-0400 (EDT)"
             },
             "id": 202
         },
@@ -2892,7 +2893,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 23:26:05 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 23:26:05 GMT-0400 (EDT)"
             },
             "id": 203
         },
@@ -2906,7 +2907,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 22:59:21 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 22:59:21 GMT-0400 (EDT)"
             },
             "id": 204
         },
@@ -2920,7 +2921,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 22:46:28 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 22:46:28 GMT-0400 (EDT)"
             },
             "id": 205
         },
@@ -2934,7 +2935,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 22:31:40 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 22:31:40 GMT-0400 (EDT)"
             },
             "id": 206
         },
@@ -2948,7 +2949,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 22:22:21 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 22:22:21 GMT-0400 (EDT)"
             },
             "id": 207
         },
@@ -2962,7 +2963,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 17:27:52 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 17:27:52 GMT-0400 (EDT)"
             },
             "id": 208
         },
@@ -2976,7 +2977,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 17:16:05 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 17:16:05 GMT-0400 (EDT)"
             },
             "id": 209
         },
@@ -2990,7 +2991,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 16:51:39 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 16:51:39 GMT-0400 (EDT)"
             },
             "id": 210
         },
@@ -3004,7 +3005,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 16:40:16 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 16:40:16 GMT-0400 (EDT)"
             },
             "id": 211
         },
@@ -3018,7 +3019,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 16:27:30 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 16:27:30 GMT-0400 (EDT)"
             },
             "id": 212
         },
@@ -3032,7 +3033,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 16:10:03 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 16:10:03 GMT-0400 (EDT)"
             },
             "id": 213
         },
@@ -3046,7 +3047,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 15:46:45 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 15:46:45 GMT-0400 (EDT)"
             },
             "id": 214
         },
@@ -3060,7 +3061,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 14:11:30 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 14:11:30 GMT-0400 (EDT)"
             },
             "id": 215
         },
@@ -3074,7 +3075,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 14:01:21 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 14:01:21 GMT-0400 (EDT)"
             },
             "id": 216
         },
@@ -3088,7 +3089,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 12:41:32 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 12:41:32 GMT-0400 (EDT)"
             },
             "id": 217
         },
@@ -3102,7 +3103,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jul 04 2014 03:07:11 GMT-0400 (EDT)\""
+                "date": "Fri Jul 04 2014 03:07:11 GMT-0400 (EDT)"
             },
             "id": 218
         },
@@ -3116,7 +3117,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 23:51:07 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 23:51:07 GMT-0400 (EDT)"
             },
             "id": 219
         },
@@ -3130,7 +3131,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 23:43:47 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 23:43:47 GMT-0400 (EDT)"
             },
             "id": 220
         },
@@ -3144,7 +3145,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 20:28:32 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 20:28:32 GMT-0400 (EDT)"
             },
             "id": 221
         },
@@ -3158,7 +3159,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 20:18:33 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 20:18:33 GMT-0400 (EDT)"
             },
             "id": 222
         },
@@ -3172,7 +3173,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 19:25:24 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 19:25:24 GMT-0400 (EDT)"
             },
             "id": 223
         },
@@ -3186,7 +3187,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 19:13:39 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 19:13:39 GMT-0400 (EDT)"
             },
             "id": 224
         },
@@ -3200,7 +3201,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 18:55:14 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 18:55:14 GMT-0400 (EDT)"
             },
             "id": 225
         },
@@ -3214,7 +3215,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 18:13:37 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 18:13:37 GMT-0400 (EDT)"
             },
             "id": 226
         },
@@ -3228,7 +3229,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 18:03:32 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 18:03:32 GMT-0400 (EDT)"
             },
             "id": 227
         },
@@ -3242,7 +3243,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 17:48:44 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 17:48:44 GMT-0400 (EDT)"
             },
             "id": 228
         },
@@ -3256,7 +3257,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 17:41:11 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 17:41:11 GMT-0400 (EDT)"
             },
             "id": 229
         },
@@ -3270,7 +3271,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 17:01:49 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 17:01:49 GMT-0400 (EDT)"
             },
             "id": 230
         },
@@ -3284,7 +3285,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 16:40:58 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 16:40:58 GMT-0400 (EDT)"
             },
             "id": 231
         },
@@ -3298,7 +3299,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 16:27:52 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 16:27:52 GMT-0400 (EDT)"
             },
             "id": 232
         },
@@ -3312,7 +3313,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 16:17:58 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 16:17:58 GMT-0400 (EDT)"
             },
             "id": 233
         },
@@ -3326,7 +3327,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 16:04:42 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 16:04:42 GMT-0400 (EDT)"
             },
             "id": 234
         },
@@ -3340,7 +3341,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 15:44:02 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 15:44:02 GMT-0400 (EDT)"
             },
             "id": 235
         },
@@ -3354,7 +3355,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 15:28:40 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 15:28:40 GMT-0400 (EDT)"
             },
             "id": 236
         },
@@ -3368,7 +3369,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 15:18:54 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 15:18:54 GMT-0400 (EDT)"
             },
             "id": 237
         },
@@ -3382,7 +3383,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 14:59:15 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 14:59:15 GMT-0400 (EDT)"
             },
             "id": 238
         },
@@ -3396,7 +3397,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 14:39:10 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 14:39:10 GMT-0400 (EDT)"
             },
             "id": 239
         },
@@ -3410,7 +3411,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 14:34:05 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 14:34:05 GMT-0400 (EDT)"
             },
             "id": 240
         },
@@ -3424,7 +3425,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 14:19:36 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 14:19:36 GMT-0400 (EDT)"
             },
             "id": 241
         },
@@ -3438,7 +3439,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 14:13:57 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 14:13:57 GMT-0400 (EDT)"
             },
             "id": 242
         },
@@ -3452,7 +3453,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 14:02:12 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 14:02:12 GMT-0400 (EDT)"
             },
             "id": 243
         },
@@ -3466,7 +3467,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 13:56:09 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 13:56:09 GMT-0400 (EDT)"
             },
             "id": 244
         },
@@ -3480,7 +3481,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 13:48:15 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 13:48:15 GMT-0400 (EDT)"
             },
             "id": 245
         },
@@ -3494,7 +3495,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 13:29:36 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 13:29:36 GMT-0400 (EDT)"
             },
             "id": 246
         },
@@ -3508,7 +3509,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 13:19:57 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 13:19:57 GMT-0400 (EDT)"
             },
             "id": 247
         },
@@ -3522,7 +3523,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 13:10:46 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 13:10:46 GMT-0400 (EDT)"
             },
             "id": 248
         },
@@ -3536,7 +3537,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 13:02:40 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 13:02:40 GMT-0400 (EDT)"
             },
             "id": 249
         },
@@ -3550,7 +3551,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 12:53:03 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 12:53:03 GMT-0400 (EDT)"
             },
             "id": 250
         },
@@ -3564,7 +3565,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 12:43:33 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 12:43:33 GMT-0400 (EDT)"
             },
             "id": 251
         },
@@ -3578,7 +3579,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 12:36:16 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 12:36:16 GMT-0400 (EDT)"
             },
             "id": 252
         },
@@ -3592,7 +3593,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 12:19:00 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 12:19:00 GMT-0400 (EDT)"
             },
             "id": 253
         },
@@ -3606,7 +3607,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 12:08:14 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 12:08:14 GMT-0400 (EDT)"
             },
             "id": 254
         },
@@ -3620,7 +3621,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 11:52:47 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 11:52:47 GMT-0400 (EDT)"
             },
             "id": 255
         },
@@ -3634,7 +3635,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 11:37:05 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 11:37:05 GMT-0400 (EDT)"
             },
             "id": 256
         },
@@ -3648,7 +3649,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 11:12:38 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 11:12:38 GMT-0400 (EDT)"
             },
             "id": 257
         },
@@ -3662,7 +3663,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 11:03:21 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 11:03:21 GMT-0400 (EDT)"
             },
             "id": 258
         },
@@ -3676,7 +3677,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 10:35:57 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 10:35:57 GMT-0400 (EDT)"
             },
             "id": 259
         },
@@ -3690,7 +3691,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 10:30:39 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 10:30:39 GMT-0400 (EDT)"
             },
             "id": 260
         },
@@ -3704,7 +3705,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 10:13:45 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 10:13:45 GMT-0400 (EDT)"
             },
             "id": 261
         },
@@ -3718,7 +3719,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 10:06:16 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 10:06:16 GMT-0400 (EDT)"
             },
             "id": 262
         },
@@ -3732,7 +3733,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 09:56:51 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 09:56:51 GMT-0400 (EDT)"
             },
             "id": 263
         },
@@ -3746,7 +3747,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 09:45:04 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 09:45:04 GMT-0400 (EDT)"
             },
             "id": 264
         },
@@ -3760,7 +3761,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 09:33:22 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 09:33:22 GMT-0400 (EDT)"
             },
             "id": 265
         },
@@ -3774,7 +3775,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 09:23:54 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 09:23:54 GMT-0400 (EDT)"
             },
             "id": 266
         },
@@ -3788,7 +3789,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 09:16:03 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 09:16:03 GMT-0400 (EDT)"
             },
             "id": 267
         },
@@ -3802,7 +3803,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 09:10:30 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 09:10:30 GMT-0400 (EDT)"
             },
             "id": 268
         },
@@ -3816,7 +3817,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 09:00:38 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 09:00:38 GMT-0400 (EDT)"
             },
             "id": 269
         },
@@ -3830,7 +3831,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 08:44:33 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 08:44:33 GMT-0400 (EDT)"
             },
             "id": 270
         },
@@ -3844,7 +3845,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 08:29:37 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 08:29:37 GMT-0400 (EDT)"
             },
             "id": 271
         },
@@ -3858,7 +3859,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 08:19:52 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 08:19:52 GMT-0400 (EDT)"
             },
             "id": 272
         },
@@ -3872,7 +3873,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 08:13:51 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 08:13:51 GMT-0400 (EDT)"
             },
             "id": 273
         },
@@ -3886,7 +3887,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 07:50:15 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 07:50:15 GMT-0400 (EDT)"
             },
             "id": 274
         },
@@ -3900,7 +3901,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 07:31:50 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 07:31:50 GMT-0400 (EDT)"
             },
             "id": 275
         },
@@ -3914,7 +3915,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 07:12:28 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 07:12:28 GMT-0400 (EDT)"
             },
             "id": 276
         },
@@ -3928,7 +3929,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 06:59:40 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 06:59:40 GMT-0400 (EDT)"
             },
             "id": 277
         },
@@ -3942,7 +3943,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 06:51:20 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 06:51:20 GMT-0400 (EDT)"
             },
             "id": 278
         },
@@ -3956,7 +3957,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 05:55:33 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 05:55:33 GMT-0400 (EDT)"
             },
             "id": 279
         },
@@ -3970,7 +3971,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 05:40:06 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 05:40:06 GMT-0400 (EDT)"
             },
             "id": 280
         },
@@ -3984,7 +3985,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 05:25:50 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 05:25:50 GMT-0400 (EDT)"
             },
             "id": 281
         },
@@ -3998,7 +3999,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 04:35:04 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 04:35:04 GMT-0400 (EDT)"
             },
             "id": 282
         },
@@ -4012,7 +4013,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 04:25:07 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 04:25:07 GMT-0400 (EDT)"
             },
             "id": 283
         },
@@ -4026,7 +4027,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 04:10:49 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 04:10:49 GMT-0400 (EDT)"
             },
             "id": 284
         },
@@ -4040,7 +4041,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 03:40:40 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 03:40:40 GMT-0400 (EDT)"
             },
             "id": 285
         },
@@ -4054,7 +4055,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 03:22:59 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 03:22:59 GMT-0400 (EDT)"
             },
             "id": 286
         },
@@ -4068,7 +4069,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 02:59:11 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 02:59:11 GMT-0400 (EDT)"
             },
             "id": 287
         },
@@ -4082,7 +4083,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 02:25:21 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 02:25:21 GMT-0400 (EDT)"
             },
             "id": 288
         },
@@ -4096,7 +4097,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 01:21:05 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 01:21:05 GMT-0400 (EDT)"
             },
             "id": 289
         },
@@ -4110,7 +4111,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 00:48:03 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 00:48:03 GMT-0400 (EDT)"
             },
             "id": 290
         },
@@ -4124,7 +4125,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jul 03 2014 00:25:56 GMT-0400 (EDT)\""
+                "date": "Thu Jul 03 2014 00:25:56 GMT-0400 (EDT)"
             },
             "id": 291
         },
@@ -4138,7 +4139,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 22:57:35 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 22:57:35 GMT-0400 (EDT)"
             },
             "id": 292
         },
@@ -4152,7 +4153,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 22:51:51 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 22:51:51 GMT-0400 (EDT)"
             },
             "id": 293
         },
@@ -4166,7 +4167,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 22:40:00 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 22:40:00 GMT-0400 (EDT)"
             },
             "id": 294
         },
@@ -4180,7 +4181,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 22:33:47 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 22:33:47 GMT-0400 (EDT)"
             },
             "id": 295
         },
@@ -4194,7 +4195,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 22:11:45 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 22:11:45 GMT-0400 (EDT)"
             },
             "id": 296
         },
@@ -4208,7 +4209,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 18:57:07 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 18:57:07 GMT-0400 (EDT)"
             },
             "id": 297
         },
@@ -4222,7 +4223,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 18:15:50 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 18:15:50 GMT-0400 (EDT)"
             },
             "id": 298
         },
@@ -4236,7 +4237,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 18:10:22 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 18:10:22 GMT-0400 (EDT)"
             },
             "id": 299
         },
@@ -4250,7 +4251,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 15:05:21 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 15:05:21 GMT-0400 (EDT)"
             },
             "id": 300
         },
@@ -4264,7 +4265,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 14:49:57 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 14:49:57 GMT-0400 (EDT)"
             },
             "id": 301
         },
@@ -4278,7 +4279,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 14:39:48 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 14:39:48 GMT-0400 (EDT)"
             },
             "id": 302
         },
@@ -4292,7 +4293,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 14:13:43 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 14:13:43 GMT-0400 (EDT)"
             },
             "id": 303
         },
@@ -4306,7 +4307,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 14:04:50 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 14:04:50 GMT-0400 (EDT)"
             },
             "id": 304
         },
@@ -4320,7 +4321,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 13:40:05 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 13:40:05 GMT-0400 (EDT)"
             },
             "id": 305
         },
@@ -4334,7 +4335,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 13:31:25 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 13:31:25 GMT-0400 (EDT)"
             },
             "id": 306
         },
@@ -4348,7 +4349,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 13:25:00 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 13:25:00 GMT-0400 (EDT)"
             },
             "id": 307
         },
@@ -4362,7 +4363,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 08:54:06 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 08:54:06 GMT-0400 (EDT)"
             },
             "id": 308
         },
@@ -4376,7 +4377,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 07:49:09 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 07:49:09 GMT-0400 (EDT)"
             },
             "id": 309
         },
@@ -4390,7 +4391,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 07:42:49 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 07:42:49 GMT-0400 (EDT)"
             },
             "id": 310
         },
@@ -4404,7 +4405,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 03:43:35 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 03:43:35 GMT-0400 (EDT)"
             },
             "id": 311
         },
@@ -4418,7 +4419,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 00:32:24 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 00:32:24 GMT-0400 (EDT)"
             },
             "id": 312
         },
@@ -4432,7 +4433,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 00:15:17 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 00:15:17 GMT-0400 (EDT)"
             },
             "id": 313
         },
@@ -4446,7 +4447,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jul 02 2014 00:07:14 GMT-0400 (EDT)\""
+                "date": "Wed Jul 02 2014 00:07:14 GMT-0400 (EDT)"
             },
             "id": 314
         },
@@ -4460,7 +4461,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 23:59:29 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 23:59:29 GMT-0400 (EDT)"
             },
             "id": 315
         },
@@ -4474,7 +4475,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 23:11:14 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 23:11:14 GMT-0400 (EDT)"
             },
             "id": 316
         },
@@ -4488,7 +4489,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 22:50:49 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 22:50:49 GMT-0400 (EDT)"
             },
             "id": 317
         },
@@ -4502,7 +4503,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 22:09:14 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 22:09:14 GMT-0400 (EDT)"
             },
             "id": 318
         },
@@ -4516,7 +4517,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 21:42:54 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 21:42:54 GMT-0400 (EDT)"
             },
             "id": 319
         },
@@ -4530,7 +4531,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 21:26:02 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 21:26:02 GMT-0400 (EDT)"
             },
             "id": 320
         },
@@ -4544,7 +4545,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 18:36:59 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 18:36:59 GMT-0400 (EDT)"
             },
             "id": 321
         },
@@ -4558,7 +4559,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 18:03:16 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 18:03:16 GMT-0400 (EDT)"
             },
             "id": 322
         },
@@ -4572,7 +4573,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 15:36:50 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 15:36:50 GMT-0400 (EDT)"
             },
             "id": 323
         },
@@ -4586,7 +4587,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 15:24:00 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 15:24:00 GMT-0400 (EDT)"
             },
             "id": 324
         },
@@ -4600,7 +4601,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 15:06:48 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 15:06:48 GMT-0400 (EDT)"
             },
             "id": 325
         },
@@ -4614,7 +4615,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 14:41:06 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 14:41:06 GMT-0400 (EDT)"
             },
             "id": 326
         },
@@ -4628,7 +4629,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 14:32:52 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 14:32:52 GMT-0400 (EDT)"
             },
             "id": 327
         },
@@ -4642,7 +4643,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 14:12:56 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 14:12:56 GMT-0400 (EDT)"
             },
             "id": 328
         },
@@ -4656,7 +4657,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 14:07:25 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 14:07:25 GMT-0400 (EDT)"
             },
             "id": 329
         },
@@ -4670,7 +4671,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 13:44:27 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 13:44:27 GMT-0400 (EDT)"
             },
             "id": 330
         },
@@ -4684,7 +4685,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 12:55:50 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 12:55:50 GMT-0400 (EDT)"
             },
             "id": 331
         },
@@ -4698,7 +4699,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 12:50:37 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 12:50:37 GMT-0400 (EDT)"
             },
             "id": 332
         },
@@ -4712,7 +4713,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 12:15:05 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 12:15:05 GMT-0400 (EDT)"
             },
             "id": 333
         },
@@ -4726,7 +4727,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 11:48:59 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 11:48:59 GMT-0400 (EDT)"
             },
             "id": 334
         },
@@ -4740,7 +4741,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 11:38:39 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 11:38:39 GMT-0400 (EDT)"
             },
             "id": 335
         },
@@ -4754,7 +4755,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 11:04:11 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 11:04:11 GMT-0400 (EDT)"
             },
             "id": 336
         },
@@ -4768,7 +4769,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 10:55:19 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 10:55:19 GMT-0400 (EDT)"
             },
             "id": 337
         },
@@ -4782,7 +4783,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 10:39:46 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 10:39:46 GMT-0400 (EDT)"
             },
             "id": 338
         },
@@ -4796,7 +4797,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 10:22:40 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 10:22:40 GMT-0400 (EDT)"
             },
             "id": 339
         },
@@ -4810,7 +4811,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 10:13:46 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 10:13:46 GMT-0400 (EDT)"
             },
             "id": 340
         },
@@ -4824,7 +4825,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 10:02:31 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 10:02:31 GMT-0400 (EDT)"
             },
             "id": 341
         },
@@ -4838,7 +4839,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 09:28:34 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 09:28:34 GMT-0400 (EDT)"
             },
             "id": 342
         },
@@ -4852,7 +4853,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jul 01 2014 08:36:22 GMT-0400 (EDT)\""
+                "date": "Tue Jul 01 2014 08:36:22 GMT-0400 (EDT)"
             },
             "id": 343
         },
@@ -4866,7 +4867,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 22:03:06 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 22:03:06 GMT-0400 (EDT)"
             },
             "id": 344
         },
@@ -4880,7 +4881,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 20:16:39 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 20:16:39 GMT-0400 (EDT)"
             },
             "id": 345
         },
@@ -4894,7 +4895,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 20:08:33 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 20:08:33 GMT-0400 (EDT)"
             },
             "id": 346
         },
@@ -4908,7 +4909,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 19:18:05 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 19:18:05 GMT-0400 (EDT)"
             },
             "id": 347
         },
@@ -4922,7 +4923,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 18:58:51 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 18:58:51 GMT-0400 (EDT)"
             },
             "id": 348
         },
@@ -4936,7 +4937,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 18:21:16 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 18:21:16 GMT-0400 (EDT)"
             },
             "id": 349
         },
@@ -4950,7 +4951,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 18:15:10 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 18:15:10 GMT-0400 (EDT)"
             },
             "id": 350
         },
@@ -4964,7 +4965,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 16:39:39 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 16:39:39 GMT-0400 (EDT)"
             },
             "id": 351
         },
@@ -4978,7 +4979,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 16:30:28 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 16:30:28 GMT-0400 (EDT)"
             },
             "id": 352
         },
@@ -4992,7 +4993,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 16:12:33 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 16:12:33 GMT-0400 (EDT)"
             },
             "id": 353
         },
@@ -5006,7 +5007,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 15:32:56 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 15:32:56 GMT-0400 (EDT)"
             },
             "id": 354
         },
@@ -5020,7 +5021,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 15:10:54 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 15:10:54 GMT-0400 (EDT)"
             },
             "id": 355
         },
@@ -5034,7 +5035,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 14:28:58 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 14:28:58 GMT-0400 (EDT)"
             },
             "id": 356
         },
@@ -5048,7 +5049,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 14:17:10 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 14:17:10 GMT-0400 (EDT)"
             },
             "id": 357
         },
@@ -5062,7 +5063,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 13:51:23 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 13:51:23 GMT-0400 (EDT)"
             },
             "id": 358
         },
@@ -5076,7 +5077,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 13:34:21 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 13:34:21 GMT-0400 (EDT)"
             },
             "id": 359
         },
@@ -5090,7 +5091,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 13:29:08 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 13:29:08 GMT-0400 (EDT)"
             },
             "id": 360
         },
@@ -5104,7 +5105,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 12:47:50 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 12:47:50 GMT-0400 (EDT)"
             },
             "id": 361
         },
@@ -5118,7 +5119,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 11:51:08 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 11:51:08 GMT-0400 (EDT)"
             },
             "id": 362
         },
@@ -5132,7 +5133,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 11:34:32 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 11:34:32 GMT-0400 (EDT)"
             },
             "id": 363
         },
@@ -5146,7 +5147,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 11:24:05 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 11:24:05 GMT-0400 (EDT)"
             },
             "id": 364
         },
@@ -5160,7 +5161,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 10:52:32 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 10:52:32 GMT-0400 (EDT)"
             },
             "id": 365
         },
@@ -5174,7 +5175,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 10:27:24 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 10:27:24 GMT-0400 (EDT)"
             },
             "id": 366
         },
@@ -5188,7 +5189,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 10:18:32 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 10:18:32 GMT-0400 (EDT)"
             },
             "id": 367
         },
@@ -5202,7 +5203,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 09:41:06 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 09:41:06 GMT-0400 (EDT)"
             },
             "id": 368
         },
@@ -5216,7 +5217,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 09:21:07 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 09:21:07 GMT-0400 (EDT)"
             },
             "id": 369
         },
@@ -5230,7 +5231,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 08:43:26 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 08:43:26 GMT-0400 (EDT)"
             },
             "id": 370
         },
@@ -5244,7 +5245,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 08:30:28 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 08:30:28 GMT-0400 (EDT)"
             },
             "id": 371
         },
@@ -5258,7 +5259,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 08:13:05 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 08:13:05 GMT-0400 (EDT)"
             },
             "id": 372
         },
@@ -5272,7 +5273,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 07:57:59 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 07:57:59 GMT-0400 (EDT)"
             },
             "id": 373
         },
@@ -5286,7 +5287,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 07:43:24 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 07:43:24 GMT-0400 (EDT)"
             },
             "id": 374
         },
@@ -5300,7 +5301,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 07:28:02 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 07:28:02 GMT-0400 (EDT)"
             },
             "id": 375
         },
@@ -5314,7 +5315,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 06:44:10 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 06:44:10 GMT-0400 (EDT)"
             },
             "id": 376
         },
@@ -5328,7 +5329,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 06:33:36 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 06:33:36 GMT-0400 (EDT)"
             },
             "id": 377
         },
@@ -5342,7 +5343,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 05:45:19 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 05:45:19 GMT-0400 (EDT)"
             },
             "id": 378
         },
@@ -5356,7 +5357,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 05:25:23 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 05:25:23 GMT-0400 (EDT)"
             },
             "id": 379
         },
@@ -5370,7 +5371,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 05:19:31 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 05:19:31 GMT-0400 (EDT)"
             },
             "id": 380
         },
@@ -5384,7 +5385,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 04:42:45 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 04:42:45 GMT-0400 (EDT)"
             },
             "id": 381
         },
@@ -5398,7 +5399,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 04:31:44 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 04:31:44 GMT-0400 (EDT)"
             },
             "id": 382
         },
@@ -5412,7 +5413,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 04:17:43 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 04:17:43 GMT-0400 (EDT)"
             },
             "id": 383
         },
@@ -5426,7 +5427,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 03:52:05 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 03:52:05 GMT-0400 (EDT)"
             },
             "id": 384
         },
@@ -5440,7 +5441,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 03:38:41 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 03:38:41 GMT-0400 (EDT)"
             },
             "id": 385
         },
@@ -5454,7 +5455,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 03:23:19 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 03:23:19 GMT-0400 (EDT)"
             },
             "id": 386
         },
@@ -5468,7 +5469,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 03:10:22 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 03:10:22 GMT-0400 (EDT)"
             },
             "id": 387
         },
@@ -5482,7 +5483,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 02:57:46 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 02:57:46 GMT-0400 (EDT)"
             },
             "id": 388
         },
@@ -5496,7 +5497,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 02:43:31 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 02:43:31 GMT-0400 (EDT)"
             },
             "id": 389
         },
@@ -5510,7 +5511,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 02:35:52 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 02:35:52 GMT-0400 (EDT)"
             },
             "id": 390
         },
@@ -5524,7 +5525,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 02:21:19 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 02:21:19 GMT-0400 (EDT)"
             },
             "id": 391
         },
@@ -5538,7 +5539,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 02:09:04 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 02:09:04 GMT-0400 (EDT)"
             },
             "id": 392
         },
@@ -5552,7 +5553,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 01:55:11 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 01:55:11 GMT-0400 (EDT)"
             },
             "id": 393
         },
@@ -5566,7 +5567,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 01:40:18 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 01:40:18 GMT-0400 (EDT)"
             },
             "id": 394
         },
@@ -5580,7 +5581,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 01:31:40 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 01:31:40 GMT-0400 (EDT)"
             },
             "id": 395
         },
@@ -5594,7 +5595,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 01:26:00 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 01:26:00 GMT-0400 (EDT)"
             },
             "id": 396
         },
@@ -5608,7 +5609,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 01:19:57 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 01:19:57 GMT-0400 (EDT)"
             },
             "id": 397
         },
@@ -5622,7 +5623,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 01:03:11 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 01:03:11 GMT-0400 (EDT)"
             },
             "id": 398
         },
@@ -5636,7 +5637,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 00:50:51 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 00:50:51 GMT-0400 (EDT)"
             },
             "id": 399
         },
@@ -5650,7 +5651,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 00:42:19 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 00:42:19 GMT-0400 (EDT)"
             },
             "id": 400
         },
@@ -5664,7 +5665,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 00:36:26 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 00:36:26 GMT-0400 (EDT)"
             },
             "id": 401
         },
@@ -5678,7 +5679,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 00:19:43 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 00:19:43 GMT-0400 (EDT)"
             },
             "id": 402
         },
@@ -5692,7 +5693,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 30 2014 00:05:29 GMT-0400 (EDT)\""
+                "date": "Mon Jun 30 2014 00:05:29 GMT-0400 (EDT)"
             },
             "id": 403
         },
@@ -5706,7 +5707,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 23:36:47 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 23:36:47 GMT-0400 (EDT)"
             },
             "id": 404
         },
@@ -5720,7 +5721,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 23:31:02 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 23:31:02 GMT-0400 (EDT)"
             },
             "id": 405
         },
@@ -5734,7 +5735,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 23:23:29 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 23:23:29 GMT-0400 (EDT)"
             },
             "id": 406
         },
@@ -5748,7 +5749,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 23:05:56 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 23:05:56 GMT-0400 (EDT)"
             },
             "id": 407
         },
@@ -5762,7 +5763,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 22:58:27 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 22:58:27 GMT-0400 (EDT)"
             },
             "id": 408
         },
@@ -5776,7 +5777,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 22:46:42 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 22:46:42 GMT-0400 (EDT)"
             },
             "id": 409
         },
@@ -5790,7 +5791,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 22:28:40 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 22:28:40 GMT-0400 (EDT)"
             },
             "id": 410
         },
@@ -5804,7 +5805,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 22:16:38 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 22:16:38 GMT-0400 (EDT)"
             },
             "id": 411
         },
@@ -5818,7 +5819,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 22:06:34 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 22:06:34 GMT-0400 (EDT)"
             },
             "id": 412
         },
@@ -5832,7 +5833,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 21:56:58 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 21:56:58 GMT-0400 (EDT)"
             },
             "id": 413
         },
@@ -5846,7 +5847,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 21:35:21 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 21:35:21 GMT-0400 (EDT)"
             },
             "id": 414
         },
@@ -5860,7 +5861,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 21:28:21 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 21:28:21 GMT-0400 (EDT)"
             },
             "id": 415
         },
@@ -5874,7 +5875,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 21:05:03 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 21:05:03 GMT-0400 (EDT)"
             },
             "id": 416
         },
@@ -5888,7 +5889,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 20:44:52 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 20:44:52 GMT-0400 (EDT)"
             },
             "id": 417
         },
@@ -5902,7 +5903,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 20:35:40 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 20:35:40 GMT-0400 (EDT)"
             },
             "id": 418
         },
@@ -5916,7 +5917,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 19:58:10 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 19:58:10 GMT-0400 (EDT)"
             },
             "id": 419
         },
@@ -5930,7 +5931,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 19:41:10 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 19:41:10 GMT-0400 (EDT)"
             },
             "id": 420
         },
@@ -5944,7 +5945,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 19:26:16 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 19:26:16 GMT-0400 (EDT)"
             },
             "id": 421
         },
@@ -5958,7 +5959,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 19:19:34 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 19:19:34 GMT-0400 (EDT)"
             },
             "id": 422
         },
@@ -5972,7 +5973,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 18:55:27 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 18:55:27 GMT-0400 (EDT)"
             },
             "id": 423
         },
@@ -5986,7 +5987,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 18:46:10 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 18:46:10 GMT-0400 (EDT)"
             },
             "id": 424
         },
@@ -6000,7 +6001,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 18:31:57 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 18:31:57 GMT-0400 (EDT)"
             },
             "id": 425
         },
@@ -6014,7 +6015,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 18:21:23 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 18:21:23 GMT-0400 (EDT)"
             },
             "id": 426
         },
@@ -6028,7 +6029,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 17:50:01 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 17:50:01 GMT-0400 (EDT)"
             },
             "id": 427
         },
@@ -6042,7 +6043,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 17:31:52 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 17:31:52 GMT-0400 (EDT)"
             },
             "id": 428
         },
@@ -6056,7 +6057,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 17:19:37 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 17:19:37 GMT-0400 (EDT)"
             },
             "id": 429
         },
@@ -6070,7 +6071,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 16:54:02 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 16:54:02 GMT-0400 (EDT)"
             },
             "id": 430
         },
@@ -6084,7 +6085,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 16:47:51 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 16:47:51 GMT-0400 (EDT)"
             },
             "id": 431
         },
@@ -6098,7 +6099,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 16:27:31 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 16:27:31 GMT-0400 (EDT)"
             },
             "id": 432
         },
@@ -6112,7 +6113,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 15:55:36 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 15:55:36 GMT-0400 (EDT)"
             },
             "id": 433
         },
@@ -6126,7 +6127,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 15:47:33 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 15:47:33 GMT-0400 (EDT)"
             },
             "id": 434
         },
@@ -6140,7 +6141,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 15:36:15 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 15:36:15 GMT-0400 (EDT)"
             },
             "id": 435
         },
@@ -6154,7 +6155,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 15:26:36 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 15:26:36 GMT-0400 (EDT)"
             },
             "id": 436
         },
@@ -6168,7 +6169,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 15:13:58 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 15:13:58 GMT-0400 (EDT)"
             },
             "id": 437
         },
@@ -6182,7 +6183,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 15:06:41 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 15:06:41 GMT-0400 (EDT)"
             },
             "id": 438
         },
@@ -6196,7 +6197,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 14:57:49 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 14:57:49 GMT-0400 (EDT)"
             },
             "id": 439
         },
@@ -6210,7 +6211,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 14:45:24 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 14:45:24 GMT-0400 (EDT)"
             },
             "id": 440
         },
@@ -6224,7 +6225,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 14:31:29 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 14:31:29 GMT-0400 (EDT)"
             },
             "id": 441
         },
@@ -6238,7 +6239,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 13:01:37 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 13:01:37 GMT-0400 (EDT)"
             },
             "id": 442
         },
@@ -6252,7 +6253,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 12:54:47 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 12:54:47 GMT-0400 (EDT)"
             },
             "id": 443
         },
@@ -6266,7 +6267,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 12:11:24 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 12:11:24 GMT-0400 (EDT)"
             },
             "id": 444
         },
@@ -6280,7 +6281,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 12:05:36 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 12:05:36 GMT-0400 (EDT)"
             },
             "id": 445
         },
@@ -6294,7 +6295,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 11:57:04 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 11:57:04 GMT-0400 (EDT)"
             },
             "id": 446
         },
@@ -6308,7 +6309,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 09:47:33 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 09:47:33 GMT-0400 (EDT)"
             },
             "id": 447
         },
@@ -6322,7 +6323,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 09:03:31 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 09:03:31 GMT-0400 (EDT)"
             },
             "id": 448
         },
@@ -6336,7 +6337,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sun Jun 29 2014 00:03:57 GMT-0400 (EDT)\""
+                "date": "Sun Jun 29 2014 00:03:57 GMT-0400 (EDT)"
             },
             "id": 449
         },
@@ -6350,7 +6351,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 23:57:01 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 23:57:01 GMT-0400 (EDT)"
             },
             "id": 450
         },
@@ -6364,7 +6365,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 22:05:03 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 22:05:03 GMT-0400 (EDT)"
             },
             "id": 451
         },
@@ -6378,7 +6379,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 21:56:32 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 21:56:32 GMT-0400 (EDT)"
             },
             "id": 452
         },
@@ -6392,7 +6393,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 21:44:33 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 21:44:33 GMT-0400 (EDT)"
             },
             "id": 453
         },
@@ -6406,7 +6407,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 20:58:45 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 20:58:45 GMT-0400 (EDT)"
             },
             "id": 454
         },
@@ -6420,7 +6421,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 20:40:25 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 20:40:25 GMT-0400 (EDT)"
             },
             "id": 455
         },
@@ -6434,7 +6435,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 19:01:05 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 19:01:05 GMT-0400 (EDT)"
             },
             "id": 456
         },
@@ -6448,7 +6449,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 18:54:57 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 18:54:57 GMT-0400 (EDT)"
             },
             "id": 457
         },
@@ -6462,7 +6463,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 15:26:21 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 15:26:21 GMT-0400 (EDT)"
             },
             "id": 458
         },
@@ -6476,7 +6477,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 15:13:17 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 15:13:17 GMT-0400 (EDT)"
             },
             "id": 459
         },
@@ -6490,7 +6491,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 12:06:19 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 12:06:19 GMT-0400 (EDT)"
             },
             "id": 460
         },
@@ -6504,7 +6505,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 11:58:00 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 11:58:00 GMT-0400 (EDT)"
             },
             "id": 461
         },
@@ -6518,7 +6519,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Sat Jun 28 2014 11:34:21 GMT-0400 (EDT)\""
+                "date": "Sat Jun 28 2014 11:34:21 GMT-0400 (EDT)"
             },
             "id": 462
         },
@@ -6532,7 +6533,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 21:14:10 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 21:14:10 GMT-0400 (EDT)"
             },
             "id": 463
         },
@@ -6546,7 +6547,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 21:04:18 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 21:04:18 GMT-0400 (EDT)"
             },
             "id": 464
         },
@@ -6560,7 +6561,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 19:29:17 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 19:29:17 GMT-0400 (EDT)"
             },
             "id": 465
         },
@@ -6574,7 +6575,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 17:55:45 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 17:55:45 GMT-0400 (EDT)"
             },
             "id": 466
         },
@@ -6588,7 +6589,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 17:23:12 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 17:23:12 GMT-0400 (EDT)"
             },
             "id": 467
         },
@@ -6602,7 +6603,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 17:16:33 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 17:16:33 GMT-0400 (EDT)"
             },
             "id": 468
         },
@@ -6616,7 +6617,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 17:09:55 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 17:09:55 GMT-0400 (EDT)"
             },
             "id": 469
         },
@@ -6630,7 +6631,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 17:01:08 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 17:01:08 GMT-0400 (EDT)"
             },
             "id": 470
         },
@@ -6644,7 +6645,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 16:49:56 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 16:49:56 GMT-0400 (EDT)"
             },
             "id": 471
         },
@@ -6658,7 +6659,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 15:58:45 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 15:58:45 GMT-0400 (EDT)"
             },
             "id": 472
         },
@@ -6672,7 +6673,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 15:40:27 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 15:40:27 GMT-0400 (EDT)"
             },
             "id": 473
         },
@@ -6686,7 +6687,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 15:34:49 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 15:34:49 GMT-0400 (EDT)"
             },
             "id": 474
         },
@@ -6700,7 +6701,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 15:21:02 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 15:21:02 GMT-0400 (EDT)"
             },
             "id": 475
         },
@@ -6714,7 +6715,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 15:02:51 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 15:02:51 GMT-0400 (EDT)"
             },
             "id": 476
         },
@@ -6728,7 +6729,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 14:50:28 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 14:50:28 GMT-0400 (EDT)"
             },
             "id": 477
         },
@@ -6742,7 +6743,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 14:31:47 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 14:31:47 GMT-0400 (EDT)"
             },
             "id": 478
         },
@@ -6756,7 +6757,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 14:21:24 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 14:21:24 GMT-0400 (EDT)"
             },
             "id": 479
         },
@@ -6770,7 +6771,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 14:03:25 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 14:03:25 GMT-0400 (EDT)"
             },
             "id": 480
         },
@@ -6784,7 +6785,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 13:49:13 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 13:49:13 GMT-0400 (EDT)"
             },
             "id": 481
         },
@@ -6798,7 +6799,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 13:14:15 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 13:14:15 GMT-0400 (EDT)"
             },
             "id": 482
         },
@@ -6812,7 +6813,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 13:07:17 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 13:07:17 GMT-0400 (EDT)"
             },
             "id": 483
         },
@@ -6826,7 +6827,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 12:51:21 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 12:51:21 GMT-0400 (EDT)"
             },
             "id": 484
         },
@@ -6840,7 +6841,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 12:32:27 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 12:32:27 GMT-0400 (EDT)"
             },
             "id": 485
         },
@@ -6854,7 +6855,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 12:13:47 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 12:13:47 GMT-0400 (EDT)"
             },
             "id": 486
         },
@@ -6868,7 +6869,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 11:58:20 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 11:58:20 GMT-0400 (EDT)"
             },
             "id": 487
         },
@@ -6882,7 +6883,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 11:47:15 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 11:47:15 GMT-0400 (EDT)"
             },
             "id": 488
         },
@@ -6896,7 +6897,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 11:39:52 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 11:39:52 GMT-0400 (EDT)"
             },
             "id": 489
         },
@@ -6910,7 +6911,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 11:33:05 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 11:33:05 GMT-0400 (EDT)"
             },
             "id": 490
         },
@@ -6924,7 +6925,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 11:11:58 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 11:11:58 GMT-0400 (EDT)"
             },
             "id": 491
         },
@@ -6938,7 +6939,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 10:53:40 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 10:53:40 GMT-0400 (EDT)"
             },
             "id": 492
         },
@@ -6952,7 +6953,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 10:38:48 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 10:38:48 GMT-0400 (EDT)"
             },
             "id": 493
         },
@@ -6966,7 +6967,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 10:32:35 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 10:32:35 GMT-0400 (EDT)"
             },
             "id": 494
         },
@@ -6980,7 +6981,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 10:11:39 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 10:11:39 GMT-0400 (EDT)"
             },
             "id": 495
         },
@@ -6994,7 +6995,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 09:59:33 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 09:59:33 GMT-0400 (EDT)"
             },
             "id": 496
         },
@@ -7008,7 +7009,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 09:38:26 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 09:38:26 GMT-0400 (EDT)"
             },
             "id": 497
         },
@@ -7022,7 +7023,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 09:33:08 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 09:33:08 GMT-0400 (EDT)"
             },
             "id": 498
         },
@@ -7036,7 +7037,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 09:00:40 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 09:00:40 GMT-0400 (EDT)"
             },
             "id": 499
         },
@@ -7050,7 +7051,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 08:40:14 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 08:40:14 GMT-0400 (EDT)"
             },
             "id": 500
         },
@@ -7064,7 +7065,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 08:32:05 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 08:32:05 GMT-0400 (EDT)"
             },
             "id": 501
         },
@@ -7078,7 +7079,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Fri Jun 27 2014 07:48:36 GMT-0400 (EDT)\""
+                "date": "Fri Jun 27 2014 07:48:36 GMT-0400 (EDT)"
             },
             "id": 502
         },
@@ -7092,7 +7093,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 23:15:05 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 23:15:05 GMT-0400 (EDT)"
             },
             "id": 503
         },
@@ -7106,7 +7107,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 21:57:03 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 21:57:03 GMT-0400 (EDT)"
             },
             "id": 504
         },
@@ -7120,7 +7121,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 21:48:23 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 21:48:23 GMT-0400 (EDT)"
             },
             "id": 505
         },
@@ -7134,7 +7135,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 20:42:25 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 20:42:25 GMT-0400 (EDT)"
             },
             "id": 506
         },
@@ -7148,7 +7149,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 20:33:42 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 20:33:42 GMT-0400 (EDT)"
             },
             "id": 507
         },
@@ -7162,7 +7163,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 20:05:00 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 20:05:00 GMT-0400 (EDT)"
             },
             "id": 508
         },
@@ -7176,7 +7177,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 19:54:44 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 19:54:44 GMT-0400 (EDT)"
             },
             "id": 509
         },
@@ -7190,7 +7191,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 17:50:46 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 17:50:46 GMT-0400 (EDT)"
             },
             "id": 510
         },
@@ -7204,7 +7205,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 17:41:03 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 17:41:03 GMT-0400 (EDT)"
             },
             "id": 511
         },
@@ -7218,7 +7219,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 17:28:25 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 17:28:25 GMT-0400 (EDT)"
             },
             "id": 512
         },
@@ -7232,7 +7233,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 17:17:06 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 17:17:06 GMT-0400 (EDT)"
             },
             "id": 513
         },
@@ -7246,7 +7247,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 16:11:26 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 16:11:26 GMT-0400 (EDT)"
             },
             "id": 514
         },
@@ -7260,7 +7261,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 15:59:02 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 15:59:02 GMT-0400 (EDT)"
             },
             "id": 515
         },
@@ -7274,7 +7275,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 15:44:33 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 15:44:33 GMT-0400 (EDT)"
             },
             "id": 516
         },
@@ -7288,7 +7289,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 15:30:11 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 15:30:11 GMT-0400 (EDT)"
             },
             "id": 517
         },
@@ -7302,7 +7303,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 15:20:53 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 15:20:53 GMT-0400 (EDT)"
             },
             "id": 518
         },
@@ -7316,7 +7317,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 15:00:19 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 15:00:19 GMT-0400 (EDT)"
             },
             "id": 519
         },
@@ -7330,7 +7331,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 14:24:56 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 14:24:56 GMT-0400 (EDT)"
             },
             "id": 520
         },
@@ -7344,7 +7345,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 13:50:28 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 13:50:28 GMT-0400 (EDT)"
             },
             "id": 521
         },
@@ -7358,7 +7359,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 13:42:52 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 13:42:52 GMT-0400 (EDT)"
             },
             "id": 522
         },
@@ -7372,7 +7373,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 13:35:23 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 13:35:23 GMT-0400 (EDT)"
             },
             "id": 523
         },
@@ -7386,7 +7387,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 13:14:59 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 13:14:59 GMT-0400 (EDT)"
             },
             "id": 524
         },
@@ -7400,7 +7401,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 12:50:29 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 12:50:29 GMT-0400 (EDT)"
             },
             "id": 525
         },
@@ -7414,7 +7415,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 12:44:57 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 12:44:57 GMT-0400 (EDT)"
             },
             "id": 526
         },
@@ -7428,7 +7429,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 12:33:19 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 12:33:19 GMT-0400 (EDT)"
             },
             "id": 527
         },
@@ -7442,7 +7443,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 12:22:34 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 12:22:34 GMT-0400 (EDT)"
             },
             "id": 528
         },
@@ -7456,7 +7457,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 12:12:58 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 12:12:58 GMT-0400 (EDT)"
             },
             "id": 529
         },
@@ -7470,7 +7471,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 12:02:27 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 12:02:27 GMT-0400 (EDT)"
             },
             "id": 530
         },
@@ -7484,7 +7485,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 11:38:32 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 11:38:32 GMT-0400 (EDT)"
             },
             "id": 531
         },
@@ -7498,7 +7499,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 11:11:39 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 11:11:39 GMT-0400 (EDT)"
             },
             "id": 532
         },
@@ -7512,7 +7513,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 10:43:34 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 10:43:34 GMT-0400 (EDT)"
             },
             "id": 533
         },
@@ -7526,7 +7527,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 08:44:54 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 08:44:54 GMT-0400 (EDT)"
             },
             "id": 534
         },
@@ -7540,7 +7541,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 08:21:53 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 08:21:53 GMT-0400 (EDT)"
             },
             "id": 535
         },
@@ -7554,7 +7555,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Thu Jun 26 2014 08:16:07 GMT-0400 (EDT)\""
+                "date": "Thu Jun 26 2014 08:16:07 GMT-0400 (EDT)"
             },
             "id": 536
         },
@@ -7568,7 +7569,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 23:51:41 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 23:51:41 GMT-0400 (EDT)"
             },
             "id": 537
         },
@@ -7582,7 +7583,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 23:43:38 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 23:43:38 GMT-0400 (EDT)"
             },
             "id": 538
         },
@@ -7596,7 +7597,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 23:33:16 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 23:33:16 GMT-0400 (EDT)"
             },
             "id": 539
         },
@@ -7610,7 +7611,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 23:26:49 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 23:26:49 GMT-0400 (EDT)"
             },
             "id": 540
         },
@@ -7624,7 +7625,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 20:21:46 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 20:21:46 GMT-0400 (EDT)"
             },
             "id": 541
         },
@@ -7638,7 +7639,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 20:16:16 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 20:16:16 GMT-0400 (EDT)"
             },
             "id": 542
         },
@@ -7652,7 +7653,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 18:49:40 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 18:49:40 GMT-0400 (EDT)"
             },
             "id": 543
         },
@@ -7666,7 +7667,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 18:38:06 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 18:38:06 GMT-0400 (EDT)"
             },
             "id": 544
         },
@@ -7680,7 +7681,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 18:19:59 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 18:19:59 GMT-0400 (EDT)"
             },
             "id": 545
         },
@@ -7694,7 +7695,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 17:54:06 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 17:54:06 GMT-0400 (EDT)"
             },
             "id": 546
         },
@@ -7708,7 +7709,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 16:51:47 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 16:51:47 GMT-0400 (EDT)"
             },
             "id": 547
         },
@@ -7722,7 +7723,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 16:38:58 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 16:38:58 GMT-0400 (EDT)"
             },
             "id": 548
         },
@@ -7736,7 +7737,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 16:23:33 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 16:23:33 GMT-0400 (EDT)"
             },
             "id": 549
         },
@@ -7750,7 +7751,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 16:16:45 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 16:16:45 GMT-0400 (EDT)"
             },
             "id": 550
         },
@@ -7764,7 +7765,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 16:09:27 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 16:09:27 GMT-0400 (EDT)"
             },
             "id": 551
         },
@@ -7778,7 +7779,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 15:59:49 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 15:59:49 GMT-0400 (EDT)"
             },
             "id": 552
         },
@@ -7792,7 +7793,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 15:52:27 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 15:52:27 GMT-0400 (EDT)"
             },
             "id": 553
         },
@@ -7806,7 +7807,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 15:40:56 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 15:40:56 GMT-0400 (EDT)"
             },
             "id": 554
         },
@@ -7820,7 +7821,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 15:31:50 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 15:31:50 GMT-0400 (EDT)"
             },
             "id": 555
         },
@@ -7834,7 +7835,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 15:16:41 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 15:16:41 GMT-0400 (EDT)"
             },
             "id": 556
         },
@@ -7848,7 +7849,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 14:33:48 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 14:33:48 GMT-0400 (EDT)"
             },
             "id": 557
         },
@@ -7862,7 +7863,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 14:16:45 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 14:16:45 GMT-0400 (EDT)"
             },
             "id": 558
         },
@@ -7876,7 +7877,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 14:11:15 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 14:11:15 GMT-0400 (EDT)"
             },
             "id": 559
         },
@@ -7890,7 +7891,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 13:58:09 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 13:58:09 GMT-0400 (EDT)"
             },
             "id": 560
         },
@@ -7904,7 +7905,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 13:39:47 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 13:39:47 GMT-0400 (EDT)"
             },
             "id": 561
         },
@@ -7918,7 +7919,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 13:34:45 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 13:34:45 GMT-0400 (EDT)"
             },
             "id": 562
         },
@@ -7932,7 +7933,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 13:26:47 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 13:26:47 GMT-0400 (EDT)"
             },
             "id": 563
         },
@@ -7946,7 +7947,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 13:06:37 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 13:06:37 GMT-0400 (EDT)"
             },
             "id": 564
         },
@@ -7960,7 +7961,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 13:00:44 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 13:00:44 GMT-0400 (EDT)"
             },
             "id": 565
         },
@@ -7974,7 +7975,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 12:32:50 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 12:32:50 GMT-0400 (EDT)"
             },
             "id": 566
         },
@@ -7988,7 +7989,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 12:16:20 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 12:16:20 GMT-0400 (EDT)"
             },
             "id": 567
         },
@@ -8002,7 +8003,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 12:04:49 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 12:04:49 GMT-0400 (EDT)"
             },
             "id": 568
         },
@@ -8016,7 +8017,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 11:59:10 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 11:59:10 GMT-0400 (EDT)"
             },
             "id": 569
         },
@@ -8030,7 +8031,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 11:47:30 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 11:47:30 GMT-0400 (EDT)"
             },
             "id": 570
         },
@@ -8044,7 +8045,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 11:39:30 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 11:39:30 GMT-0400 (EDT)"
             },
             "id": 571
         },
@@ -8058,7 +8059,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 11:16:57 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 11:16:57 GMT-0400 (EDT)"
             },
             "id": 572
         },
@@ -8072,7 +8073,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 11:06:46 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 11:06:46 GMT-0400 (EDT)"
             },
             "id": 573
         },
@@ -8086,7 +8087,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 10:59:48 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 10:59:48 GMT-0400 (EDT)"
             },
             "id": 574
         },
@@ -8100,7 +8101,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 10:35:02 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 10:35:02 GMT-0400 (EDT)"
             },
             "id": 575
         },
@@ -8114,7 +8115,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 10:25:09 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 10:25:09 GMT-0400 (EDT)"
             },
             "id": 576
         },
@@ -8128,7 +8129,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Wed Jun 25 2014 09:12:12 GMT-0400 (EDT)\""
+                "date": "Wed Jun 25 2014 09:12:12 GMT-0400 (EDT)"
             },
             "id": 577
         },
@@ -8142,7 +8143,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 23:56:08 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 23:56:08 GMT-0400 (EDT)"
             },
             "id": 578
         },
@@ -8156,7 +8157,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 19:52:33 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 19:52:33 GMT-0400 (EDT)"
             },
             "id": 579
         },
@@ -8170,7 +8171,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 19:47:17 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 19:47:17 GMT-0400 (EDT)"
             },
             "id": 580
         },
@@ -8184,7 +8185,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 19:36:47 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 19:36:47 GMT-0400 (EDT)"
             },
             "id": 581
         },
@@ -8198,7 +8199,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 17:40:39 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 17:40:39 GMT-0400 (EDT)"
             },
             "id": 582
         },
@@ -8212,7 +8213,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 17:18:23 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 17:18:23 GMT-0400 (EDT)"
             },
             "id": 583
         },
@@ -8226,7 +8227,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 17:11:00 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 17:11:00 GMT-0400 (EDT)"
             },
             "id": 584
         },
@@ -8240,7 +8241,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 16:47:57 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 16:47:57 GMT-0400 (EDT)"
             },
             "id": 585
         },
@@ -8254,7 +8255,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 16:14:11 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 16:14:11 GMT-0400 (EDT)"
             },
             "id": 586
         },
@@ -8268,7 +8269,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 15:45:00 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 15:45:00 GMT-0400 (EDT)"
             },
             "id": 587
         },
@@ -8282,7 +8283,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 15:34:07 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 15:34:07 GMT-0400 (EDT)"
             },
             "id": 588
         },
@@ -8296,7 +8297,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 15:25:09 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 15:25:09 GMT-0400 (EDT)"
             },
             "id": 589
         },
@@ -8310,7 +8311,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 15:05:24 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 15:05:24 GMT-0400 (EDT)"
             },
             "id": 590
         },
@@ -8324,7 +8325,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 14:58:59 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 14:58:59 GMT-0400 (EDT)"
             },
             "id": 591
         },
@@ -8338,7 +8339,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 14:44:51 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 14:44:51 GMT-0400 (EDT)"
             },
             "id": 592
         },
@@ -8352,7 +8353,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 14:32:31 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 14:32:31 GMT-0400 (EDT)"
             },
             "id": 593
         },
@@ -8366,7 +8367,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 14:21:48 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 14:21:48 GMT-0400 (EDT)"
             },
             "id": 594
         },
@@ -8380,7 +8381,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 14:15:04 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 14:15:04 GMT-0400 (EDT)"
             },
             "id": 595
         },
@@ -8394,7 +8395,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 13:56:33 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 13:56:33 GMT-0400 (EDT)"
             },
             "id": 596
         },
@@ -8408,7 +8409,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 13:45:49 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 13:45:49 GMT-0400 (EDT)"
             },
             "id": 597
         },
@@ -8422,7 +8423,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 13:32:54 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 13:32:54 GMT-0400 (EDT)"
             },
             "id": 598
         },
@@ -8436,7 +8437,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 13:18:38 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 13:18:38 GMT-0400 (EDT)"
             },
             "id": 599
         },
@@ -8450,7 +8451,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 13:10:06 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 13:10:06 GMT-0400 (EDT)"
             },
             "id": 600
         },
@@ -8464,7 +8465,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 12:57:40 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 12:57:40 GMT-0400 (EDT)"
             },
             "id": 601
         },
@@ -8478,7 +8479,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 12:47:29 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 12:47:29 GMT-0400 (EDT)"
             },
             "id": 602
         },
@@ -8492,7 +8493,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 12:36:50 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 12:36:50 GMT-0400 (EDT)"
             },
             "id": 603
         },
@@ -8506,7 +8507,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 12:21:48 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 12:21:48 GMT-0400 (EDT)"
             },
             "id": 604
         },
@@ -8520,7 +8521,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 12:11:56 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 12:11:56 GMT-0400 (EDT)"
             },
             "id": 605
         },
@@ -8534,7 +8535,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 11:32:44 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 11:32:44 GMT-0400 (EDT)"
             },
             "id": 606
         },
@@ -8548,7 +8549,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 11:24:27 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 11:24:27 GMT-0400 (EDT)"
             },
             "id": 607
         },
@@ -8562,7 +8563,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 10:51:10 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 10:51:10 GMT-0400 (EDT)"
             },
             "id": 608
         },
@@ -8576,7 +8577,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 10:07:33 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 10:07:33 GMT-0400 (EDT)"
             },
             "id": 609
         },
@@ -8590,7 +8591,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 09:55:07 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 09:55:07 GMT-0400 (EDT)"
             },
             "id": 610
         },
@@ -8604,7 +8605,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 09:34:25 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 09:34:25 GMT-0400 (EDT)"
             },
             "id": 611
         },
@@ -8618,7 +8619,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Tue Jun 24 2014 09:22:47 GMT-0400 (EDT)\""
+                "date": "Tue Jun 24 2014 09:22:47 GMT-0400 (EDT)"
             },
             "id": 612
         },
@@ -8632,7 +8633,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 23 2014 19:28:03 GMT-0400 (EDT)\""
+                "date": "Mon Jun 23 2014 19:28:03 GMT-0400 (EDT)"
             },
             "id": 613
         },
@@ -8646,7 +8647,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 23 2014 17:59:22 GMT-0400 (EDT)\""
+                "date": "Mon Jun 23 2014 17:59:22 GMT-0400 (EDT)"
             },
             "id": 614
         },
@@ -8660,7 +8661,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 23 2014 13:28:08 GMT-0400 (EDT)\""
+                "date": "Mon Jun 23 2014 13:28:08 GMT-0400 (EDT)"
             },
             "id": 615
         },
@@ -8674,7 +8675,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 23 2014 12:38:41 GMT-0400 (EDT)\""
+                "date": "Mon Jun 23 2014 12:38:41 GMT-0400 (EDT)"
             },
             "id": 616
         },
@@ -8688,7 +8689,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 23 2014 12:26:53 GMT-0400 (EDT)\""
+                "date": "Mon Jun 23 2014 12:26:53 GMT-0400 (EDT)"
             },
             "id": 617
         },
@@ -8702,7 +8703,7 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 23 2014 12:12:11 GMT-0400 (EDT)\""
+                "date": "Mon Jun 23 2014 12:12:11 GMT-0400 (EDT)"
             },
             "id": 618
         },
@@ -8716,9 +8717,11 @@ var amtrakLines = {
                 ]
             },
             "properties": {
-                "date": "\"Mon Jun 23 2014 11:30:20 GMT-0400 (EDT)\""
+                "date": "Mon Jun 23 2014 11:30:20 GMT-0400 (EDT)"
             },
             "id": 619
         }
+
+
     ]
 };
