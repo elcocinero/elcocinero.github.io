@@ -51,7 +51,7 @@
               n          : data.get('n'), 
               jobcount : solarjobs[data.fips][1],
               pop : solarjobs[data.fips][2],
-              jobspercap : solarjobs[data.fips][2]
+              jobspercap : solarjobs[data.fips][3]
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
@@ -64,10 +64,10 @@
 
         // define state categoricals
         var stateColor = function(jobs) {
-          if (jobs < 500) return "rgb(237,248,233)";
-          if (jobs < 1000) return "rgb(186,228,179)";
-          if (jobs < 5000) return "rgb(116,196,118)";
-          if (jobs < 10000) return "rgb(49,163,84)";
+          if (jobs < 250) return "rgb(237,248,233)";
+          if (jobs < 500) return "rgb(186,228,179)";
+          if (jobs < 750) return "rgb(116,196,118)";
+          if (jobs < 1000) return "rgb(49,163,84)";
           return "rgb(0,109,44)";
         };
 
@@ -77,7 +77,7 @@
 
         // color states
         _(census).each(function(ary, fips) {
-          map.style(fips, "fill", stateColor(ary[1]));
+          map.style(fips, "fill", stateColor(ary[3]));
         })
 
         // Draw the map
