@@ -17,7 +17,7 @@
       <span class="tooltip_sub">
         jobcount <%= jobcount %>
         <br>
-        population <%= population %>       
+        population <%= moe %>       
       </span>
     </script>
 
@@ -48,7 +48,7 @@
           $("#landline_tooltip").html(tmpl({
               n          : data.get('n'), 
               jobcount : census[data.fips][1],
-              population : census[data.fips][2]
+              moe : census[data.fips][2]
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
