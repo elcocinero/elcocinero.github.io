@@ -15,12 +15,21 @@
     <script type="text/jst" id="landline_tooltip_tmpl">
       <h2><%= n %></h2>
       <span class="tooltip_sub">
-        jobcount 
-        $<%= jobcount %>
-        <br>
-        population <%= pop %> 
-        <br>
-        jobs per million residents <%= jobspercap %>       
+        <span class='tooltip_jobspercap'>
+          <%= jobspercap %>
+        </span>
+        <span class='tooltip_textnorm'>
+          <br>
+          solar jobs per million residents
+        </span>
+          <br>
+        <span class='tooltip_textsmall'>
+          2013 Solar Jobs: 
+          <%= jobcount %>
+          <br>
+          2010 Census Population:
+          <%= jobcount %>
+        </span>
       </span>
     </script>
 
@@ -51,8 +60,8 @@
           $("#landline_tooltip").html(tmpl({
               n           : data.get('n'), 
               jobcount    : numberWithCommas(solarjobs[data.fips][1]),
-              pop         : commaDelimit(solarjobs[data.fips][2]),
-              jobspercap  : solarjobs[data.fips][3]
+              pop         : numberWithCommas(solarjobs[data.fips][2]),
+              jobspercap  : numberWithCommas(solarjobs[data.fips][3])
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
@@ -72,10 +81,6 @@
           return "rgb(204,76,2)";
         };
 
-
-        var commaDelimit = function(a){
-          return _.isNumber(a) ? a.toString().replace(/(d)(?=(ddd)+(?!d))/g,"$1,") : "";
-        };
 
         function numberWithCommas(x) {
           return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
