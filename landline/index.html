@@ -50,7 +50,7 @@
         map.on('mousemove', function(e, path, data) {
           $("#landline_tooltip").html(tmpl({
               n           : data.get('n'), 
-              jobcount    : commaDelimit(solarjobs[data.fips][1]),
+              jobcount    : numberWithCommas(solarjobs[data.fips][1]),
               pop         : commaDelimit(solarjobs[data.fips][2]),
               jobspercap  : solarjobs[data.fips][3]
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
@@ -76,6 +76,10 @@
         var commaDelimit = function(a){
           return _.isNumber(a) ? a.toString().replace(/(d)(?=(ddd)+(?!d))/g,"$1,") : "";
         };
+
+        function numberWithCommas(x) {
+          return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }; 
 
         // color states
         _(solarjobs).each(function(ary, fips) {
