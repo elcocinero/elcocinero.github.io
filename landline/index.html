@@ -17,7 +17,9 @@
       <span class="tooltip_sub">
         jobcount <%= jobcount %>
         <br>
-        population <%= pop %>       
+        population <%= pop %> 
+        <br>
+        jobs per million residents <%= jobspercap %>       
       </span>
     </script>
 
@@ -48,7 +50,8 @@
           $("#landline_tooltip").html(tmpl({
               n          : data.get('n'), 
               jobcount : solarjobs[data.fips][1],
-              pop : solarjobs[data.fips][2]
+              pop : solarjobs[data.fips][2],
+              jobspercap : solarjobs[data.fips][2]
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
