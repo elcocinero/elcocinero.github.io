@@ -45,7 +45,7 @@
         map.on('mousemove', function(e, path, data) {
           $("#landline_tooltip").html(tmpl({
               n          : data.get('n'), 
-              jobcount : commaDelimit(solarjobs[data.fips][1])
+              jobcount : commaDelimit(census[data.fips][1])
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
