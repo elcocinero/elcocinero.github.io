@@ -15,9 +15,7 @@
     <script type="text/jst" id="landline_tooltip_tmpl">
       <h2><%= n %></h2>
       <span class="tooltip_sub">
-        <%= jobspercap %> Solar Jobs per Million Residents
-        2013 Solar Jobs: <%= jobcount %>
-        
+        2013 Solar Jobs: <%= jobcount %>        
       </span>
     </script>
 
@@ -47,8 +45,7 @@
         map.on('mousemove', function(e, path, data) {
           $("#landline_tooltip").html(tmpl({
               n          : data.get('n'), 
-              jobcount : commaDelimit(solarjobs[data.fips][1]),
-              jobspercap : solarjobs[data.fips][2]
+              jobcount : commaDelimit(solarjobs[data.fips][1])
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
