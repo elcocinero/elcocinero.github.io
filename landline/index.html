@@ -21,7 +21,15 @@
       </span>
     </script>
 
- 
+    <script type="text/jst" id="landline_tooltip_tmpl">
+      <h2><%= n %></h2>
+      <span class="tooltip_sub">
+        Median income<br>
+        $<%= med_income %>
+        <span class='tooltip_moe'><br>± $<%= moe %></span>
+      </span>
+    </script>
+
 
   </head>
   <body>
@@ -75,7 +83,7 @@
 
         // color states
         _(solarjobs).each(function(ary, fips) {
-          map.style(fips, "fill", stateColor(ary[1]));
+          map.style(fips, "fill", stateColor(ary[3]));
         })
 
         // Draw the map
