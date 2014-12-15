@@ -43,7 +43,7 @@
           data.existingStyle = (data.existingStyle || {});
           data.existingStyle["fill"]        = path.attr("fill");
           data.existingStyle["strokeWidth"] = path.attr("stroke-width");
-          path.attr("fill", "#999").attr("stroke-width", 1);
+          path.attr("fill", rgb(140,45,4)).attr("stroke-width", 1);
         });
 
         map.on('mousemove', function(e, path, data) {
@@ -67,8 +67,8 @@
           if (jobs < 187) return "rgb(254,227,145)";
           if (jobs < 274) return "rgb(254,196,79)";
           if (jobs < 345) return "rgb(254,153,41)";
-          if (jobs < 706) return "rgb(217,95,14)";
-          return "rgb(153,52,4)";
+          if (jobs < 706) return "rgb(236,112,20)";
+          return "rgb(204,76,2)";
         };
 
 
