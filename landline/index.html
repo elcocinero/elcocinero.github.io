@@ -15,7 +15,10 @@
     <script type="text/jst" id="landline_tooltip_tmpl">
       <h2><%= n %></h2>
       <span class="tooltip_sub">
-        $<%= jobcount %> Solar Jobs in 2013
+        $<%= jobspercap %> Solar Jobs per Million Residents
+        2013 Solar Jobs: $<%= jobcount %>
+        2010 Census Population: $<%= population %>
+        
       </span>
     </script>
 
@@ -45,6 +48,8 @@
           $("#landline_tooltip").html(tmpl({
               n          : data.get('n'), 
               jobcount : commaDelimit(solarjobs[data.fips][1])
+              population : commaDelimit(solarjobs[data.fips][2])
+              jobspercap : commaDelimit(solarjobs[data.fips][3])
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
@@ -70,7 +75,7 @@
 
         // color states
         _(solarjobs).each(function(ary, fips) {
-          map.style(fips, "fill", stateColor(ary[1]));
+          map.style(fips, "fill", stateColor(ary[3]));
         })
 
         // Draw the map
