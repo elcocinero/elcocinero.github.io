@@ -48,7 +48,7 @@
           $("#landline_tooltip").html(tmpl({
               n          : data.get('n'), 
               jobcount : commaDelimit(solarjobs[data.fips][1]),
-              population : solarjobs[data.fips][2]
+              jobspercap : solarjobs[data.fips][2]
             })).css("left", e.pageX + 20).css("top", e.pageY + 20).show();
         });
 
