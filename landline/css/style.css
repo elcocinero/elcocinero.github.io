@@ -4,7 +4,7 @@
 }
 #landline_tooltip {
   position:absolute;
-  background:rgb(140,45,4);
+  background:rgba(222, 222, 222, 0.95);
   z-index:999999;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:bold;
