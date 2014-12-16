@@ -25,6 +25,7 @@
   text-align: center;
 }
 .tooltip_sub {
+  padding:5px;
   font-size:12px;
   font-weight:normal;
   display:inline-block;
