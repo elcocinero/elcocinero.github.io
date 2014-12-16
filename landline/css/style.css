@@ -4,7 +4,7 @@
 }
 #landline_tooltip {
   position:absolute;
-  background:rgba(222, 222, 222, 0.25);
+  background:rgba(222, 222, 222, 0.5);
   z-index:999999;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:bold;
@@ -22,7 +22,6 @@
   margin: 0;
   text-transform: uppercase;
   /*letter-spacing: 0.1em;*/
-  border-top: 2px solid #444;
   background: #8c2d04;      
 }
 .tooltip_sub {
