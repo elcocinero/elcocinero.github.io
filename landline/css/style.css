@@ -4,7 +4,7 @@
 }
 #landline_tooltip {
   position:absolute;
-  background:rgba(222, 222, 222, 090);
+  background:rgba(222, 222, 222, 0.90);
   z-index:999999;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:bold;
@@ -31,3 +31,9 @@
   line-height:14px;
 }
 
+.tooltip_jobspercap {
+  font-size:24px;
+  font-weight:normal;
+  display:inline-block;
+  color:#fe9929;
+}
