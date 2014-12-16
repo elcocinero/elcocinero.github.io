@@ -26,16 +26,17 @@
 }
 .tooltip_sub {
   padding:5px;
-  font-size:12px;
+  font-size:14px;
   display:inline-block;
   line-height:14px;
-  font-weight:bold;
+  font-weight:normal;
   color:#777;
 }
 
 .tooltip_jobspercap {
   font-size:36px;
-  font-weight:bolder;
+  font-weight:bold;
   display:inline-block;
   color:#993404;
+  padding-top:10px;
 }
