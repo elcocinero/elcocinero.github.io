@@ -3,7 +3,6 @@
   max-width:800px;
   margin-left:auto;
   margin-right: auto;
-
 }
 #landline_tooltip {
   position:absolute;
@@ -20,12 +19,13 @@
 #landline_tooltip h2 {
   /*margin:0;*/
   padding:0;
-  font-size:14px;
+  font-size:18px;
   margin: 0;
   text-transform: uppercase;
   /*letter-spacing: 0.1em;*/
   background: #fe9929;      
   text-align: center;
+  color:#888;
 }
 .tooltip_jobspercap {
   font-size:36px;

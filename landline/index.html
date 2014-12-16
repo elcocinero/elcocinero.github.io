@@ -10,6 +10,8 @@
     <script src="states_options.js"></script>
     <script src="states_packaged.js"></script>
     <script src="state_data.js"></script>
+  </head>
+  <body>
 
     <!-- Create a tooltip container -->
     <script type="text/jst" id="landline_tooltip_tmpl">
@@ -31,11 +33,7 @@
       </span>
     </script>
 
-
-
-  </head>
-  <body>
-    <div id="landline_container"></div>
+    <!-- Create the map -->
     <script>
       $(function() {
 
@@ -94,6 +92,19 @@
       });
     </script>
 
+<!-- Create the divs -->
+    <div class="head">
+      <h1 class="title">Where the Sun Shines</h1>
+      <p class="subtext">
+        Solar markets are local markets.
+        <br>
+        Which states get the benefits of solar economic development?
+      </p>
+    </div>
+
+    <div id="landline_container"></div>
+    
     <div id="landline_tooltip"></div>
+
   </body>
 </html>
