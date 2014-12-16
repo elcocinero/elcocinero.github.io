@@ -1,6 +1,9 @@
 #landline_container {
   width:95%;
   max-width:600px;
+  margin-left:auto;
+  margin-right: auto;
+
 }
 #landline_tooltip {
   position:absolute;
@@ -43,7 +46,7 @@
 .tooltip_textsmall {
   padding-left:5px;
   padding-top:5px;
-  font-size:14px;
+  font-size:12px;
   display:inline-block;
   line-height:18px;
   font-weight:normal;
