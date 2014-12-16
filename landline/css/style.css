@@ -1,5 +1,5 @@
 html {
-  background:#222;
+  background:#888;
 }
 
 #landline_container {
@@ -29,7 +29,7 @@ html {
   /*letter-spacing: 0.1em;*/
   background: #fe9929;      
   text-align: center;
-  color:#999999;
+  color:#333333;
 }
 .tooltip_jobspercap {
   font-size:36px;
