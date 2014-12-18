@@ -63,8 +63,9 @@ html {
   color:red;
 }
 
-a {
+a:link a:hover a:active {
   text-decoration: none;
+  color:orange;
 }
 
 .byline {
