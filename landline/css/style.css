@@ -7,7 +7,7 @@ html {
   max-width:800px;
   margin-left:auto;
   margin-right: auto;
-  border:black 2px;
+  background-color:black;
 }
 #landline_tooltip {
   position:absolute;
