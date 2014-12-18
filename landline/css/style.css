@@ -63,10 +63,11 @@ html {
   color:red;
 }
 
-
+a {
+  text-decoration: none;
+}
 
 .byline {
   font-family: 'Lato', Helvetica, Arial, sans-serif; 
-  text-decoration: none;
   color:red;
 }
