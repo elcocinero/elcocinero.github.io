@@ -58,12 +58,13 @@ html {
 }
 
 
-.title{
-  font-size:54pt;
+.heads{
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-weight: 400;
 }
 
+
+
 .tails {
+  font-family: 'Lato', Helvetica, Arial, sans-serif; 
   text-decoration: none;
 }
