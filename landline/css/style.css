@@ -63,11 +63,20 @@ html {
   color:red;
 }
 
-a:link a:hover a:active {
+a:link {
   text-decoration: none;
   color:orange;
 }
 
+a:hover {
+  text-decoration: none;
+  color:orange;
+}
+
+a:active {
+  text-decoration: none;
+  color:orange;
+}
 .byline {
   font-family: 'Lato', Helvetica, Arial, sans-serif; 
   color:red;
