@@ -63,21 +63,9 @@ html {
   color:#919191;
 }
 
-a:link {
-  text-decoration: none;
-  color:orange;
-}
-
-a:hover {
-  text-decoration: none;
-  color:orange;
-}
-
-a:active {
-  text-decoration: none;
-  color:orange;
-}
-.byline {
-  font-family: 'Molengo', Helvetica, Arial, sans-serif; 
-  color:red;
+.tails {
+  position:relative;
+  font-family: 'Molengo', Helvetica, Arial, sans-serif;
+  color:#919191;
+  font-size:8;
 }
