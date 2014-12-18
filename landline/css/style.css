@@ -63,6 +63,13 @@ html {
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   color:#919191;
 }
+.title{
+  font-size:36;
+}
+.subtext{
+  font-size:10;
+  margin:10,-10,10,-10;
+}
 
 .tails {
   position:fixed;
