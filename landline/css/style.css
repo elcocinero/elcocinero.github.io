@@ -59,7 +59,7 @@ html {
 
 
 .heads{
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-family: 'Molengo', Helvetica, Arial, sans-serif;
   color:#919191;
 }
 
@@ -78,6 +78,6 @@ a:active {
   color:orange;
 }
 .byline {
-  font-family: 'Lato', Helvetica, Arial, sans-serif; 
+  font-family: 'Molengo', Helvetica, Arial, sans-serif; 
   color:red;
 }
