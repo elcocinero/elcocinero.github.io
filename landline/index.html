@@ -49,8 +49,9 @@
         map.on('mouseover', function(e, path, data) {
           data.existingStyle = (data.existingStyle || {});
           data.existingStyle["fill"]        = path.attr("fill");
+          data.existingStyle["stroke"]        = path.attr("stroke");
           data.existingStyle["strokeWidth"] = path.attr("stroke-width");
-          path.attr("fill", "#636363").attr("stroke-width", 1);
+          path.attr("fill", "#636363").attr("stroke","#999").attr("stroke-width", 1);
         });
 
         map.on('mousemove', function(e, path, data) {
