@@ -57,6 +57,13 @@ html {
   color:#777;
 }
 
+
+.title{
+  font-size:54pt;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
 .tails {
   text-decoration: none;
 }
