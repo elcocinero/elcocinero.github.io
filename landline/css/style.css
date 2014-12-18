@@ -60,6 +60,7 @@ html {
 
 .heads{
   font-family: 'Lato', Helvetica, Arial, sans-serif;
+  color:red;
 }
 
 
@@ -67,4 +68,5 @@ html {
 .tails {
   font-family: 'Lato', Helvetica, Arial, sans-serif; 
   text-decoration: none;
+  color:red;
 }
