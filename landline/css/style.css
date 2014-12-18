@@ -63,8 +63,8 @@ html {
   color:#919191;
 }
 
-.tails {
-  position:relative;
+.tails p {
+  position:absolute;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   color:#919191;
   font-size:38;
