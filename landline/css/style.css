@@ -1,5 +1,5 @@
 html {
-  background:rgba(171,217,233,0.5);
+  background:#111;
 }
 
 #landline_container {
@@ -60,7 +60,7 @@ html {
 
 .heads{
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  color:red;
+  color:#222;
 }
 
 a:link {
