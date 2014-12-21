@@ -12,8 +12,8 @@
   margin: -40px auto -10px auto;
   padding:0;
   background:blue;
-  z-index:auto;
-}
+/*  z-index:auto;
+*/}
 #landline_tooltip {
   position:absolute;
   background:rgba(222, 222, 222, 0.90);
@@ -69,8 +69,8 @@
   /*color:#919191;*/
   margin-bottom:-10px;
   background:green;
-  z-index:9999;
-}
+/*  z-index:9999;
+*/}
 .title{
   font-size:36;
 }
