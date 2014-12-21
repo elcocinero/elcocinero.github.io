@@ -3,6 +3,7 @@
 }*/
 
 #landline_container {
+  position:relative;
   width:95%;
   max-width:800px;
   /*margin-left:auto;
@@ -10,7 +11,7 @@
   margin-bottom:0;*/
   margin: 0px auto -10px auto;
   padding:0;
-  background:red;
+  z-index:0;
 }
 #landline_tooltip {
   position:absolute;
@@ -77,10 +78,11 @@
 }
 
 .tails {
+  position:relative;
+  z-index:1;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
 /*  color:#919191;*/
   margin-top: -10%;
   font-size:10px;
   text-align: right;
-  background:blue;
 }
