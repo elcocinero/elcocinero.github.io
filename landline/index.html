@@ -72,12 +72,17 @@
         });
 
         // define state categoricals
-        var stateColor = function(jobs) {
+        var fillColor = function(jobs) {
           if (jobs < 187) return "rgb(254,227,145)";
           if (jobs < 274) return "rgb(254,196,79)";
           if (jobs < 345) return "rgb(254,153,41)";
           if (jobs < 706) return "rgb(217,95,14)";
           return "rgb(153,52,4)";
+        };
+
+        var strokeColor = function(jobs) {
+          if (jobs < 187) return "rgb(254,196,79)";
+          return "rgb(255,255,212)";
         };
 
 
@@ -87,8 +92,8 @@
 
         // color states
         _(solarjobs).each(function(ary, fips) {
-          map.style(fips, "fill", stateColor(ary[3]));
-          map.style(fips, "stroke", "#ffffd4");
+          map.style(fips, "fill", fillColor(ary[3]));
+          map.style(fips, "stroke", strokeColor(ary[3]));
           map.style(fips, "stroke-width", 1);
         })
 
