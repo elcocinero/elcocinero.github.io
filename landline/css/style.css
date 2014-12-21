@@ -3,7 +3,6 @@ html {
 }
 
 #landline_container {
-  position: fixed;
   width:95%;
   max-width:800px;
   margin-left:auto;
@@ -69,14 +68,14 @@ html {
 }
 .subtext{
   font-size:10;
-  margin:10,-10,10,-10;
+  margin: 10,-10,10,-10;
 }
 
 .tails {
-  position:fixed;
+  position:fixed center;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   color:#919191;
-  bottom: 10px;
+  top: 600px;
   right: 20px;
 }
 
