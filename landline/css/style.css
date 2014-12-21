@@ -5,8 +5,10 @@
 #landline_container {
   width:95%;
   max-width:800px;
-  margin-left:auto;
+  /*margin-left:auto;
   margin-right: auto;
+  margin-bottom:0;*/
+  margin: 0 auto 0 auto;
 }
 #landline_tooltip {
   position:absolute;
@@ -73,7 +75,7 @@
 .tails {
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
 /*  color:#919191;*/
-  margin-top: -75px;
+  margin-top: 0px;
   font-size:10px;
   text-align: right;
 }
