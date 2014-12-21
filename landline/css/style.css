@@ -62,7 +62,7 @@
 
 .heads{
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
-  /*color:#919191;*/
+  color:#919191;
   margin-bottom:-10px;
 }
 .title{
@@ -76,7 +76,7 @@
 .tails {
   position: relative;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
-/*  color:#919191;*/
+  color:#919191;
   margin-top: -10%;
   font-size:10px;
   text-align: right;
