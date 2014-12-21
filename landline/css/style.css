@@ -71,11 +71,11 @@
 }
 
 .tails {
-  position:relative;
-  font-family: 'Molengo', Helvetica, Arial, sans-serif;
+/*  position:relative;
+*/  font-family: 'Molengo', Helvetica, Arial, sans-serif;
 /*  color:#919191;
   top: 500px;*/
   margin-top: -50px;
-  margin-right:0px;
+  margin-right:10px;
   font-size:10px;
 }
