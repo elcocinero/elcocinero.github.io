@@ -3,6 +3,7 @@ html {
 }
 
 #landline_container {
+  position: fixed;
   width:95%;
   max-width:800px;
   margin-left:auto;
