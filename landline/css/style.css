@@ -68,14 +68,14 @@ html {
 }
 .subtext{
   font-size:10;
-  margin: 10,-10,10,-10;
+  margin: 10;
 }
 
 .tails {
-  position:fixed center;
+  position:fixed;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   color:#919191;
-  top: 600px;
+  top: 500px;
   right: 20px;
 }
 
