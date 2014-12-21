@@ -67,8 +67,8 @@ html {
 }
 .subtext{
   position:absolute;
-  top:0;
-  left: 300px;
+  top:auto;
+  left: 500px;
   font-size:10;
   margin: 10;
 }
