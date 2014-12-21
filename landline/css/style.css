@@ -76,8 +76,7 @@ html {
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   color:#919191;
   top: 500px;
-  right: 20px;
-}
+  margin-left: 50%;}
 
 .byline {
   position:absolute;
