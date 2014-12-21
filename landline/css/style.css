@@ -9,9 +9,8 @@
   /*margin-left:auto;
   margin-right: auto;
   margin-bottom:0;*/
-  margin: -40px auto -10px auto;
+  margin: -20px auto -10px auto;
   padding:0;
-  background:blue;
 }
 #landline_tooltip {
   position:absolute;
@@ -65,7 +64,6 @@
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   /*color:#919191;*/
   margin-bottom:-10px;
-  background:green;
 }
 .title{
   font-size:36;
@@ -82,5 +80,4 @@
   margin-top: -10%;
   font-size:10px;
   text-align: right;
-  background:red;
 }
