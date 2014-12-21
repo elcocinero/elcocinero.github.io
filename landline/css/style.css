@@ -68,8 +68,8 @@
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   /*color:#919191;*/
   margin-bottom:-10px;
-  background:black;
-  z-index:1;
+  background:green;
+  z-index:9999;
 }
 .title{
   font-size:36;
