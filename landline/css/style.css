@@ -11,6 +11,7 @@
   margin: -40px auto -10px auto;
   padding:0;
   background:blue;
+  z-index:auto;
 }
 #landline_tooltip {
   position:absolute;
@@ -83,4 +84,5 @@
   font-size:10px;
   text-align: right;
   background:red;
+  z-index:1;
 }
