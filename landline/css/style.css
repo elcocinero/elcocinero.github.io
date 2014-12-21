@@ -71,10 +71,9 @@
 }
 
 .tails {
-  position:absolute;
+  /*position:absolute;*/
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
 /*  color:#919191;
-*/  top: 500px;
-  margin-left: 50%;
+  top: 500px;*/
   font-size:10px;
 }
