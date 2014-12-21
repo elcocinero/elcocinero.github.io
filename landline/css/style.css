@@ -1,13 +1,12 @@
-html {
+/*html {
   background:#FFFAF1;
-}
+}*/
 
 #landline_container {
   width:95%;
   max-width:800px;
   margin-left:auto;
   margin-right: auto;
-  background-color:black;
 }
 #landline_tooltip {
   position:absolute;
@@ -61,7 +60,7 @@ html {
 
 .heads{
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
-  color:#919191;
+  /*color:#919191;*/
 }
 .title{
   font-size:36;
@@ -74,9 +73,11 @@ html {
 .tails {
   position:absolute;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
-  color:#919191;
-  top: 500px;
-  margin-left: 50%;}
+/*  color:#919191;
+*/  top: 500px;
+  margin-left: 50%;
+  font-size:10px;
+}
 
 .byline {
   position:absolute;
