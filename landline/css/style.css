@@ -9,6 +9,7 @@
   margin-right: auto;
   margin-bottom:0;*/
   margin: 0 auto 0 auto;
+  background:red;
 }
 #landline_tooltip {
   position:absolute;
@@ -63,6 +64,7 @@
 .heads{
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   /*color:#919191;*/
+  background:green;
 }
 .title{
   font-size:36;
@@ -78,4 +80,5 @@
   margin-top: 0px;
   font-size:10px;
   text-align: right;
+  background:blue;
 }
