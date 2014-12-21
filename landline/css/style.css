@@ -71,7 +71,7 @@
 }
 
 .tails {
-  /*position:absolute;*/
+  position:relative;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
 /*  color:#919191;
   top: 500px;*/
