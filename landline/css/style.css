@@ -72,7 +72,7 @@ html {
 }
 
 .tails {
-  position:fixed;
+  position:absolute;
   font-family: 'Molengo', Helvetica, Arial, sans-serif;
   color:#919191;
   top: 500px;
