@@ -3,7 +3,9 @@
   <head>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-    <script src="dcline.js"></script>
+    <script>
+      var DCLineColor =  "rgb(153,52,4)";
+    </script>
     <script src="../js/landline.js"></script>
     <script src="../js/landline.stateline.js"></script>
     <script src="../js/jquery.js"></script>
@@ -97,8 +99,6 @@
           map.style(fips, "stroke", strokeColor(ary[3]));
           map.style(fips, "stroke-width", 1);
         })
-
-        var DCLineColor =  "rgb(153,52,4)";
 
 
         // Draw the map
