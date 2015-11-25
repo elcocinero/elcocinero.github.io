@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="strava.com iPhone" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ <metadata>
+  <time>2014-05-22T16:35:48Z</time>
+ </metadata>
+ <trk>
+  <name>Lunch Ride</name>
+  <trkseg>
+   <trkpt lat="42.3596780" lon="-71.0940330">
+    <ele>2.8</ele>
+    <time>2014-05-22T16:35:48Z</time>
+   </trkpt>
+   <trkpt lat="42.3873030" lon="-71.1196020">
+    <ele>11.2</ele>
+    <time>2014-05-22T16:50:07Z</time>
+   </trkpt>
+   <trkpt lat="42.3873080" lon="-71.1194380">
+    <ele>10.6</ele>
+    <time>2014-05-22T16:50:08Z</time>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>
