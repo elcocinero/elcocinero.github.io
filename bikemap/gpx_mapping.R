@@ -1,0 +1,277 @@
+install.packages(c('rgdal', 'leaflet', 'sp', 'lubridate', 'ggplot2', 'htmlwidgets'))
+
+library(leaflet)  # for generating interactive Javascript maps
+library(rgdal)    # GDAL bindings for loading GPX-data
+library(sp)       # spatial operations library
+library(lubridate)# datetime-operatings, here to convert from strings
+library(ggplot2)  # general plotting library
+library(htmlwidgets)
+
+
+#import gpx table
+gpxtable <- read.csv("gpxtable.csv",stringsAsFactors=FALSE, header=TRUE)
+gpxnames <- gpxtable$GPX
+gpxtype <- gpxtable$Type
+gpxtracks <-gpxtable$Track
+
+# creating tracks
+for( i in 1:length(gpxnames)) {
+  assign(paste("track", i, sep=""),readOGR(paste("datafiles/",gpxnames[i],sep=""), layer = "tracks", verbose = FALSE))
+}
+
+# for( i in 1:length(gpxnames)) {
+#   gpxtracks[i] <- readOGR(paste("datafiles/",gpxnames[i],sep=""), layer = "tracks", verbose = FALSE)
+# }
+
+
+m <- leaflet() %>%
+  
+  # Add tiles
+  addProviderTiles("MapBox.ryancook.o8im6llh", group = "Roads") %>%
+  addProviderTiles("Esri.WorldImagery", group = "Satellite") %>%
+  
+  addLegend(position = 'bottomright',opacity = 0.4, 
+            colors = c('#999999', '#762a83'),
+            labels = c('Around Town', 'Long Ride'),
+            title = 'Where Ryan Bikes') %>%
+  
+  # Layers control
+  addLayersControl(position = 'bottomright',
+                   baseGroups = c( "Roads", "Satellite"),
+                   overlayGroups = c("Around Town", "Long Ride"),
+                   options = layersControlOptions(collapsed = FALSE)) %>%
+  addPolylines(data=track1, color='#999999', group="Around Town")%>%
+  addPolylines(data=track2, color='#999999', group="Around Town")%>%
+  addPolylines(data=track3, color='#999999', group="Around Town")%>%
+  addPolylines(data=track4, color='#999999', group="Around Town")%>%
+  addPolylines(data=track5, color='#999999', group="Around Town")%>%
+  addPolylines(data=track6, color='#999999', group="Around Town")%>%
+  addPolylines(data=track7, color='#999999', group="Around Town")%>%
+  addPolylines(data=track8, color='#999999', group="Around Town")%>%
+  addPolylines(data=track9, color='#999999', group="Around Town")%>%
+  addPolylines(data=track10, color='#999999', group="Around Town")%>%
+  addPolylines(data=track11, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track12, color='#999999', group="Around Town")%>%
+  addPolylines(data=track13, color='#999999', group="Around Town")%>%
+  addPolylines(data=track14, color='#999999', group="Around Town")%>%
+  addPolylines(data=track15, color='#999999', group="Around Town")%>%
+  addPolylines(data=track16, color='#999999', group="Around Town")%>%
+  addPolylines(data=track17, color='#999999', group="Around Town")%>%
+  addPolylines(data=track18, color='#999999', group="Around Town")%>%
+  addPolylines(data=track19, color='#999999', group="Around Town")%>%
+  addPolylines(data=track20, color='#999999', group="Around Town")%>%
+  addPolylines(data=track21, color='#999999', group="Around Town")%>%
+  addPolylines(data=track22, color='#999999', group="Around Town")%>%
+  addPolylines(data=track23, color='#999999', group="Around Town")%>%
+  addPolylines(data=track24, color='#999999', group="Around Town")%>%
+  addPolylines(data=track25, color='#999999', group="Around Town")%>%
+  addPolylines(data=track26, color='#999999', group="Around Town")%>%
+  addPolylines(data=track27, color='#999999', group="Around Town")%>%
+  addPolylines(data=track28, color='#999999', group="Around Town")%>%
+  addPolylines(data=track29, color='#999999', group="Around Town")%>%
+  addPolylines(data=track30, color='#999999', group="Around Town")%>%
+  addPolylines(data=track31, color='#999999', group="Around Town")%>%
+  addPolylines(data=track32, color='#999999', group="Around Town")%>%
+  addPolylines(data=track33, color='#999999', group="Around Town")%>%
+  addPolylines(data=track34, color='#999999', group="Around Town")%>%
+  addPolylines(data=track35, color='#999999', group="Around Town")%>%
+  addPolylines(data=track36, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track37, color='#999999', group="Around Town")%>%
+  addPolylines(data=track38, color='#999999', group="Around Town")%>%
+  addPolylines(data=track39, color='#999999', group="Around Town")%>%
+  addPolylines(data=track40, color='#999999', group="Around Town")%>%
+  addPolylines(data=track41, color='#999999', group="Around Town")%>%
+  addPolylines(data=track42, color='#999999', group="Around Town")%>%
+  addPolylines(data=track43, color='#999999', group="Around Town")%>%
+  addPolylines(data=track44, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track45, color='#999999', group="Around Town")%>%
+  addPolylines(data=track46, color='#999999', group="Around Town")%>%
+  addPolylines(data=track47, color='#999999', group="Around Town")%>%
+  addPolylines(data=track48, color='#999999', group="Around Town")%>%
+  addPolylines(data=track49, color='#999999', group="Around Town")%>%
+  addPolylines(data=track50, color='#999999', group="Around Town")%>%
+  addPolylines(data=track51, color='#999999', group="Around Town")%>%
+  addPolylines(data=track52, color='#999999', group="Around Town")%>%
+  addPolylines(data=track53, color='#999999', group="Around Town")%>%
+  addPolylines(data=track54, color='#999999', group="Around Town")%>%
+  addPolylines(data=track55, color='#999999', group="Around Town")%>%
+  addPolylines(data=track56, color='#999999', group="Around Town")%>%
+  addPolylines(data=track57, color='#999999', group="Around Town")%>%
+  addPolylines(data=track58, color='#999999', group="Around Town")%>%
+  addPolylines(data=track59, color='#999999', group="Around Town")%>%
+  addPolylines(data=track60, color='#999999', group="Around Town")%>%
+  addPolylines(data=track61, color='#999999', group="Around Town")%>%
+  addPolylines(data=track62, color='#999999', group="Around Town")%>%
+  addPolylines(data=track63, color='#999999', group="Around Town")%>%
+  addPolylines(data=track64, color='#999999', group="Around Town")%>%
+  addPolylines(data=track65, color='#999999', group="Around Town")%>%
+  addPolylines(data=track66, color='#999999', group="Around Town")%>%
+  addPolylines(data=track67, color='#999999', group="Around Town")%>%
+  addPolylines(data=track68, color='#999999', group="Around Town")%>%
+  addPolylines(data=track69, color='#999999', group="Around Town")%>%
+  addPolylines(data=track70, color='#999999', group="Around Town")%>%
+  addPolylines(data=track71, color='#999999', group="Around Town")%>%
+  addPolylines(data=track72, color='#999999', group="Around Town")%>%
+  addPolylines(data=track73, color='#999999', group="Around Town")%>%
+  addPolylines(data=track74, color='#999999', group="Around Town")%>%
+  addPolylines(data=track75, color='#999999', group="Around Town")%>%
+  addPolylines(data=track76, color='#999999', group="Around Town")%>%
+  addPolylines(data=track77, color='#999999', group="Around Town")%>%
+  addPolylines(data=track78, color='#999999', group="Around Town")%>%
+  addPolylines(data=track79, color='#999999', group="Around Town")%>%
+  addPolylines(data=track80, color='#999999', group="Around Town")%>%
+  addPolylines(data=track81, color='#999999', group="Around Town")%>%
+  addPolylines(data=track82, color='#999999', group="Around Town")%>%
+  addPolylines(data=track83, color='#999999', group="Around Town")%>%
+  addPolylines(data=track84, color='#999999', group="Around Town")%>%
+  addPolylines(data=track85, color='#999999', group="Around Town")%>%
+  addPolylines(data=track86, color='#999999', group="Around Town")%>%
+  addPolylines(data=track87, color='#999999', group="Around Town")%>%
+  addPolylines(data=track88, color='#999999', group="Around Town")%>%
+  addPolylines(data=track89, color='#999999', group="Around Town")%>%
+  addPolylines(data=track90, color='#999999', group="Around Town")%>%
+  addPolylines(data=track91, color='#999999', group="Around Town")%>%
+  addPolylines(data=track92, color='#999999', group="Around Town")%>%
+  addPolylines(data=track93, color='#999999', group="Around Town")%>%
+  addPolylines(data=track94, color='#999999', group="Around Town")%>%
+  addPolylines(data=track95, color='#999999', group="Around Town")%>%
+  addPolylines(data=track96, color='#999999', group="Around Town")%>%
+  addPolylines(data=track97, color='#999999', group="Around Town")%>%
+  addPolylines(data=track98, color='#999999', group="Around Town")%>%
+  addPolylines(data=track99, color='#999999', group="Around Town")%>%
+  addPolylines(data=track100, color='#999999', group="Around Town")%>%
+  addPolylines(data=track101, color='#999999', group="Around Town")%>%
+  addPolylines(data=track102, color='#999999', group="Around Town")%>%
+  addPolylines(data=track103, color='#999999', group="Around Town")%>%
+  addPolylines(data=track104, color='#999999', group="Around Town")%>%
+  addPolylines(data=track105, color='#999999', group="Around Town")%>%
+  addPolylines(data=track106, color='#999999', group="Around Town")%>%
+  addPolylines(data=track107, color='#999999', group="Around Town")%>%
+  addPolylines(data=track108, color='#999999', group="Around Town")%>%
+  addPolylines(data=track109, color='#999999', group="Around Town")%>%
+  addPolylines(data=track110, color='#999999', group="Around Town")%>%
+  addPolylines(data=track111, color='#999999', group="Around Town")%>%
+  addPolylines(data=track112, color='#999999', group="Around Town")%>%
+  addPolylines(data=track113, color='#999999', group="Around Town")%>%
+  addPolylines(data=track114, color='#999999', group="Around Town")%>%
+  addPolylines(data=track115, color='#999999', group="Around Town")%>%
+  addPolylines(data=track116, color='#999999', group="Around Town")%>%
+  addPolylines(data=track117, color='#999999', group="Around Town")%>%
+  addPolylines(data=track118, color='#999999', group="Around Town")%>%
+  addPolylines(data=track119, color='#999999', group="Around Town")%>%
+  addPolylines(data=track120, color='#999999', group="Around Town")%>%
+  addPolylines(data=track121, color='#999999', group="Around Town")%>%
+  addPolylines(data=track122, color='#999999', group="Around Town")%>%
+  addPolylines(data=track123, color='#999999', group="Around Town")%>%
+  addPolylines(data=track124, color='#999999', group="Around Town")%>%
+  addPolylines(data=track125, color='#999999', group="Around Town")%>%
+  addPolylines(data=track126, color='#999999', group="Around Town")%>%
+  addPolylines(data=track127, color='#999999', group="Around Town")%>%
+  addPolylines(data=track128, color='#999999', group="Around Town")%>%
+  addPolylines(data=track129, color='#999999', group="Around Town")%>%
+  addPolylines(data=track130, color='#999999', group="Around Town")%>%
+  addPolylines(data=track131, color='#999999', group="Around Town")%>%
+  addPolylines(data=track132, color='#999999', group="Around Town")%>%
+  addPolylines(data=track133, color='#999999', group="Around Town")%>%
+  addPolylines(data=track134, color='#999999', group="Around Town")%>%
+  addPolylines(data=track135, color='#999999', group="Around Town")%>%
+  addPolylines(data=track136, color='#999999', group="Around Town")%>%
+  addPolylines(data=track137, color='#999999', group="Around Town")%>%
+  addPolylines(data=track138, color='#999999', group="Around Town")%>%
+  addPolylines(data=track139, color='#999999', group="Around Town")%>%
+  addPolylines(data=track140, color='#999999', group="Around Town")%>%
+  addPolylines(data=track141, color='#999999', group="Around Town")%>%
+  addPolylines(data=track142, color='#999999', group="Around Town")%>%
+  addPolylines(data=track143, color='#999999', group="Around Town")%>%
+  addPolylines(data=track144, color='#999999', group="Around Town")%>%
+  addPolylines(data=track145, color='#999999', group="Around Town")%>%
+  addPolylines(data=track146, color='#999999', group="Around Town")%>%
+  addPolylines(data=track147, color='#999999', group="Around Town")%>%
+  addPolylines(data=track148, color='#999999', group="Around Town")%>%
+  addPolylines(data=track149, color='#999999', group="Around Town")%>%
+  addPolylines(data=track150, color='#999999', group="Around Town")%>%
+  addPolylines(data=track151, color='#999999', group="Around Town")%>%
+  addPolylines(data=track152, color='#999999', group="Around Town")%>%
+  addPolylines(data=track153, color='#999999', group="Around Town")%>%
+  addPolylines(data=track154, color='#999999', group="Around Town")%>%
+  addPolylines(data=track155, color='#999999', group="Around Town")%>%
+  addPolylines(data=track156, color='#999999', group="Around Town")%>%
+  addPolylines(data=track157, color='#999999', group="Around Town")%>%
+  addPolylines(data=track158, color='#999999', group="Around Town")%>%
+  addPolylines(data=track159, color='#999999', group="Around Town")%>%
+  addPolylines(data=track160, color='#999999', group="Around Town")%>%
+  addPolylines(data=track161, color='#999999', group="Around Town")%>%
+  addPolylines(data=track162, color='#999999', group="Around Town")%>%
+  addPolylines(data=track163, color='#999999', group="Around Town")%>%
+  addPolylines(data=track164, color='#999999', group="Around Town")%>%
+  addPolylines(data=track165, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track166, color='#999999', group="Around Town")%>%
+  addPolylines(data=track167, color='#999999', group="Around Town")%>%
+  addPolylines(data=track168, color='#999999', group="Around Town")%>%
+  addPolylines(data=track169, color='#999999', group="Around Town")%>%
+  addPolylines(data=track170, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track171, color='#999999', group="Around Town")%>%
+  addPolylines(data=track172, color='#999999', group="Around Town")%>%
+  addPolylines(data=track173, color='#999999', group="Around Town")%>%
+  addPolylines(data=track174, color='#999999', group="Around Town")%>%
+  addPolylines(data=track175, color='#999999', group="Around Town")%>%
+  addPolylines(data=track176, color='#999999', group="Around Town")%>%
+  addPolylines(data=track177, color='#999999', group="Around Town")%>%
+  addPolylines(data=track178, color='#999999', group="Around Town")%>%
+  addPolylines(data=track179, color='#999999', group="Around Town")%>%
+  addPolylines(data=track180, color='#999999', group="Around Town")%>%
+  addPolylines(data=track181, color='#999999', group="Around Town")%>%
+  addPolylines(data=track182, color='#999999', group="Around Town")%>%
+  addPolylines(data=track183, color='#999999', group="Around Town")%>%
+  addPolylines(data=track184, color='#999999', group="Around Town")%>%
+  addPolylines(data=track185, color='#999999', group="Around Town")%>%
+  addPolylines(data=track186, color='#999999', group="Around Town")%>%
+  addPolylines(data=track187, color='#999999', group="Around Town")%>%
+  addPolylines(data=track188, color='#999999', group="Around Town")%>%
+  addPolylines(data=track189, color='#999999', group="Around Town")%>%
+  addPolylines(data=track190, color='#999999', group="Around Town")%>%
+  addPolylines(data=track191, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track192, color='#999999', group="Around Town")%>%
+  addPolylines(data=track193, color='#999999', group="Around Town")%>%
+  addPolylines(data=track194, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track195, color='#999999', group="Around Town")%>%
+  addPolylines(data=track196, color='#999999', group="Around Town")%>%
+  addPolylines(data=track197, color='#999999', group="Around Town")%>%
+  addPolylines(data=track198, color='#999999', group="Around Town")%>%
+  addPolylines(data=track199, color='#999999', group="Around Town")%>%
+  addPolylines(data=track200, color='#999999', group="Around Town")%>%
+  addPolylines(data=track201, color='#762a83', group="Long Ride")%>%
+  addPolylines(data=track202, color='#999999', group="Around Town")%>%
+  addPolylines(data=track203, color='#999999', group="Around Town")%>%
+  addPolylines(data=track204, color='#999999', group="Around Town")%>%
+  addPolylines(data=track205, color='#999999', group="Around Town")%>%
+  addPolylines(data=track206, color='#999999', group="Around Town")%>%
+  addPolylines(data=track207, color='#999999', group="Around Town")%>%
+  addPolylines(data=track208, color='#999999', group="Around Town")%>%
+  addPolylines(data=track209, color='#999999', group="Around Town")%>%
+  addPolylines(data=track210, color='#999999', group="Around Town")%>%
+  addPolylines(data=track211, color='#999999', group="Around Town")%>%
+  addPolylines(data=track212, color='#999999', group="Around Town")%>%
+  addPolylines(data=track213, color='#999999', group="Around Town")%>%
+  addPolylines(data=track214, color='#999999', group="Around Town")%>%
+  addPolylines(data=track215, color='#999999', group="Around Town")%>%
+  addPolylines(data=track216, color='#999999', group="Around Town")%>%
+  addPolylines(data=track217, color='#999999', group="Around Town")%>%
+  addPolylines(data=track218, color='#999999', group="Around Town")%>%
+  addPolylines(data=track219, color='#999999', group="Around Town")%>%
+  addPolylines(data=track220, color='#999999', group="Around Town")%>%
+  addPolylines(data=track221, color='#999999', group="Around Town")%>%
+  addPolylines(data=track222, color='#999999', group="Around Town")%>%
+  addPolylines(data=track223, color='#999999', group="Around Town")%>%
+  addPolylines(data=track224, color='#999999', group="Around Town")%>%
+  addPolylines(data=track225, color='#999999', group="Around Town")%>%
+  addPolylines(data=track226, color='#999999', group="Around Town")%>%
+  addPolylines(data=track227, color='#999999', group="Around Town")%>%
+  addPolylines(data=track228, color='#762a83', group="Long Ride")
+  
+m
+  
+
+
+saveWidget(widget = m, file="index.html", selfcontained = FALSE)
+
