@@ -84,13 +84,15 @@ map <- leaflet(pct) %>%
   )
 
   for (i in 1:length(photo.df$photo.names)) {
-      map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group='Photos', popup="<a target='_blank' href='photos/IMG_0580.jpg'>
-                        
-                          </a>")
+      map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group='Photos', popup=paste("<a target='_blank' href='photos/",photo.names[i],"'><img width=100%, height=100% src='photos/",photo.names[i],"' /></a>",sep=""))
   }
 
 map
-# <img width=100%, height=100% src='photos/IMG_0580.jpg' />
+
 #exporting to html
 saveWidget(widget = map, file="index.html", selfcontained = FALSE)
 
+
+"<a target='_blank' href='photos/IMG_0580.jpg'><img width=100%, height=100% src='photos/IMG_0580.jpg' /></a>"
+paste("<a target='_blank' href='photos/",photo.names[1],"'><img width=100%, height=100% src='photos/",photo.names[1],"' /></a>",sep="")
+photo.names[1]
