@@ -90,7 +90,7 @@ map <- leaflet(pct) %>%
                             photo.names[i],
                             "'><img width=100%, height=100% src='photos/",
                             photo.names[i],
-                            "' /></a></div><div>lotsa text herelotsa text herelotsa text herelotsa text here</div>",
+                            "' /></a></div><div>Caption text to be inserted here</div>",
                             sep=""))
   }
 
@@ -99,7 +99,3 @@ map
 #exporting to html
 saveWidget(widget = map, file="index.html", selfcontained = FALSE)
 
-
-"<a target='_blank' href='photos/IMG_0580.jpg'><img width=100%, height=100% src='photos/IMG_0580.jpg' /></a>"
-paste("<a target='_blank' href='photos/",photo.names[1],"'><img width=100%, height=100% src='photos/",photo.names[1],"' /></a>",sep="")
-photo.names[1]
