@@ -10,11 +10,8 @@ library(htmlwidgets)
 gpx <- 'data/pacific-crest-trail.gpx'
 pct <- readOGR(gpx, layer = "tracks")
 
-
-
 #getting picture info
-
-photo.names <- c("IMG_0580.jpg", "IMG_2884.jpg")
+photo.names <- read.csv("photo_directory.csv",stringsAsFactors=FALSE, header=TRUE)
 photo.df=data.frame(photo.names)
 
 exif_time <- function(path) {
@@ -55,7 +52,6 @@ photoIcon <- makeIcon(
 )
 
 
-
 #creating map
 mapStates <- map("state", fill=TRUE,
                  plot=FALSE,
@@ -87,9 +83,9 @@ map <- leaflet(pct) %>%
       map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group='Photos', popup=
                           paste(
                             "<div><a target='_blank' href='photos/",
-                            photo.names[i],
+                            photo.df$photo.names[i],
                             "'><img width=100%, height=100% src='photos/",
-                            photo.names[i],
+                            photo.df$photo.names[i],
                             "' /></a></div><div>Caption text to be inserted here</div>",
                             sep=""))
   }
