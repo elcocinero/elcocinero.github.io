@@ -52,6 +52,7 @@ photoIcon <- makeIcon(
   iconUrl = "https://www.mapbox.com/maki/renders/camera-12@2x.png"
 )
 
+blanks="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
 
 #creating map
 mapStates <- map("state", fill=TRUE,
@@ -83,30 +84,11 @@ map <- leaflet(pct) %>%
   for (i in 1:length(photo.df$photo.names)) {
       map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group='Photos', popup=
                           paste(
-                            "<div><a target='_blank' href='photos/",
+                            "<div>",blanks,"</div><div width=300><img width=100%, height=100% src='photos/",
                             photo.df$photo.names[i],
-                            "'><img width=100%, height=100% src='photos/",
-                            photo.df$photo.names[i],
-                            "' /></a></div><div>Caption text to be inserted here</div>",
+                              "' /></a></div><div>",blanks,"</div>",
                             sep=""))
   }
-
-# 
-# paste(
-#   "<div><img width=300px, height=100% src='photos/",
-#   photo.df$photo.names[i],
-#   "' /></a></div>",
-#   sep=""))
-
-
-# paste(
-#   "<div><a target='_blank' href='photos/",
-#   photo.df$photo.names[i],
-#   "'><img width=100%, height=100% src='photos/",
-#   photo.df$photo.names[i],
-#   "' /></a></div><div>Caption text to be inserted here</div>",
-#   sep=""))
-
 
 
 
