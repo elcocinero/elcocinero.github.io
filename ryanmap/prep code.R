@@ -86,9 +86,9 @@ map <- leaflet(pct) %>%
                           paste(
                             "<div>",blanks,"</div><div width=300><a href='photos/",
                             photo.df$photo.names[i],
-                            "><img width=100%, height=100% src='photos/",
+                            "'><img width=100%, height=100% src='photos/",
                             photo.df$photo.names[i],
-                              "></a></div><div>",blanks,"</div>",
+                              "' /></a></div><div>",blanks,"</div>",
                             sep=""))
   }
 
