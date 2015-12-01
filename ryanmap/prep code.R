@@ -11,7 +11,8 @@ gpx <- 'data/pacific-crest-trail.gpx'
 pct <- readOGR(gpx, layer = "tracks")
 
 #getting picture info
-photo.names <- read.csv("photo_directory.csv",stringsAsFactors=FALSE, header=TRUE)
+# photo.names <- read.csv("photo_directory.csv",stringsAsFactors=FALSE, header=TRUE)
+photo.names <- list.files(path="photos")
 photo.df=data.frame(photo.names)
 
 exif_time <- function(path) {
@@ -82,13 +83,20 @@ map <- leaflet(pct) %>%
   for (i in 1:length(photo.df$photo.names)) {
       map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group='Photos', popup=
                           paste(
-                            "<div><a target='_blank' href='photos/",
+                            "<div><img width=500px, height=100% src='photos/",
                             photo.df$photo.names[i],
-                            "'><img width=100%, height=100% src='photos/",
-                            photo.df$photo.names[i],
-                            "' /></a></div><div>Caption text to be inserted here</div>",
+                            "' /></a></div>",
                             sep=""))
   }
+
+# paste(
+#   "<div><a target='_blank' href='photos/",
+#   photo.df$photo.names[i],
+#   "'><img width=100%, height=100% src='photos/",
+#   photo.df$photo.names[i],
+#   "' /></a></div><div>Caption text to be inserted here</div>",
+#   sep=""))
+
 
 map
 
