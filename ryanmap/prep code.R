@@ -84,9 +84,11 @@ map <- leaflet(pct) %>%
   for (i in 1:length(photo.df$photo.names)) {
       map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group='Photos', popup=
                           paste(
-                            "<div>",blanks,"</div><div width=300><img width=100%, height=100% src='photos/",
+                            "<div>",blanks,"</div><div width=300><a href='photos/",
                             photo.df$photo.names[i],
-                              "' /></a></div><div>",blanks,"</div>",
+                            "><img width=100%, height=100% src='photos/",
+                            photo.df$photo.names[i],
+                              "></a></div><div>",blanks,"</div>",
                             sep=""))
   }
 
