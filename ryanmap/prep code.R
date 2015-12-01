@@ -85,7 +85,7 @@ map <- leaflet(pct) %>%
                           paste(
                             "<div><a target='_blank' href='photos/",
                             photo.df$photo.names[i],
-                            "'><img width=300, height=100% src='photos/",
+                            "'><img width=100%, height=100% src='photos/",
                             photo.df$photo.names[i],
                             "' /></a></div><div>Caption text to be inserted here</div>",
                             sep=""))
