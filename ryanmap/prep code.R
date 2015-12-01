@@ -11,7 +11,6 @@ gpx <- 'data/pacific-crest-trail.gpx'
 pct <- readOGR(gpx, layer = "tracks")
 
 #getting picture info
-# photo.names <- read.csv("photo_directory.csv",stringsAsFactors=FALSE, header=TRUE)
 photo.names <- list.files(path="photos")
 photo.df=data.frame(photo.names)
 
@@ -44,6 +43,16 @@ for (i in 1:length(photo.df$photo.names)) {
 
 photo.df
 
+months <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+
+photo.df$month <- paste(months[as.numeric(substr(photo.df$time,6,7))],substr(photo.df$time,1,4),sep=" ")
+photo.df$monthnum <- as.numeric(substr(photo.df$time,1,4)) + (as.numeric(substr(photo.df$time,6,7))/100)
+
+unique.months <- photo.df$monthnum
+unique.months <- unique(unique.months)
+unique.months <- unique.months[order(unique.months)]
+unique.months <- paste(months[as.numeric(substr(unique.months,6,7))],substr(unique.months,1,4),sep=" ")
+
 
 # creating icon
 photoIcon <- makeIcon(
@@ -55,17 +64,15 @@ photoIcon <- makeIcon(
 blanks="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
 
 #creating map
-mapStates <- map("state", fill=TRUE,
-                 plot=FALSE,
-                 region=c("California","Oregon","Washington"))
+# mapStates <- map("state", fill=TRUE,
+#                  plot=FALSE,
+#                  region=c("California","Oregon","Washington"))
 
 map <- leaflet(pct) %>%
   addProviderTiles("MapBox.ryancook.o8im6llh", group = "Roads") %>%
   addProviderTiles("OpenTopoMap", group = "Topo") %>%
   addProviderTiles("MapQuestOpen.Aerial", group = "Aerial") %>%
   addPolylines (color="red", popup="PCT") %>%
-  addMarkers(-116.4697, 32.60758, popup = "Campo", group="Terminals") %>%
-  addMarkers(-120.7816, 49.06465, popup = "Manning Park, Canada", group="Terminals") %>%
   addPolygons(data=mapStates, stroke=FALSE, fillColor="#373737") %>%
   addLegend(position="topright",colors="red", labels="PCT", opacity=0.2, title="Trail Map") %>%
   
@@ -73,16 +80,15 @@ map <- leaflet(pct) %>%
 #       addMarkers(photo.df$long[i], photo.df$lat[i], icon=photoIcon, group='Photos', popup=photo.df$time[i]) %>%
 #   }
 
-  hideGroup("Terminals") %>%
   
   addLayersControl(
     baseGroups = c("Roads","Topo","Aerial"),
-    overlayGroups=c("Terminals","Photos"),
+    overlayGroups=unique.months,
     options = layersControlOptions(collapsed=FALSE)
   )
 
   for (i in 1:length(photo.df$photo.names)) {
-      map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group='Photos', popup=
+      map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group=photo.df$month[i], popup=
                           paste(
                             "<div>",blanks,"</div><div width=300><a target = '_blank' href='photos/",
                             photo.df$photo.names[i],
