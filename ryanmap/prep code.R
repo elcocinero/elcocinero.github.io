@@ -7,6 +7,17 @@ library(htmlwidgets)
 #  %>%  pipe operator: cmd-shft-m
 # comments: cmd-shfit-c
 
+
+# getting trip info
+trips <- read.csv("Trips.csv",stringsAsFactors=FALSE, header=TRUE)
+
+
+
+
+
+
+
+
 gpx <- 'data/pacific-crest-trail.gpx'
 pct <- readOGR(gpx, layer = "tracks")
 
@@ -68,13 +79,14 @@ blanks="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&n
 #                  plot=FALSE,
 #                  region=c("California","Oregon","Washington"))
 
-map <- leaflet(pct) %>%
+map <- leaflet() %>%
   addProviderTiles("MapBox.ryancook.o8im6llh", group = "Roads") %>%
   addProviderTiles("OpenTopoMap", group = "Topo") %>%
   addProviderTiles("MapQuestOpen.Aerial", group = "Aerial") %>%
-  addPolylines (color="red", popup="PCT") %>%
-  addPolygons(data=mapStates, stroke=FALSE, fillColor="#373737") %>%
+#   addPolylines (color="red", popup="PCT") %>%
+#   addPolygons(data=mapStates, stroke=FALSE, fillColor="#373737") %>%
   addLegend(position="topright",colors="red", labels="PCT", opacity=0.2, title="Trail Map") %>%
+  
   
 #   for (i in 1:length(photo.df$photo.names)) {
 #       addMarkers(photo.df$long[i], photo.df$lat[i], icon=photoIcon, group='Photos', popup=photo.df$time[i]) %>%
@@ -86,6 +98,10 @@ map <- leaflet(pct) %>%
     overlayGroups=unique.months,
     options = layersControlOptions(collapsed=FALSE)
   )
+
+  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat)
+
+
 
   for (i in 1:length(photo.df$photo.names)) {
       map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group=photo.df$month[i], popup=
