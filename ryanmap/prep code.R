@@ -14,15 +14,8 @@ trips <- read.csv("Trips.csv",stringsAsFactors=FALSE, header=TRUE)
 
 
 
-
-
-
-
-gpx <- 'data/pacific-crest-trail.gpx'
-pct <- readOGR(gpx, layer = "tracks")
-
 #getting picture info
-photo.names <- list.files(path="photos")
+photo.names <- list.files(path=?aa"photos")
 photo.df=data.frame(photo.names)
 
 exif_time <- function(path) {
@@ -99,7 +92,7 @@ map <- leaflet() %>%
     options = layersControlOptions(collapsed=FALSE)
   )
 
-  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat)
+  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat, color="black", opacity=0.3, weight=2)
 
 
 
