@@ -78,7 +78,7 @@ map <- leaflet() %>%
   addProviderTiles("MapQuestOpen.Aerial", group = "Aerial") %>%
 #   addPolylines (color="red", popup="PCT") %>%
 #   addPolygons(data=mapStates, stroke=FALSE, fillColor="#373737") %>%
-  addLegend(position="topright",colors="red", labels="PCT", opacity=0.2, title="Trail Map") %>%
+#   addLegend(position="topright",colors="red", labels="PCT", opacity=0.2, title="Trail Map") %>%
   
   
 #   for (i in 1:length(photo.df$photo.names)) {
