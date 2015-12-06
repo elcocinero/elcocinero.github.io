@@ -11,7 +11,8 @@ library(htmlwidgets)
 # getting trip info
 trips <- read.csv("Trips.csv",stringsAsFactors=FALSE, header=TRUE)
 
-
+unique.trips <- data.frame(trips$City,trips$Lat,trips$Lng)
+unique.trips <- unique(unique.trips)
 
 
 #getting picture info
@@ -65,6 +66,12 @@ photoIcon <- makeIcon(
   iconUrl = "https://www.mapbox.com/maki/renders/camera-12@2x.png"
 )
 
+cityIcon <- makeIcon(
+  iconAnchorX = 12, iconAnchorY = 12, # center middle of icon on track,
+  # instead of top corner  
+  iconUrl = "http://www.capitolscientific.com/core/media/media.nl?id=453195&c=1250437&h=f177909298363d4e354b"
+)
+
 blanks="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"
 
 #creating map
@@ -88,16 +95,19 @@ map <- leaflet() %>%
   
   addLayersControl(
     baseGroups = c("Roads","Topo","Aerial"),
-    overlayGroups=unique.months,
+    overlayGroups=c("Cities","Photos","Paths"),
     options = layersControlOptions(collapsed=FALSE)
   )
 
-  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat, color="black", opacity=0.3, weight=2)
+  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat, color="black", opacity=0.3, weight=2, group="Paths")
 
+for (i in 1:length(unique.trips$trips.City)) {
+  map <- addCircleMarkers(map, lng=unique.trips$trips.Lng[i], lat=unique.trips$trips.Lat[i], group="Cities", popup=unique.trips$trips.City[i])
+}
 
 
   for (i in 1:length(photo.df$photo.names)) {
-      map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group=photo.df$month[i], popup=
+      map <- addMarkers(map, lng=photo.df$long[i], lat=photo.df$lat[i], icon=photoIcon, group="Photos", popup=
                           paste(
                             "<div>",blanks,"</div><div width=300><a target = '_blank' href='photos/",
                             photo.df$photo.names[i],
