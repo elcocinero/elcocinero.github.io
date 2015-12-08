@@ -84,7 +84,7 @@ blanks="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&n
 #                  region=c("California","Oregon","Washington"))
 
 map <- leaflet() %>%
-  setView(lng = -98.35, lat = 39.50, zoom = 4) %>%
+  setView(lat = 39.50, lng = -98.35, zoom = 5) %>%
   addProviderTiles("MapBox.ryancook.o8im6llh") %>%
 #   addPolylines (color="red", popup="PCT") %>%
 #   addPolygons(data=mapStates, stroke=FALSE, fillColor="#373737") %>%
