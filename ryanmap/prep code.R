@@ -15,6 +15,10 @@ unique.trips <- data.frame(trips$City,trips$Lat,trips$Lng)
 unique.trips <- unique(unique.trips)
 
 
+# getting gpx info
+trail <- readOGR("gpx/test.gpx", layer = "tracks")
+
+
 #getting picture info
 photo.names <- list.files(path=?aa"photos")
 photo.df=data.frame(photo.names)
@@ -80,9 +84,8 @@ blanks="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&n
 #                  region=c("California","Oregon","Washington"))
 
 map <- leaflet() %>%
-  addProviderTiles("MapBox.ryancook.o8im6llh", group = "Roads") %>%
-  addProviderTiles("OpenTopoMap", group = "Topo") %>%
-  addProviderTiles("MapQuestOpen.Aerial", group = "Aerial") %>%
+  setView(lng = -98.35, lat = 39.50, zoom = 4) %>%
+  addProviderTiles("MapBox.ryancook.o8im6llh") %>%
 #   addPolylines (color="red", popup="PCT") %>%
 #   addPolygons(data=mapStates, stroke=FALSE, fillColor="#373737") %>%
 #   addLegend(position="topright",colors="red", labels="PCT", opacity=0.2, title="Trail Map") %>%
@@ -94,12 +97,15 @@ map <- leaflet() %>%
 
   
   addLayersControl(
-    baseGroups = c("Roads","Topo","Aerial"),
-    overlayGroups=c("Cities","Photos","Paths"),
+    overlayGroups=c("Cities","Photos","Plane","Car"),
     options = layersControlOptions(collapsed=FALSE)
   )
 
-  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat, color="black", opacity=0.3, weight=2, group="Paths")
+  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat, color="black", opacity=0.3, weight=2, group="Plane")
+
+  map <- addPolylines(map,data=trail, color="black", opacity=0.3, weight=2, group="Car")
+
+
 
 for (i in 1:length(unique.trips$trips.City)) {
   map <- addCircleMarkers(map, lng=unique.trips$trips.Lng[i], lat=unique.trips$trips.Lat[i], group="Cities", popup=unique.trips$trips.City[i])
