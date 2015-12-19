@@ -10,17 +10,26 @@ library(htmlwidgets)
 
 # getting trip info
 trips <- read.csv("Trips.csv",stringsAsFactors=FALSE, header=TRUE)
+trip.markers <- trips[trips$Marker==1,c('City','Lat','Lng')]
 
-unique.trips <- data.frame(trips$City,trips$Lat,trips$Lng)
+unique.trips <- trips[trips$Marker==1,c('City','Lat','Lng')]
 unique.trips <- unique(unique.trips)
 
 
+
 # getting gpx info
-trail <- readOGR("gpx/test.gpx", layer = "tracks")
+# using: http://www.gpsvisualizer.com/convert_input?convert_format=gpx
+trail.names <- list.files(path="gpx")
+
+
+for (i in 1:length(trail.names)) {
+  assign(paste("GPX",i,".gpx",sep=""), readOGR(paste("gpx/",trail.names[i],sep=""), layer = "tracks"))
+}
+
 
 
 #getting picture info
-photo.names <- list.files(path=?aa"photos")
+photo.names <- list.files(path="photos")
 photo.df=data.frame(photo.names)
 
 exif_time <- function(path) {
@@ -101,10 +110,13 @@ map <- leaflet() %>%
     options = layersControlOptions(collapsed=FALSE)
   )
 
-  map <- addPolylines(map,lng=trips$Lng, lat=trips$Lat, color="black", opacity=0.3, weight=2, group="Plane")
+  map <- addPolylines(map,lng=trip.markers$Lng, lat=trip.markers$Lat, color="black", opacity=0.3, weight=2, group="Plane")
 
-  map <- addPolylines(map,data=trail, color="black", opacity=0.3, weight=2, group="Car")
+#   map <- addPolylines(map,data=trail, color="black", opacity=0.3, weight=2, group="Car")
 
+for (i in 1:length(trail.names)) {
+  map <- addPolylines(map,data=get(trail.names[i]), color="black", opacity=0.3, weight=2, group="Car")
+}
 
 
 for (i in 1:length(unique.trips$trips.City)) {
