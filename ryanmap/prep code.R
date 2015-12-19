@@ -119,8 +119,8 @@ for (i in 1:length(trail.names)) {
 }
 
 
-for (i in 1:length(unique.trips$trips.City)) {
-  map <- addCircleMarkers(map, lng=unique.trips$trips.Lng[i], lat=unique.trips$trips.Lat[i], group="Cities", popup=unique.trips$trips.City[i])
+for (i in 1:length(unique.trips$City)) {
+  map <- addCircleMarkers(map, lng=unique.trips$Lng[i], lat=unique.trips$Lat[i], group="Cities", popup=unique.trips$City[i])
 }
 
 
