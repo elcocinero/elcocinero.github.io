@@ -63,6 +63,7 @@ DateEdits <- PhotoEdits[PhotoEdits$Year != ".",c("ImageID","Year","Month","Day")
 CoordEdits <- PhotoEdits[PhotoEdits$Lat != ".",c("ImageID","Lat","Lng")]
 
 photo.df
+
 for (i in 1:length(DateEdits$ImageID)) {
   photo.df$date[photo.df$photo.names == DateEdits$ImageID[i]] <-paste(DateEdits$Year[i],DateEdits$Month[i],DateEdits$Day[i], sep=":")
 }
@@ -76,14 +77,14 @@ for (i in 1:length(CoordEdits$ImageID)) {
 photo.df
 
 # adding month of photo
-months <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
-photo.df$month <- paste(months[as.numeric(substr(photo.df$time,6,7))],substr(photo.df$time,1,4),sep=" ")
-photo.df$monthnum <- as.numeric(substr(photo.df$time,1,4)) + (as.numeric(substr(photo.df$time,6,7))/100)
-
-unique.months <- photo.df$monthnum
-unique.months <- unique(unique.months)
-unique.months <- unique.months[order(unique.months)]
-unique.months <- paste(months[as.numeric(substr(unique.months,6,7))],substr(unique.months,1,4),sep=" ")
+# months <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+# photo.df$month <- paste(months[as.numeric(substr(photo.df$time,6,7))],substr(photo.df$time,1,4),sep=" ")
+# photo.df$monthnum <- as.numeric(substr(photo.df$time,1,4)) + (as.numeric(substr(photo.df$time,6,7))/100)
+# 
+# unique.months <- photo.df$monthnum
+# unique.months <- unique(unique.months)
+# unique.months <- unique.months[order(unique.months)]
+# unique.months <- paste(months[as.numeric(substr(unique.months,6,7))],substr(unique.months,1,4),sep=" ")
 
 
 # creating photo icon
