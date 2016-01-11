@@ -66,7 +66,7 @@ map$set(
 )
 map
 
-#adding angular js and making interactive
+#adding angular js
 map$set(
   bodyattrs = "ng-app ng-controller='rChartsCtrl'"
 )
@@ -74,7 +74,12 @@ map$addAssets(
   jshead = "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"
 )
 
-map$setTemplate(chartDiv = "
+
+
+#Slider
+map_slider = map$copy()
+map_slider = map$copy()
+map_slider$setTemplate(chartDiv = "
         <div class='container'>
           <input id='slider' type='range' min=1960 max=2010 ng-model='year' width=200>
           <span ng-bind='year'></span>
@@ -89,10 +94,67 @@ map$setTemplate(chartDiv = "
           }
        </script>"
 )
+map_slider$set(newData = dat2)
+map_slider
 
-map$set(newData = dat2)
 
-map
+#Dropdown
+map_dropdown = map$copy()
+map_dropdown$setTemplate(chartDiv = "
+        <div class='container'>
+          <div class='col-md-2'>
+            <select ng-model='year' class='form-control'
+               ng-options='year for year in [1960, 1980, 2000]'>
+              {{ year }}
+            </select>
+          </div>
+          <div id='{{chartId}}' class='rChart datamaps'></div>  
+        </div>
+        <script>
+          function rChartsCtrl($scope){
+            $scope.year = 1960;
+            $scope.$watch('year', function(newYear){
+              map{{chartId}}.updateChoropleth(chartParams.newData[newYear]);
+            })
+          }
+       </script>"
+)
+map_dropdown$set(newData = dat2)
+map_dropdown
 
-map$save('index.html', cdn=TRUE)
 
+#Buttons
+map_buttons = map$copy()
+map_buttons = map$copy()
+map_buttons$setTemplate(chartDiv = "
+        <div class='container'>
+          <div class='btn-group'>
+            <button ng-repeat=\"value in years\" ng-click='updateYear(value)'
+              class=\"btn btn-default\" type=\"button\"
+              ng-model=\"value\" btn-radio=\"value\">
+              {{ value }}
+            </button>
+          </div>
+          <div id='{{chartId}}' class='rChart datamaps'></div>  
+        </div>
+        <script>
+          function rChartsCtrl($scope){
+            $scope.years = [1960, 1980, 2000]
+            $scope.year = $scope.years[0]
+            $scope.updateYear = function(x){
+              $scope.year = x
+            }
+            $scope.$watch('year', function(newYear){
+              mapchart_1.updateChoropleth(chartParams.newData[newYear]);
+            })
+          }
+       </script>"
+)
+map_buttons$set(newData = dat2)
+map_buttons
+
+
+
+map_slider$save('slider.html', cdn=TRUE)
+map_dropdown$save('dropdown.html', cdn=TRUE)
+map_buttons$save('buttons.html', cdn=TRUE)
