@@ -78,7 +78,6 @@ map$addAssets(
 
 #Slider
 map_slider = map$copy()
-map_slider = map$copy()
 map_slider$setTemplate(chartDiv = "
         <div class='container'>
           <input id='slider' type='range' min=1960 max=2010 ng-model='year' width=200>

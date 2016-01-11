@@ -1,0 +1,7054 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/topojson.v1.min.js' type='text/javascript'></script>
+    <script src='http://datamaps.github.io/scripts/datamaps.all.min.js' type='text/javascript'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js' type='text/javascript'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body ng-app ng-controller='rChartsCtrl'>
+    
+    
+            <div class='container'>
+              <input id='slider' type='range' min=1 max=24 ng-model='month' width=200>
+              Month <span ng-bind='month'></span> (Timeframe: January 2014 - October 2015)
+              <div id='chart_1' class='rChart datamaps'></div>  
+            </div>
+            <script>
+              function rChartsCtrl($scope){
+                $scope.month = 1;
+                $scope.$watch('month', function(newMonth){
+                  mapchart_1.updateChoropleth(chartParams.newData[newMonth]);
+                })
+              }
+           </script>    
+    <script id='popup-template' type='text/x-handlebars-template'>
+    
+</script>
+<script>
+  var chartParams = {
+ "dom": "chart_1",
+"width":    800,
+"height":    400,
+"scope": "usa",
+"fills": {
+ "<1": "#FFFFD9",
+"1-2": "#EDF8B1",
+"3-5": "#C7E9B4",
+"6-10": "#7FCDBB",
+"11-20": "#41B6C4",
+"21-50": "#1D91C0",
+"51-100": "#225EA8",
+">100": "#0C2C84" 
+},
+"data": {
+ "CT": {
+ "State": "CT",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"ME": {
+ "State": "ME",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 1,
+"GWh": 24,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 1,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 1,
+"GWh": 65,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 1,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"PA": {
+ "State": "PA",
+"Month": 1,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MI": {
+ "State": "MI",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 1,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 1,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"NE": {
+ "State": "NE",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 1,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 1,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 1,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 1,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"SC": {
+ "State": "SC",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 1,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"OK": {
+ "State": "OK",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 1,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 1,
+"GWh": 60,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 1,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"NV": {
+ "State": "NV",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"NM": {
+ "State": "NM",
+"Month": 1,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 1,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WY": {
+ "State": "WY",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 1,
+"GWh": 203,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 1,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WA": {
+ "State": "WA",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 1,
+"GWh": 36,
+"fillKey": "21-50" 
+} 
+},
+"legend": true,
+"labels": true,
+"bodyattrs": "ng-app ng-controller='rChartsCtrl'",
+"newData": {
+ "1": {
+ "CT": {
+ "State": "CT",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"ME": {
+ "State": "ME",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 1,
+"GWh": 24,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 1,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 1,
+"GWh": 65,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 1,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"PA": {
+ "State": "PA",
+"Month": 1,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MI": {
+ "State": "MI",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 1,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 1,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"NE": {
+ "State": "NE",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 1,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 1,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 1,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 1,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"SC": {
+ "State": "SC",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 1,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"OK": {
+ "State": "OK",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 1,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 1,
+"GWh": 60,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 1,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"NV": {
+ "State": "NV",
+"Month": 1,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"NM": {
+ "State": "NM",
+"Month": 1,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 1,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WY": {
+ "State": "WY",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 1,
+"GWh": 203,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 1,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WA": {
+ "State": "WA",
+"Month": 1,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 1,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 1,
+"GWh": 36,
+"fillKey": "21-50" 
+} 
+},
+"2": {
+ "CT": {
+ "State": "CT",
+"Month": 2,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 2,
+"GWh": 28,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 2,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 2,
+"GWh": 74,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 2,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"PA": {
+ "State": "PA",
+"Month": 2,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 2,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 2,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 2,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"NE": {
+ "State": "NE",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 2,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 2,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 2,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 2,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 2,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"SC": {
+ "State": "SC",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 2,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 2,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"OK": {
+ "State": "OK",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 2,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 2,
+"GWh": 59,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 2,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 2,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 2,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"NM": {
+ "State": "NM",
+"Month": 2,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 2,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WY": {
+ "State": "WY",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 2,
+"GWh": 211,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 2,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WA": {
+ "State": "WA",
+"Month": 2,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 2,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 2,
+"GWh": 36,
+"fillKey": "21-50" 
+} 
+},
+"3": {
+ "CT": {
+ "State": "CT",
+"Month": 3,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 3,
+"GWh": 38,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 3,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 3,
+"GWh": 97,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 3,
+"GWh": 22,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 3,
+"GWh": 18,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 3,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 3,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 3,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 3,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 3,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 3,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 3,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 3,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 3,
+"GWh": 17,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 3,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 3,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 3,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 3,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 3,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 3,
+"GWh": 76,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 3,
+"GWh": 29,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 3,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 3,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 3,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 3,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 3,
+"GWh": 306,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 3,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 3,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 3,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 3,
+"GWh": 43,
+"fillKey": "21-50" 
+} 
+},
+"4": {
+ "CT": {
+ "State": "CT",
+"Month": 4,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 4,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 4,
+"GWh": 43,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 4,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 4,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 4,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 4,
+"GWh": 102,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 4,
+"GWh": 25,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 4,
+"GWh": 20,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 4,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 4,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 4,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 4,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 4,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 4,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 4,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 4,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 4,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 4,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 4,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 4,
+"GWh": 18,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 4,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 4,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 4,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 4,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 4,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 4,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 4,
+"GWh": 80,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 4,
+"GWh": 31,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 4,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 4,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 4,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 4,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 4,
+"GWh": 335,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 4,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 4,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 4,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 4,
+"GWh": 46,
+"fillKey": "21-50" 
+} 
+},
+"5": {
+ "CT": {
+ "State": "CT",
+"Month": 5,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 5,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 5,
+"GWh": 49,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 5,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 5,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 5,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 5,
+"GWh": 113,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 5,
+"GWh": 28,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 5,
+"GWh": 22,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 5,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 5,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 5,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 5,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 5,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 5,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 5,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 5,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 5,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 5,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 5,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 5,
+"GWh": 20,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 5,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 5,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 5,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 5,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 5,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 5,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 5,
+"GWh": 86,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 5,
+"GWh": 34,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 5,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 5,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 5,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 5,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 5,
+"GWh": 372,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 5,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 5,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 5,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 5,
+"GWh": 49,
+"fillKey": "21-50" 
+} 
+},
+"6": {
+ "CT": {
+ "State": "CT",
+"Month": 6,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 6,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 6,
+"GWh": 46,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 6,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 6,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 6,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 6,
+"GWh": 113,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 6,
+"GWh": 30,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 6,
+"GWh": 22,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 6,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 6,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 6,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 6,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 6,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 6,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 6,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 6,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 6,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 6,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 6,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 6,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 6,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 6,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 6,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 6,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 6,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 6,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 6,
+"GWh": 83,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 6,
+"GWh": 34,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 6,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 6,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 6,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 6,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 6,
+"GWh": 379,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 6,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 6,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 6,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 6,
+"GWh": 50,
+"fillKey": "21-50" 
+} 
+},
+"7": {
+ "CT": {
+ "State": "CT",
+"Month": 7,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 7,
+"GWh": 51,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 7,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 7,
+"GWh": 118,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 7,
+"GWh": 33,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 7,
+"GWh": 23,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 7,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 7,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 7,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 7,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 7,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 7,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 7,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 7,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 7,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 7,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 7,
+"GWh": 22,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 7,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 7,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 7,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"LA": {
+ "State": "LA",
+"Month": 7,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 7,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 7,
+"GWh": 79,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 7,
+"GWh": 35,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 7,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 7,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 7,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 7,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 7,
+"GWh": 399,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 7,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 7,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 7,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 7,
+"GWh": 51,
+"fillKey": "51-100" 
+} 
+},
+"8": {
+ "CT": {
+ "State": "CT",
+"Month": 8,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 8,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 8,
+"GWh": 60,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 8,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 8,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 8,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 8,
+"GWh": 110,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 8,
+"GWh": 31,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 8,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 8,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 8,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 8,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 8,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 8,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 8,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 8,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 8,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 8,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 8,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 8,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 8,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 8,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 8,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 8,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 8,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 8,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"LA": {
+ "State": "LA",
+"Month": 8,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 8,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 8,
+"GWh": 81,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 8,
+"GWh": 33,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 8,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 8,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 8,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 8,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 8,
+"GWh": 396,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 8,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 8,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 8,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 8,
+"GWh": 51,
+"fillKey": "51-100" 
+} 
+},
+"9": {
+ "CT": {
+ "State": "CT",
+"Month": 9,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 9,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 9,
+"GWh": 53,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 9,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 9,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 9,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 9,
+"GWh": 97,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 9,
+"GWh": 29,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 9,
+"GWh": 19,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 9,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 9,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 9,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 9,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 9,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 9,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 9,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 9,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 9,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 9,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 9,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 9,
+"GWh": 18,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 9,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 9,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 9,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 9,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 9,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 9,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 9,
+"GWh": 80,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 9,
+"GWh": 32,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 9,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 9,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 9,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 9,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 9,
+"GWh": 368,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 9,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 9,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 9,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 9,
+"GWh": 47,
+"fillKey": "21-50" 
+} 
+},
+"10": {
+ "CT": {
+ "State": "CT",
+"Month": 10,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 10,
+"GWh": 44,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 10,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 10,
+"GWh": 85,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 10,
+"GWh": 25,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 10,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 10,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 10,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 10,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 10,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 10,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 10,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 10,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 10,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 10,
+"GWh": 17,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 10,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 10,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 10,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 10,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 10,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 10,
+"GWh": 81,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 10,
+"GWh": 31,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 10,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 10,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 10,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 10,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 10,
+"GWh": 348,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 10,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 10,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 10,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 10,
+"GWh": 44,
+"fillKey": "21-50" 
+} 
+},
+"11": {
+ "CT": {
+ "State": "CT",
+"Month": 11,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 11,
+"GWh": 32,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 11,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 11,
+"GWh": 66,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 11,
+"GWh": 19,
+"fillKey": "11-20" 
+},
+"PA": {
+ "State": "PA",
+"Month": 11,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 11,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 11,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 11,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 11,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 11,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 11,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 11,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 11,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 11,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"SC": {
+ "State": "SC",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 11,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 11,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 11,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 11,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 11,
+"GWh": 75,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 11,
+"GWh": 27,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 11,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 11,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 11,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 11,
+"GWh": 283,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 11,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WA": {
+ "State": "WA",
+"Month": 11,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 11,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 11,
+"GWh": 39,
+"fillKey": "21-50" 
+} 
+},
+"12": {
+ "CT": {
+ "State": "CT",
+"Month": 12,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 12,
+"GWh": 35,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 12,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 12,
+"GWh": 66,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 12,
+"GWh": 20,
+"fillKey": "11-20" 
+},
+"PA": {
+ "State": "PA",
+"Month": 12,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MI": {
+ "State": "MI",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 12,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 12,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 12,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 12,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 12,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"MD": {
+ "State": "MD",
+"Month": 12,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 12,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"SC": {
+ "State": "SC",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 12,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 12,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 12,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 12,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 12,
+"GWh": 76,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 12,
+"GWh": 25,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 12,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 12,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 12,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 12,
+"GWh": 262,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 12,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WA": {
+ "State": "WA",
+"Month": 12,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 12,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 12,
+"GWh": 40,
+"fillKey": "21-50" 
+} 
+},
+"13": {
+ "CT": {
+ "State": "CT",
+"Month": 13,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 13,
+"GWh": 36,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 13,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 13,
+"GWh": 66,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 13,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 13,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 13,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 13,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 13,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 13,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 13,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 13,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 13,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 13,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 13,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"SC": {
+ "State": "SC",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 13,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 13,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 13,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 13,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 13,
+"GWh": 68,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 13,
+"GWh": 23,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"NV": {
+ "State": "NV",
+"Month": 13,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 13,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 13,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 13,
+"GWh": 256,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 13,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WA": {
+ "State": "WA",
+"Month": 13,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 13,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 13,
+"GWh": 41,
+"fillKey": "21-50" 
+} 
+},
+"14": {
+ "CT": {
+ "State": "CT",
+"Month": 14,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"ME": {
+ "State": "ME",
+"Month": 14,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 14,
+"GWh": 39,
+"fillKey": "21-50" 
+},
+"NH": {
+ "State": "NH",
+"Month": 14,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 14,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 14,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 14,
+"GWh": 75,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 14,
+"GWh": 24,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 14,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 14,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 14,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 14,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"OH": {
+ "State": "OH",
+"Month": 14,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"WI": {
+ "State": "WI",
+"Month": 14,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 14,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"KS": {
+ "State": "KS",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 14,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 14,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"NE": {
+ "State": "NE",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 14,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 14,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"GA": {
+ "State": "GA",
+"Month": 14,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 14,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 14,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"VA": {
+ "State": "VA",
+"Month": 14,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 14,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 14,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 14,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"OK": {
+ "State": "OK",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 14,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 14,
+"GWh": 74,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 14,
+"GWh": 23,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"NV": {
+ "State": "NV",
+"Month": 14,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 14,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"UT": {
+ "State": "UT",
+"Month": 14,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 14,
+"GWh": 279,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 14,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"WA": {
+ "State": "WA",
+"Month": 14,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"AK": {
+ "State": "AK",
+"Month": 14,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 14,
+"GWh": 41,
+"fillKey": "21-50" 
+} 
+},
+"15": {
+ "CT": {
+ "State": "CT",
+"Month": 15,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 15,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 15,
+"GWh": 55,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 15,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 15,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 15,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 15,
+"GWh": 98,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 15,
+"GWh": 35,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 15,
+"GWh": 19,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 15,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 15,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 15,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 15,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 15,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 15,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 15,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 15,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 15,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 15,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 15,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 15,
+"GWh": 20,
+"fillKey": "11-20" 
+},
+"NC": {
+ "State": "NC",
+"Month": 15,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 15,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 15,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 15,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 15,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 15,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 15,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 15,
+"GWh": 96,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 15,
+"GWh": 34,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MT": {
+ "State": "MT",
+"Month": 15,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 15,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"NM": {
+ "State": "NM",
+"Month": 15,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 15,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 15,
+"GWh": 410,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 15,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 15,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 15,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 15,
+"GWh": 49,
+"fillKey": "21-50" 
+} 
+},
+"16": {
+ "CT": {
+ "State": "CT",
+"Month": 16,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 16,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 16,
+"GWh": 63,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 16,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 16,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 16,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 16,
+"GWh": 108,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 16,
+"GWh": 44,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 16,
+"GWh": 21,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 16,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 16,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 16,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 16,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 16,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 16,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 16,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"MO": {
+ "State": "MO",
+"Month": 16,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 16,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 16,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 16,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 16,
+"GWh": 24,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 16,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 16,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 16,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"WV": {
+ "State": "WV",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 16,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 16,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 16,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 16,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 16,
+"GWh": 107,
+"fillKey": ">100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 16,
+"GWh": 37,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 16,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 16,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 16,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"NM": {
+ "State": "NM",
+"Month": 16,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 16,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"WY": {
+ "State": "WY",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 16,
+"GWh": 454,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 16,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 16,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 16,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 16,
+"GWh": 53,
+"fillKey": "51-100" 
+} 
+},
+"17": {
+ "CT": {
+ "State": "CT",
+"Month": 17,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 17,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 17,
+"GWh": 70,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 17,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 17,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 17,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 17,
+"GWh": 119,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 17,
+"GWh": 51,
+"fillKey": "51-100" 
+},
+"PA": {
+ "State": "PA",
+"Month": 17,
+"GWh": 23,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 17,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IN": {
+ "State": "IN",
+"Month": 17,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 17,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 17,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 17,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 17,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 17,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"MO": {
+ "State": "MO",
+"Month": 17,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 17,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 17,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 17,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 17,
+"GWh": 27,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 17,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 17,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 17,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WV": {
+ "State": "WV",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 17,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 17,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 17,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"LA": {
+ "State": "LA",
+"Month": 17,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 17,
+"GWh": 18,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 17,
+"GWh": 114,
+"fillKey": ">100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 17,
+"GWh": 38,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 17,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 17,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 17,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"NM": {
+ "State": "NM",
+"Month": 17,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 17,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"WY": {
+ "State": "WY",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 17,
+"GWh": 496,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 17,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 17,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 17,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 17,
+"GWh": 56,
+"fillKey": "51-100" 
+} 
+},
+"18": {
+ "CT": {
+ "State": "CT",
+"Month": 18,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 18,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 18,
+"GWh": 68,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 18,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 18,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 18,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 18,
+"GWh": 117,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 18,
+"GWh": 49,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 18,
+"GWh": 23,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 18,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IN": {
+ "State": "IN",
+"Month": 18,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 18,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 18,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 18,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 18,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 18,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"MO": {
+ "State": "MO",
+"Month": 18,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 18,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 18,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 18,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 18,
+"GWh": 25,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 18,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 18,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 18,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WV": {
+ "State": "WV",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 18,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 18,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 18,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"LA": {
+ "State": "LA",
+"Month": 18,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 18,
+"GWh": 19,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 18,
+"GWh": 111,
+"fillKey": ">100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 18,
+"GWh": 42,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 18,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 18,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 18,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"NM": {
+ "State": "NM",
+"Month": 18,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 18,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"WY": {
+ "State": "WY",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 18,
+"GWh": 517,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 18,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"WA": {
+ "State": "WA",
+"Month": 18,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AK": {
+ "State": "AK",
+"Month": 18,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 18,
+"GWh": 57,
+"fillKey": "51-100" 
+} 
+},
+"19": {
+ "CT": {
+ "State": "CT",
+"Month": 19,
+"GWh": 19,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 19,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 19,
+"GWh": 77,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 19,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 19,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 19,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 19,
+"GWh": 125,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 19,
+"GWh": 54,
+"fillKey": "51-100" 
+},
+"PA": {
+ "State": "PA",
+"Month": 19,
+"GWh": 24,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 19,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IN": {
+ "State": "IN",
+"Month": 19,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 19,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 19,
+"GWh": 10,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 19,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 19,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 19,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"MO": {
+ "State": "MO",
+"Month": 19,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 19,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 19,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 19,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 19,
+"GWh": 27,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 19,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 19,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 19,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WV": {
+ "State": "WV",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 19,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 19,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 19,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"LA": {
+ "State": "LA",
+"Month": 19,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 19,
+"GWh": 20,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 19,
+"GWh": 108,
+"fillKey": ">100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 19,
+"GWh": 42,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 19,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 19,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 19,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"NM": {
+ "State": "NM",
+"Month": 19,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 19,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WY": {
+ "State": "WY",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 19,
+"GWh": 540,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 19,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"WA": {
+ "State": "WA",
+"Month": 19,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"AK": {
+ "State": "AK",
+"Month": 19,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 19,
+"GWh": 59,
+"fillKey": "51-100" 
+} 
+},
+"20": {
+ "CT": {
+ "State": "CT",
+"Month": 20,
+"GWh": 18,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 20,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 20,
+"GWh": 73,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 20,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 20,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 20,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 20,
+"GWh": 118,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 20,
+"GWh": 54,
+"fillKey": "51-100" 
+},
+"PA": {
+ "State": "PA",
+"Month": 20,
+"GWh": 22,
+"fillKey": "21-50" 
+},
+"IL": {
+ "State": "IL",
+"Month": 20,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IN": {
+ "State": "IN",
+"Month": 20,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 20,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 20,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 20,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 20,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 20,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"MO": {
+ "State": "MO",
+"Month": 20,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 20,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 20,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 20,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 20,
+"GWh": 28,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 20,
+"GWh": 9,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 20,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 20,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WV": {
+ "State": "WV",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 20,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 20,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AR": {
+ "State": "AR",
+"Month": 20,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"LA": {
+ "State": "LA",
+"Month": 20,
+"GWh": 15,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 20,
+"GWh": 20,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 20,
+"GWh": 106,
+"fillKey": ">100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 20,
+"GWh": 41,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 20,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 20,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 20,
+"GWh": 17,
+"fillKey": "11-20" 
+},
+"NM": {
+ "State": "NM",
+"Month": 20,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 20,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WY": {
+ "State": "WY",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 20,
+"GWh": 542,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 20,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"WA": {
+ "State": "WA",
+"Month": 20,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"AK": {
+ "State": "AK",
+"Month": 20,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 20,
+"GWh": 58,
+"fillKey": "51-100" 
+} 
+},
+"21": {
+ "CT": {
+ "State": "CT",
+"Month": 21,
+"GWh": 17,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 21,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 21,
+"GWh": 65,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 21,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 21,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 21,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 21,
+"GWh": 102,
+"fillKey": ">100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 21,
+"GWh": 48,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 21,
+"GWh": 19,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 21,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 21,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 21,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 21,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 21,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"IA": {
+ "State": "IA",
+"Month": 21,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 21,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 21,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 21,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"FL": {
+ "State": "FL",
+"Month": 21,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 21,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 21,
+"GWh": 25,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 21,
+"GWh": 8,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 21,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 21,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WV": {
+ "State": "WV",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 21,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 21,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 21,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 21,
+"GWh": 18,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 21,
+"GWh": 98,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 21,
+"GWh": 38,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 21,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 21,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 21,
+"GWh": 18,
+"fillKey": "11-20" 
+},
+"NM": {
+ "State": "NM",
+"Month": 21,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 21,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WY": {
+ "State": "WY",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 21,
+"GWh": 490,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 21,
+"GWh": 11,
+"fillKey": "11-20" 
+},
+"WA": {
+ "State": "WA",
+"Month": 21,
+"GWh": 6,
+"fillKey": "6-10" 
+},
+"AK": {
+ "State": "AK",
+"Month": 21,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 21,
+"GWh": 53,
+"fillKey": "51-100" 
+} 
+},
+"22": {
+ "CT": {
+ "State": "CT",
+"Month": 22,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"ME": {
+ "State": "ME",
+"Month": 22,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MA": {
+ "State": "MA",
+"Month": 22,
+"GWh": 52,
+"fillKey": "51-100" 
+},
+"NH": {
+ "State": "NH",
+"Month": 22,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"RI": {
+ "State": "RI",
+"Month": 22,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VT": {
+ "State": "VT",
+"Month": 22,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"NJ": {
+ "State": "NJ",
+"Month": 22,
+"GWh": 88,
+"fillKey": "51-100" 
+},
+"NY": {
+ "State": "NY",
+"Month": 22,
+"GWh": 38,
+"fillKey": "21-50" 
+},
+"PA": {
+ "State": "PA",
+"Month": 22,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"IL": {
+ "State": "IL",
+"Month": 22,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IN": {
+ "State": "IN",
+"Month": 22,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MI": {
+ "State": "MI",
+"Month": 22,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"OH": {
+ "State": "OH",
+"Month": 22,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WI": {
+ "State": "WI",
+"Month": 22,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"IA": {
+ "State": "IA",
+"Month": 22,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"KS": {
+ "State": "KS",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"MN": {
+ "State": "MN",
+"Month": 22,
+"GWh": 2,
+"fillKey": "1-2" 
+},
+"MO": {
+ "State": "MO",
+"Month": 22,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"NE": {
+ "State": "NE",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"ND": {
+ "State": "ND",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"SD": {
+ "State": "SD",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"DE": {
+ "State": "DE",
+"Month": 22,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"FL": {
+ "State": "FL",
+"Month": 22,
+"GWh": 13,
+"fillKey": "11-20" 
+},
+"GA": {
+ "State": "GA",
+"Month": 22,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"MD": {
+ "State": "MD",
+"Month": 22,
+"GWh": 22,
+"fillKey": "21-50" 
+},
+"NC": {
+ "State": "NC",
+"Month": 22,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"SC": {
+ "State": "SC",
+"Month": 22,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"VA": {
+ "State": "VA",
+"Month": 22,
+"GWh": 3,
+"fillKey": "3-5" 
+},
+"WV": {
+ "State": "WV",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"AL": {
+ "State": "AL",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"KY": {
+ "State": "KY",
+"Month": 22,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MS": {
+ "State": "MS",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TN": {
+ "State": "TN",
+"Month": 22,
+"GWh": 5,
+"fillKey": "3-5" 
+},
+"AR": {
+ "State": "AR",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"LA": {
+ "State": "LA",
+"Month": 22,
+"GWh": 14,
+"fillKey": "11-20" 
+},
+"OK": {
+ "State": "OK",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"TX": {
+ "State": "TX",
+"Month": 22,
+"GWh": 17,
+"fillKey": "11-20" 
+},
+"AZ": {
+ "State": "AZ",
+"Month": 22,
+"GWh": 94,
+"fillKey": "51-100" 
+},
+"CO": {
+ "State": "CO",
+"Month": 22,
+"GWh": 34,
+"fillKey": "21-50" 
+},
+"ID": {
+ "State": "ID",
+"Month": 22,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"MT": {
+ "State": "MT",
+"Month": 22,
+"GWh": 1,
+"fillKey": "1-2" 
+},
+"NV": {
+ "State": "NV",
+"Month": 22,
+"GWh": 16,
+"fillKey": "11-20" 
+},
+"NM": {
+ "State": "NM",
+"Month": 22,
+"GWh": 12,
+"fillKey": "11-20" 
+},
+"UT": {
+ "State": "UT",
+"Month": 22,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WY": {
+ "State": "WY",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"CA": {
+ "State": "CA",
+"Month": 22,
+"GWh": 448,
+"fillKey": ">100" 
+},
+"OR": {
+ "State": "OR",
+"Month": 22,
+"GWh": 7,
+"fillKey": "6-10" 
+},
+"WA": {
+ "State": "WA",
+"Month": 22,
+"GWh": 4,
+"fillKey": "3-5" 
+},
+"AK": {
+ "State": "AK",
+"Month": 22,
+"GWh": 0,
+"fillKey": "<1" 
+},
+"HI": {
+ "State": "HI",
+"Month": 22,
+"GWh": 50,
+"fillKey": "21-50" 
+} 
+} 
+},
+"id": "chart_1" 
+}
+  chartParams.element = document.getElementById('chart_1')
+  
+  
+  var mapchart_1 = new Datamap(chartParams);
+  
+  
+    
+  // draw a bubble map if specified
+  if (chartParams.bubbles) {
+    var bubbles = chartParams.bubbles
+    mapchart_1.bubbles(bubbles)
+  }
+  
+  if (chartParams.labels){
+    mapchart_1.labels()
+  }
+  
+  if (chartParams.legend){
+    mapchart_1.legend()
+  }
+  
+  setProjection = function( element, options ) {
+    var projection, path;
+ 
+      projection = d3.geo.albersUsa()
+        .scale(element.offsetWidth)
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+ 
+    path = d3.geo.path()
+      .projection( projection );
+ 
+    return {path: path, projection: projection};
+  }
+</script>
+
+<style>
+.datamaps {
+  position: relative;
+}
+</style>
+    
+    <script></script>    
+  </body>
+</html>
