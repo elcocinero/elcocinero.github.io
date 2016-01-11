@@ -66,33 +66,33 @@ map$set(
 )
 map
 
-#adding angular js
-map2 <- map$copy()
-map2 = map$copy()
-map2$set(
+#adding angular js and making interactive
+map$set(
   bodyattrs = "ng-app ng-controller='rChartsCtrl'"
 )
-map2$addAssets(
+map$addAssets(
   jshead = "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"
 )
 
-map2$setTemplate(chartDiv = "
-  <div class='container'>
-    <input id='slider' type='range' min=1960 max=2010 ng-model='year' width=200>
-    <span ng-bind='year'></span>
-    <div id='' class='rChart datamaps'></div>  
-  </div>
-  <script>
-    function rChartsCtrl($scope){
-      $scope.year = 1960;
-      $scope.$watch('year', function(newYear){
-        map.updateChoropleth(chartParams.newData[newYear]);
-      })
-    }
-  </script>"
+map$setTemplate(chartDiv = "
+        <div class='container'>
+          <input id='slider' type='range' min=1960 max=2010 ng-model='year' width=200>
+          <span ng-bind='year'></span>
+          <div id='{{chartId}}' class='rChart datamaps'></div>  
+        </div>
+        <script>
+          function rChartsCtrl($scope){
+            $scope.year = 1960;
+            $scope.$watch('year', function(newYear){
+              map{{chartId}}.updateChoropleth(chartParams.newData[newYear]);
+            })
+          }
+       </script>"
 )
 
-map2$set(newData = dat2)
-map2
+map$set(newData = dat2)
+
+map
 
 map$save('index.html', cdn=TRUE)
+
